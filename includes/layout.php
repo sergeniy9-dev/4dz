@@ -40,6 +40,7 @@ function page_head(string $title, string $description = ''): void
     });
   </script>
   <?php endif; ?>
+  <link rel="stylesheet" href="<?= asset('css/site-light.css') ?>?v=light-final-1">
 </head>
 <body>
 <div class="intro-loader" data-intro>
@@ -186,4 +187,7 @@ function page_end(): void
     echo '</main>';
     page_footer();
 }
+
+
+
 

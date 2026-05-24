@@ -17,43 +17,55 @@ page_start(
   </div>
 </section>
 
-<section class="section">
-  <div class="container split">
-    <div>
-      <p class="eyebrow">Зачем</p>
-      <h2>Красивый проект бесполезен, если его нельзя нормально вести</h2>
-    </div>
+<section class="signature-section">
+  <div class="container signature-board reveal">
+    <div class="signature-grid">
+      <div>
+        <p class="eyebrow">Реализация</p>
+        <h2>Красивый проект бесполезен, если его нельзя нормально вести</h2>
+        <p class="lead">
+          Мы собираем решения так, чтобы собственник, строители и подрядчики понимали направление
+          без постоянных переделок и случайных замен.
+        </p>
+      </div>
 
-    <div>
-      <p class="lead">
-        Мы собираем архитектурные и интерьерные решения так, чтобы собственник,
-        строители и подрядчики понимали направление без постоянных переделок.
-      </p>
-
-      <ul class="list">
-        <li>фиксируем ключевые решения по планировке;</li>
-        <li>определяем материалы и визуальную тональность;</li>
-        <li>собираем логику света, мебели и хранения;</li>
-        <li>готовим основу для смет, подрядчиков и дальнейшей документации;</li>
-        <li>снижаем риск дорогих ошибок на реализации.</li>
-      </ul>
+      <div class="signature-points">
+        <article class="signature-point">
+          <small>01</small>
+          <strong>Фиксация</strong>
+          <p class="muted">Ключевые решения по планировке, материалам и атмосфере.</p>
+        </article>
+        <article class="signature-point">
+          <small>02</small>
+          <strong>Логика</strong>
+          <p class="muted">Свет, мебель, хранение, отделка и технические зоны.</p>
+        </article>
+        <article class="signature-point">
+          <small>03</small>
+          <strong>Понятность</strong>
+          <p class="muted">Решения можно обсуждать с подрядчиками без угадываний.</p>
+        </article>
+        <article class="signature-point">
+          <small>04</small>
+          <strong>Контроль</strong>
+          <p class="muted">Меньше хаоса, меньше переделок, меньше дорогих ошибок.</p>
+        </article>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="section">
-  <div class="container">
-    <div class="project-grid">
-      <article class="project reveal">
-        <h3>Квартира под проживание</h3>
-        <p class="muted">Планировка, интерьерная база, материалы, сценарии и подготовка к отделке.</p>
-      </article>
+  <div class="container project-grid">
+    <article class="project reveal">
+      <h3>Квартира под проживание</h3>
+      <p class="muted">Планировка, интерьерная база, материалы, сценарии и подготовка к отделке.</p>
+    </article>
 
-      <article class="project reveal">
-        <h3>Дом под постоянную жизнь</h3>
-        <p class="muted">Архитектура, фасадный образ, внутренняя логика и связь с участком.</p>
-      </article>
-    </div>
+    <article class="project reveal">
+      <h3>Дом под постоянную жизнь</h3>
+      <p class="muted">Архитектура, фасадный образ, внутренняя логика и связь с участком.</p>
+    </article>
   </div>
 </section>
 

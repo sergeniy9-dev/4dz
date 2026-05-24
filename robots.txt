@@ -1,4 +1,5 @@
 ﻿User-agent: *
 Allow: /
 
-Sitemap: /sitemap.xml
+Host: asdesignhome.ru
+Sitemap: https://asdesignhome.ru/sitemap.xml

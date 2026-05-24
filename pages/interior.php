@@ -1,7 +1,7 @@
 ﻿<?php
 page_start(
     'Интерьерная логика',
-    'Интерьерная логика жилья: планировки, мебельные сценарии, свет, хранение и ощущение дорогого пространства.',
+    'Интерьерная логика жилья: планировки, мебельные сценарии, свет, хранение, материалы и ощущение дорогого пространства.',
     $currentRoute
 );
 ?>
@@ -11,9 +11,40 @@ page_start(
     <p class="eyebrow">Интерьер</p>
     <h1>Интерьер начинается не с дивана, а с планировки</h1>
     <p class="lead">
-      Хороший интерьер не держится на дорогой мебели. Он держится на пропорциях,
-      грамотных маршрутах, удобном хранении, световых сценариях и чистой визуальной дисциплине.
+      Хороший интерьер держится не на дорогих предметах, а на пропорциях,
+      маршрутах, хранении, свете, фактурах и дисциплине пространства.
     </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container presentation-strip">
+    <article class="presentation-card reveal">
+      <p class="eyebrow">План</p>
+      <h3>Маршруты без случайности</h3>
+      <p class="muted">Вход, гардероб, кухня, гостиная, спальни, санузлы и хранение работают как единый сценарий.</p>
+      <div class="mini-labels">
+        <span>проходы</span>
+        <span>виды</span>
+        <span>зоны</span>
+      </div>
+    </article>
+
+    <article class="presentation-card wide reveal">
+      <p class="eyebrow">Атмосфера</p>
+      <h3>Светлый интерьер не должен быть пустым</h3>
+      <p class="muted">
+        Чтобы пространство не стало холодным, добавляем фактуру: камень, дерево, латунь,
+        мягкую тень, арочные формы и спокойную мебельную геометрию.
+      </p>
+      <div class="mini-labels">
+        <span>мрамор</span>
+        <span>латунь</span>
+        <span>текстиль</span>
+        <span>теплый свет</span>
+        <span>скрытое хранение</span>
+      </div>
+    </article>
   </div>
 </section>
 
@@ -41,24 +72,40 @@ page_start(
   </div>
 </section>
 
-<section class="section">
-  <div class="container split">
-    <div>
-      <p class="eyebrow">Подход</p>
-      <h2>Дорого выглядит то, что не спорит само с собой</h2>
-    </div>
-    <div>
-      <p class="lead">
-        Мы убираем случайность: лишние формы, спорные материалы, визуальный шум и планировочные компромиссы,
-        которые потом дорого исправлять на стройке.
-      </p>
-      <ul class="list">
-        <li>пропорциональные помещения;</li>
-        <li>чистые оси и видовые точки;</li>
-        <li>скрытое хранение;</li>
-        <li>логика розеток, света и мебели;</li>
-        <li>основа для комплектации и отделки.</li>
-      </ul>
+<section class="signature-section">
+  <div class="container signature-board reveal">
+    <div class="signature-grid">
+      <div>
+        <p class="eyebrow">Детали</p>
+        <h2>Дорого выглядит то, что не спорит само с собой</h2>
+        <p class="lead">
+          Мы убираем визуальный шум и планировочные компромиссы,
+          которые потом дорого исправлять на стройке.
+        </p>
+      </div>
+
+      <div class="signature-points">
+        <article class="signature-point">
+          <small>свет</small>
+          <strong>Сценарии</strong>
+          <p class="muted">Дневной, вечерний, акцентный и функциональный свет.</p>
+        </article>
+        <article class="signature-point">
+          <small>мебель</small>
+          <strong>Габариты</strong>
+          <p class="muted">Мебель не “влезает потом”, а закладывается сразу.</p>
+        </article>
+        <article class="signature-point">
+          <small>хранение</small>
+          <strong>Скрытость</strong>
+          <p class="muted">Вещи не портят интерьер, потому что для них есть место.</p>
+        </article>
+        <article class="signature-point">
+          <small>ритм</small>
+          <strong>Оси</strong>
+          <p class="muted">Каждый важный вид внутри пространства заранее продуман.</p>
+        </article>
+      </div>
     </div>
   </div>
 </section>

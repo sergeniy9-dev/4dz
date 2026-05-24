@@ -129,3 +129,62 @@
     }
   });
 })();
+
+
+/* ---------- SHOWROOM LUXURY LIGHT TRACKING ---------- */
+(function () {
+  const targets = document.querySelectorAll(
+    '.hero-card, .card, .signature-point, .presentation-card, .project, .stat, .material-cell'
+  );
+
+  if (!targets.length) return;
+
+  targets.forEach(function (el) {
+    el.style.setProperty('--mx', '52%');
+    el.style.setProperty('--my', '18%');
+
+    el.addEventListener('pointermove', function (event) {
+      const rect = el.getBoundingClientRect();
+      const x = ((event.clientX - rect.left) / rect.width) * 100;
+      const y = ((event.clientY - rect.top) / rect.height) * 100;
+
+      el.style.setProperty('--mx', x.toFixed(2) + '%');
+      el.style.setProperty('--my', y.toFixed(2) + '%');
+    });
+
+    el.addEventListener('pointerleave', function () {
+      el.style.setProperty('--mx', '52%');
+      el.style.setProperty('--my', '18%');
+    });
+  });
+})();
+/* ---------- END SHOWROOM LUXURY LIGHT TRACKING ---------- */
+
+
+
+
+
+/* ---------- AS SHOWROOM TILE LIGHT ---------- */
+(function () {
+  const tiles = document.querySelectorAll('.showroom-tile');
+
+  tiles.forEach(function (tile) {
+    tile.style.setProperty('--mx', '50%');
+    tile.style.setProperty('--my', '20%');
+
+    tile.addEventListener('pointermove', function (event) {
+      const rect = tile.getBoundingClientRect();
+      const x = ((event.clientX - rect.left) / rect.width) * 100;
+      const y = ((event.clientY - rect.top) / rect.height) * 100;
+
+      tile.style.setProperty('--mx', x.toFixed(2) + '%');
+      tile.style.setProperty('--my', y.toFixed(2) + '%');
+    });
+
+    tile.addEventListener('pointerleave', function () {
+      tile.style.setProperty('--mx', '50%');
+      tile.style.setProperty('--my', '20%');
+    });
+  });
+})();
+/* ---------- END AS SHOWROOM TILE LIGHT ---------- */

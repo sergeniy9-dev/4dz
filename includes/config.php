@@ -1,8 +1,8 @@
 ﻿<?php
 
 const SITE = [
-    'name' => 'ARCHA',
-    'descriptor' => 'Архитектурная проработка жилья под реализацию',
+    'name' => 'AS ДИЗАЙН',
+    'descriptor' => 'Интерьеры • Архитектура',
     'phone' => '+7 000 000-00-00',
     'phone_href' => '+70000000000',
     'email' => 'hello@example.ru',
@@ -44,3 +44,8 @@ function asset(string $path): string
 {
     return url('assets/' . ltrim($path, '/'));
 }
+
+
+
+
+

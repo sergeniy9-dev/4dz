@@ -49,4 +49,42 @@ page_start(
   </div>
 </section>
 
+<section class="signature-section">
+  <div class="container signature-board reveal">
+    <div class="signature-grid">
+      <div>
+        <p class="eyebrow">Контроль процесса</p>
+        <h2>Каждый этап оставляет после себя понятный результат</h2>
+        <p class="lead">
+          Не “мы подумали и что-то нарисовали”, а конкретная точка фиксации:
+          планировка, образ, материалы, сценарии, состав следующих действий.
+        </p>
+      </div>
+
+      <div class="signature-points">
+        <article class="signature-point">
+          <small>до</small>
+          <strong>Вводные</strong>
+          <p class="muted">Понимаем объект, клиента, ограничения и желаемый уровень.</p>
+        </article>
+        <article class="signature-point">
+          <small>во время</small>
+          <strong>Сборка</strong>
+          <p class="muted">Соединяем архитектуру, интерьер и будущую реализацию.</p>
+        </article>
+        <article class="signature-point">
+          <small>после</small>
+          <strong>Пакет</strong>
+          <p class="muted">Передаем решения в понятной структуре для дальнейшей работы.</p>
+        </article>
+        <article class="signature-point">
+          <small>итог</small>
+          <strong>Спокойствие</strong>
+          <p class="muted">Меньше сомнений, случайных решений и дорогих переделок.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
 <?php page_end(); ?>

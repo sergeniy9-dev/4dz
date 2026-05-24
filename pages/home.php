@@ -1,122 +1,143 @@
 ﻿<?php
 page_start(
-    'Архитектурная проработка жилья',
-    'Дорогая архитектурная проработка частного жилья: планировки, фасады, интерьерная логика и подготовка под реализацию.',
+    'AS Дизайн — интерьеры и архитектура',
+    'AS Дизайн: премиальные интерьеры, архитектура, планировочные решения и комплексная проработка жилья.',
     $currentRoute
 );
 ?>
 
-<section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <p class="eyebrow js-letters">ARCHITECTURE FOR LIVING</p>
-      <h1 class="js-letters">Жилье, которое выглядит дорого еще до стройки</h1>
-      <p class="lead">
-        Прорабатываем архитектуру, планировочную логику, фасадный образ и интерьерную основу так,
-        чтобы дом или квартира были не просто красивыми на картинке, а понятными для реализации.
-      </p>
-      <div class="actions">
-        <a class="btn primary" href="<?= url('/contacts') ?>">Обсудить проект</a>
-        <a class="btn" href="<?= url('/architecture') ?>">Что входит</a>
-      </div>
+<section class="as-showcase">
+  <div class="container as-showcase-inner">
+    <div class="as-showcase-copy">
+      <p class="eyebrow">ДИЗАЙН, ПРОДУМАННЫЙ ДО МЕЛОЧЕЙ</p>
 
-      <div class="stats reveal">
-        <div class="stat">
-          <strong>01</strong>
-          <span>Архитектурная идея</span>
-        </div>
-        <div class="stat">
-          <strong>02</strong>
-          <span>Планировка под жизнь</span>
-        </div>
-        <div class="stat">
-          <strong>03</strong>
-          <span>Подготовка к реализации</span>
-        </div>
+      <h1>
+        Создаем интерьеры и архитектуру,<br>
+        <span>в которых хочется жить</span>
+      </h1>
+
+      <p class="lead">
+        Комплексный подход к проектированию частных и коммерческих пространств.
+        От концепции до подготовки решений под реализацию.
+      </p>
+
+      <div class="actions">
+        <a class="btn primary" href="<?= url('/contacts') ?>">Рассчитать проект</a>
+        <a class="btn" href="<?= url('/projects') ?>">Смотреть проекты</a>
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="hero-card reveal">
-      <div class="hero-badge">private residence</div>
-      <div class="hero-card-text">
-        <strong>Арка как символ входа в продуманное пространство</strong>
-        <p class="muted">
-          Минимализм, пропорции, спокойная премиальность и архитектурная дисциплина вместо случайного декора.
+<section class="as-tile-strip">
+  <div class="container as-tiles">
+    <a class="as-tile tile-architecture" href="<?= url('/architecture') ?>">
+      <div class="as-tile-text">
+        <h3>Архитектура</h3>
+        <p>Проектируем дома и общественные пространства с учетом контекста, функции и эстетики.</p>
+      </div>
+      <span>→</span>
+    </a>
+
+    <a class="as-tile tile-interior" href="<?= url('/interior') ?>">
+      <div class="as-tile-text">
+        <h3>Интерьеры</h3>
+        <p>Создаем гармоничные интерьеры для жизни и бизнеса — от идеи до финальных деталей.</p>
+      </div>
+      <span>→</span>
+    </a>
+
+    <a class="as-tile tile-fitout" href="<?= url('/fitout') ?>">
+      <div class="as-tile-text">
+        <h3>Под жилье</h3>
+        <p>Решения под ваш образ жизни: комфорт, функциональность и индивидуальность.</p>
+      </div>
+      <span>→</span>
+    </a>
+
+    <a class="as-tile tile-complex" href="<?= url('/process') ?>">
+      <div class="as-tile-text">
+        <h3>Комплексно</h3>
+        <p>Весь процесс под контролем: планирование, авторский надзор и подготовка решений.</p>
+      </div>
+      <span>→</span>
+    </a>
+  </div>
+</section>
+
+<section class="as-benefits">
+  <div class="container as-benefits-row">
+    <article>
+      <div class="as-benefit-icon">♕</div>
+      <div>
+        <h3>Премиальный подход</h3>
+        <p>Каждое решение основано на логике, опыте и внимании к деталям.</p>
+      </div>
+    </article>
+
+    <article>
+      <div class="as-benefit-icon">△</div>
+      <div>
+        <h3>Эстетика в деталях</h3>
+        <p>Материалы, свет, текстуры и формы создают цельное пространство.</p>
+      </div>
+    </article>
+
+    <article>
+      <div class="as-benefit-icon">▣</div>
+      <div>
+        <h3>Реализация под ключ</h3>
+        <p>От концепции до финальной реализации — без лишних хлопот.</p>
+      </div>
+    </article>
+
+    <article>
+      <div class="as-benefit-icon">◎</div>
+      <div>
+        <h3>Индивидуальность</h3>
+        <p>Каждый проект уникален и отражает характер владельца.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="signature-section">
+  <div class="container signature-board reveal">
+    <div class="signature-grid">
+      <div>
+        <p class="eyebrow">Философия студии</p>
+        <h2>Сначала ощущение, потом детали</h2>
+        <p class="lead">
+          Пространство должно продавать уровень еще до объяснений:
+          через свет, пропорции, фактуры, тишину, материалы и точную архитектурную подачу.
         </p>
       </div>
-    </div>
-  </div>
-</section>
 
-<div class="band">
-  <div class="marquee">
-    <div>
-      <span>ARCHITECTURE</span> / PLANNING / INTERIOR LOGIC / FACADE / REALIZATION / PREMIUM LIVING /
-      <span>ARCHITECTURE</span> / PLANNING / INTERIOR LOGIC / FACADE / REALIZATION / PREMIUM LIVING /
-    </div>
-    <div>
-      <span>ARCHITECTURE</span> / PLANNING / INTERIOR LOGIC / FACADE / REALIZATION / PREMIUM LIVING /
-      <span>ARCHITECTURE</span> / PLANNING / INTERIOR LOGIC / FACADE / REALIZATION / PREMIUM LIVING /
-    </div>
-  </div>
-</div>
+      <div class="signature-points">
+        <article class="signature-point">
+          <small>Фон</small>
+          <strong>Светлый камень</strong>
+          <p class="muted">Мраморная фактура, теплый тон и спокойная премиальность.</p>
+        </article>
 
-<section class="section">
-  <div class="container split">
-    <div class="reveal">
-      <p class="eyebrow">Суть работы</p>
-      <h2>Не рисуем красоту отдельно от жизни</h2>
-      <p class="lead">
-        Сначала собираем сценарии проживания, затем собираем архитектуру вокруг этих сценариев:
-        вход, свет, хранение, приватность, видовые точки, мебель, инженерия и будущая отделка.
-      </p>
-    </div>
+        <article class="signature-point">
+          <small>Акцент</small>
+          <strong>Латунная линия</strong>
+          <p class="muted">Тонкая графика, арки и мягкие световые контуры.</p>
+        </article>
 
-    <div class="cards">
-      <article class="card reveal">
-        <div class="card-num">01</div>
-        <h3>Планировочная логика</h3>
-        <p class="muted">Зонирование, маршруты, приватные и общие зоны, сценарии семьи и гостей.</p>
-      </article>
+        <article class="signature-point">
+          <small>Форма</small>
+          <strong>Арочный портал</strong>
+          <p class="muted">Символ входа в продуманное пространство.</p>
+        </article>
 
-      <article class="card reveal">
-        <div class="card-num">02</div>
-        <h3>Архитектурный образ</h3>
-        <p class="muted">Фасады, пропорции, материалы, арки, объемы, входная группа и визуальная цельность.</p>
-      </article>
-
-      <article class="card reveal">
-        <div class="card-num">03</div>
-        <h3>Под жилье</h3>
-        <p class="muted">Не абстрактный дизайн, а база для дальнейшей стройки, отделки и комплектации.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <p class="eyebrow">Направления</p>
-    <h2>От архитектурной идеи до понятного решения</h2>
-
-    <div class="cards">
-      <a class="card reveal" href="<?= url('/architecture') ?>">
-        <div class="card-num">A</div>
-        <h3>Архитектурная проработка</h3>
-        <p class="muted">Объем, фасады, посадка, входные сценарии и общее ощущение дома.</p>
-      </a>
-
-      <a class="card reveal" href="<?= url('/interior') ?>">
-        <div class="card-num">I</div>
-        <h3>Интерьерная логика</h3>
-        <p class="muted">Планировочные решения, мебельные зоны, свет, хранение и атмосфера.</p>
-      </a>
-
-      <a class="card reveal" href="<?= url('/fitout') ?>">
-        <div class="card-num">R</div>
-        <h3>Окончание под жилье</h3>
-        <p class="muted">Финальная упаковка решений, чтобы объект можно было вести дальше без хаоса.</p>
-      </a>
+        <article class="signature-point">
+          <small>Ритм</small>
+          <strong>Редкая типографика</strong>
+          <p class="muted">Воздух, крупные паузы и дорогая подача.</p>
+        </article>
+      </div>
     </div>
   </div>
 </section>
