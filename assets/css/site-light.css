@@ -2857,3 +2857,975 @@ body {
 }
 
 /* ---------- END AS INNER PAGES HERO IMAGES ---------- */
+
+
+/* ---------- AS INNER PREMIUM UPGRADE ---------- */
+
+/* Внутренний hero делаем как дорогую обложку */
+.page-hero {
+  min-height: 520px !important;
+  position: relative !important;
+  isolation: isolate !important;
+  border-bottom: 1px solid rgba(126,104,67,.16) !important;
+  box-shadow: inset 0 -1px 0 rgba(255,255,255,.55) !important;
+}
+
+.page-hero::before {
+  filter: saturate(1.02) contrast(1.05) brightness(.98) !important;
+  transform: scale(1.015);
+}
+
+.page-hero::after {
+  background:
+    linear-gradient(90deg,
+      rgba(247,242,233,.88) 0%,
+      rgba(247,242,233,.70) 30%,
+      rgba(247,242,233,.24) 58%,
+      rgba(247,242,233,.02) 100%),
+    radial-gradient(circle at 18% 42%, rgba(255,255,255,.38), transparent 22rem),
+    linear-gradient(180deg, transparent 0%, rgba(247,242,233,.36) 100%) !important;
+}
+
+/* Тонкие архитектурные линии поверх hero */
+.page-hero .page-hero-inner::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 58px;
+  width: min(520px, 44vw);
+  height: 1px;
+  background: linear-gradient(90deg, rgba(185,154,94,.72), transparent);
+  opacity: .9;
+}
+
+.page-hero .page-hero-inner::after {
+  content: "";
+  position: absolute;
+  left: min(680px, 54vw);
+  top: 74px;
+  bottom: 0;
+  width: min(310px, 28vw);
+  border: 1px solid rgba(185,154,94,.24);
+  border-bottom: 0;
+  border-radius: 999px 999px 0 0;
+  opacity: .75;
+  pointer-events: none;
+  box-shadow:
+    inset 0 0 38px rgba(255,255,255,.28),
+    0 0 36px rgba(185,154,94,.08);
+}
+
+.page-hero-inner {
+  padding: 96px 0 86px !important;
+}
+
+.page-hero-inner > div {
+  position: relative;
+  width: min(660px, 100%) !important;
+  padding: 34px 0 0;
+}
+
+/* Номер/маркер раздела */
+.page-hero .eyebrow {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 22px !important;
+  color: #8b7041 !important;
+  font-size: 12px !important;
+  letter-spacing: .28em !important;
+}
+
+.page-hero .eyebrow::before {
+  content: "";
+  width: 62px;
+  height: 1px;
+  background: rgba(185,154,94,.78);
+}
+
+/* Заголовок внутренней страницы: меньше шаблонности */
+.page-hero h1 {
+  font-size: clamp(48px, 5.1vw, 82px) !important;
+  line-height: 1.02 !important;
+  letter-spacing: .035em !important;
+  font-weight: 400 !important;
+  text-shadow:
+    0 14px 40px rgba(255,255,255,.78),
+    0 1px 0 rgba(255,255,255,.46) !important;
+}
+
+.page-hero .lead {
+  max-width: 560px !important;
+  font-size: 18px !important;
+  line-height: 1.68 !important;
+  color: #342e27 !important;
+  text-shadow: 0 10px 30px rgba(255,255,255,.75) !important;
+}
+
+.page-hero .actions {
+  margin-top: 30px !important;
+}
+
+/* Кнопки внутреннего hero более editorial */
+.page-hero .btn {
+  min-height: 52px !important;
+  border-radius: 0 !important;
+  padding: 0 28px !important;
+  text-transform: uppercase !important;
+  letter-spacing: .14em !important;
+  font-size: 12px !important;
+}
+
+.page-hero .btn:not(.primary) {
+  background: rgba(255,255,255,.48) !important;
+}
+
+/* Следующая секция после hero — как презентационный лист, а не обычный текст */
+.page-hero + .section {
+  position: relative;
+  margin-top: -34px !important;
+  padding-top: 92px !important;
+  background:
+    linear-gradient(180deg, rgba(247,242,233,.82), rgba(247,242,233,0) 34%),
+    radial-gradient(circle at 74% 12%, rgba(185,154,94,.10), transparent 20rem);
+}
+
+.page-hero + .section::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 28px;
+  width: min(1180px, calc(100% - 40px));
+  height: 1px;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, transparent, rgba(126,104,67,.26), transparent);
+}
+
+/* Split-блок делаем как архитектурную доску */
+.page-hero + .section .split {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(126,104,67,.14);
+  border-radius: 42px;
+  padding: clamp(28px, 5vw, 62px);
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.76), rgba(239,231,217,.90)),
+    radial-gradient(circle at 18% 12%, rgba(255,255,255,.82), transparent 18rem),
+    radial-gradient(circle at 86% 18%, rgba(185,154,94,.10), transparent 22rem);
+  box-shadow:
+    0 34px 95px rgba(77,62,38,.10),
+    inset 0 0 0 1px rgba(255,255,255,.58),
+    inset 0 1px 0 rgba(255,255,255,.82);
+}
+
+.page-hero + .section .split::before {
+  content: "";
+  position: absolute;
+  right: clamp(30px, 8vw, 112px);
+  top: clamp(36px, 6vw, 74px);
+  width: min(260px, 28vw);
+  height: min(360px, 38vw);
+  border: 1px solid rgba(185,154,94,.26);
+  border-bottom: 0;
+  border-radius: 999px 999px 0 0;
+  pointer-events: none;
+  opacity: .85;
+}
+
+.page-hero + .section .split::after {
+  content: "";
+  position: absolute;
+  inset: 22px;
+  border: 1px solid rgba(126,104,67,.07);
+  border-radius: 30px;
+  pointer-events: none;
+}
+
+/* Левая часть секции */
+.page-hero + .section .split > div:first-child {
+  position: relative;
+  z-index: 2;
+  padding-right: 10px;
+}
+
+.page-hero + .section .split > div:first-child .eyebrow {
+  color: #8b7041 !important;
+}
+
+.page-hero + .section .split > div:first-child h2 {
+  font-size: clamp(38px, 4.2vw, 68px) !important;
+  line-height: 1.04 !important;
+  letter-spacing: -.025em !important;
+}
+
+.page-hero + .section .split > div:first-child p {
+  max-width: 520px;
+  color: #50473b !important;
+}
+
+/* Карточки на внутренних страницах — как материал-образцы */
+.page-hero + .section .cards {
+  position: relative;
+  z-index: 2;
+  gap: 14px !important;
+}
+
+.page-hero + .section .card {
+  min-height: 230px !important;
+  border-radius: 28px !important;
+  padding: 24px !important;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.76), rgba(232,222,207,.92)) !important;
+  border-color: rgba(126,104,67,.17) !important;
+}
+
+.page-hero + .section .card::after {
+  opacity: .18 !important;
+}
+
+.page-hero + .section .card-num {
+  margin-bottom: 30px !important;
+  color: #8b7041 !important;
+  font-size: 12px !important;
+}
+
+.page-hero + .section .card h3 {
+  font-size: 24px !important;
+}
+
+.page-hero + .section .card p {
+  color: #50473b !important;
+}
+
+/* Для страницы fitout конкретно — чтобы стул и фон выглядели дороже */
+.page-hero-fitout::after {
+  background:
+    linear-gradient(90deg,
+      rgba(247,242,233,.90) 0%,
+      rgba(247,242,233,.72) 28%,
+      rgba(247,242,233,.20) 56%,
+      rgba(247,242,233,.00) 100%),
+    radial-gradient(circle at 20% 44%, rgba(255,255,255,.42), transparent 22rem),
+    linear-gradient(180deg, transparent 0%, rgba(247,242,233,.28) 100%) !important;
+}
+
+.page-hero-fitout::before {
+  background-position: center right !important;
+}
+
+/* Микро-эффект: фото чуть приближается, но без дергания */
+.page-hero::before {
+  animation: innerHeroBreath 12s ease-in-out infinite alternate;
+}
+
+@keyframes innerHeroBreath {
+  from {
+    transform: scale(1.01);
+  }
+  to {
+    transform: scale(1.035);
+  }
+}
+
+/* Уважение к reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .page-hero::before {
+    animation: none !important;
+  }
+}
+
+/* Адаптив */
+@media (max-width: 980px) {
+  .page-hero {
+    min-height: 620px !important;
+  }
+
+  .page-hero::after {
+    background:
+      linear-gradient(180deg,
+        rgba(247,242,233,.92) 0%,
+        rgba(247,242,233,.72) 48%,
+        rgba(247,242,233,.24) 100%) !important;
+  }
+
+  .page-hero .page-hero-inner::after {
+    display: none;
+  }
+
+  .page-hero-inner {
+    padding: 66px 0 260px !important;
+  }
+
+  .page-hero + .section .split {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 680px) {
+  .page-hero h1 {
+    font-size: clamp(38px, 11vw, 56px) !important;
+    letter-spacing: .015em !important;
+  }
+
+  .page-hero .lead {
+    font-size: 16px !important;
+  }
+
+  .page-hero + .section {
+    padding-top: 70px !important;
+  }
+
+  .page-hero + .section .split {
+    border-radius: 30px;
+  }
+}
+
+/* ---------- END AS INNER PREMIUM UPGRADE ---------- */
+
+
+/* ---------- INNER SECTION BACKGROUND IMAGE ---------- */
+
+.page-hero + .section {
+  position: relative !important;
+  overflow: hidden !important;
+  background:
+    linear-gradient(180deg,
+      rgba(247,242,233,.90) 0%,
+      rgba(247,242,233,.74) 38%,
+      rgba(247,242,233,.92) 100%),
+    url("../img/inner-section-bg.png") center center / cover no-repeat !important;
+}
+
+.page-hero + .section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 24% 18%, rgba(255,255,255,.54), transparent 26rem),
+    linear-gradient(90deg, rgba(247,242,233,.36), rgba(247,242,233,.18));
+  z-index: 0;
+}
+
+.page-hero + .section > .container {
+  position: relative;
+  z-index: 2;
+}
+
+.page-hero + .section .split {
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.72), rgba(239,231,217,.78)) !important;
+  backdrop-filter: blur(10px) saturate(112%) !important;
+}
+
+/* ---------- END INNER SECTION BACKGROUND IMAGE ---------- */
+
+
+
+/* ---------- ARCHITECTURE SECTION BG FINAL ---------- */
+
+/* Фон именно для секции после hero на странице Архитектура */
+.page-hero-architecture + .section {
+  position: relative !important;
+  overflow: hidden !important;
+  background:
+    linear-gradient(180deg,
+      rgba(247,242,233,.86) 0%,
+      rgba(247,242,233,.70) 42%,
+      rgba(247,242,233,.90) 100%),
+    url("../img/architecture-section-bg.png") center center / cover no-repeat !important;
+}
+
+/* Мягкий слой, чтобы текст и карточки читались */
+.page-hero-architecture + .section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 22% 18%, rgba(255,255,255,.58), transparent 26rem),
+    linear-gradient(90deg,
+      rgba(247,242,233,.34),
+      rgba(247,242,233,.16) 52%,
+      rgba(247,242,233,.28));
+}
+
+/* Контент поверх фоновой картинки */
+.page-hero-architecture + .section > .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Центральная доска становится стеклянной, чтобы было видно фон */
+.page-hero-architecture + .section .split {
+  background:
+    linear-gradient(145deg,
+      rgba(255,255,255,.68),
+      rgba(239,231,217,.74)) !important;
+  backdrop-filter: blur(12px) saturate(112%) !important;
+  border-color: rgba(126,104,67,.18) !important;
+  box-shadow:
+    0 36px 105px rgba(77,62,38,.13),
+    inset 0 0 0 1px rgba(255,255,255,.60),
+    inset 0 1px 0 rgba(255,255,255,.84) !important;
+}
+
+/* Карточки внутри архитектурного блока чуть плотнее */
+.page-hero-architecture + .section .card {
+  background:
+    linear-gradient(145deg,
+      rgba(255,255,255,.76),
+      rgba(232,222,207,.82)) !important;
+  backdrop-filter: blur(10px) saturate(110%) !important;
+  border-color: rgba(126,104,67,.18) !important;
+}
+
+/* Убираем излишний пересвет на карточках */
+.page-hero-architecture + .section .card::after {
+  opacity: .14 !important;
+}
+
+/* ---------- END ARCHITECTURE SECTION BG FINAL ---------- */
+
+
+/* ---------- ARCHITECTURE DE-WHITE FIX ---------- */
+
+/* HERO сверху: меньше белой пелены */
+.page-hero-architecture::after {
+  background:
+    linear-gradient(90deg,
+      rgba(247,242,233,.72) 0%,
+      rgba(247,242,233,.52) 28%,
+      rgba(247,242,233,.16) 58%,
+      rgba(247,242,233,.02) 100%),
+    radial-gradient(circle at 18% 40%, rgba(255,255,255,.22), transparent 22rem),
+    linear-gradient(180deg, transparent 0%, rgba(247,242,233,.18) 100%) !important;
+}
+
+/* Блок под hero: фон делаем заметнее */
+.page-hero-architecture + .section {
+  background:
+    linear-gradient(180deg,
+      rgba(247,242,233,.64) 0%,
+      rgba(247,242,233,.46) 38%,
+      rgba(247,242,233,.68) 100%),
+    url("../img/architecture-section-bg.png") center center / cover no-repeat !important;
+}
+
+/* Убираем сильный белый слой поверх фоновой картинки */
+.page-hero-architecture + .section::after {
+  background:
+    radial-gradient(circle at 20% 18%, rgba(255,255,255,.24), transparent 24rem),
+    linear-gradient(90deg,
+      rgba(247,242,233,.18),
+      rgba(247,242,233,.08) 52%,
+      rgba(247,242,233,.14)) !important;
+}
+
+/* Центральная доска: менее молочная, больше стеклянности */
+.page-hero-architecture + .section .split {
+  background:
+    linear-gradient(145deg,
+      rgba(255,255,255,.48),
+      rgba(234,224,210,.56)) !important;
+  backdrop-filter: blur(8px) saturate(108%) !important;
+  box-shadow:
+    0 28px 84px rgba(77,62,38,.10),
+    inset 0 0 0 1px rgba(255,255,255,.44),
+    inset 0 1px 0 rgba(255,255,255,.66) !important;
+}
+
+/* Внутренние карточки тоже менее белые */
+.page-hero-architecture + .section .card {
+  background:
+    linear-gradient(145deg,
+      rgba(255,255,255,.58),
+      rgba(229,219,204,.68)) !important;
+  border-color: rgba(126,104,67,.18) !important;
+  box-shadow:
+    0 18px 42px rgba(77,62,38,.08),
+    inset 0 0 0 1px rgba(255,255,255,.34) !important;
+}
+
+/* Блики на карточках уменьшаем */
+.page-hero-architecture + .section .card::after {
+  opacity: .08 !important;
+}
+
+/* Текст делаем немного плотнее по цвету */
+.page-hero-architecture + .section h2,
+.page-hero-architecture + .section .card h3 {
+  color: #221f1a !important;
+}
+
+.page-hero-architecture + .section p,
+.page-hero-architecture + .section .muted,
+.page-hero-architecture + .section .card p {
+  color: #4b4338 !important;
+}
+
+/* ---------- END ARCHITECTURE DE-WHITE FIX ---------- */
+
+
+/* ---------- SIGNATURE SECTION BACKGROUND FINAL ---------- */
+
+.signature-section {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.signature-board {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  background:
+    linear-gradient(90deg,
+      rgba(247,242,233,.82) 0%,
+      rgba(247,242,233,.62) 42%,
+      rgba(247,242,233,.38) 100%),
+    url("../img/signature-section-bg.png") center center / cover no-repeat !important;
+  border-color: rgba(126,104,67,.18) !important;
+  box-shadow:
+    0 36px 110px rgba(77,62,38,.13),
+    inset 0 0 0 1px rgba(255,255,255,.54),
+    inset 0 1px 0 rgba(255,255,255,.78) !important;
+}
+
+.signature-board::before {
+  opacity: .55 !important;
+}
+
+.signature-board::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+  border-radius: inherit !important;
+  background:
+    radial-gradient(circle at 18% 22%, rgba(255,255,255,.46), transparent 24rem),
+    linear-gradient(90deg,
+      rgba(255,255,255,.30) 0%,
+      rgba(255,255,255,.12) 48%,
+      rgba(255,255,255,.04) 100%) !important;
+}
+
+.signature-board > * {
+  position: relative !important;
+  z-index: 3 !important;
+}
+
+.signature-point {
+  background:
+    linear-gradient(145deg,
+      rgba(255,255,255,.66),
+      rgba(235,225,210,.62)) !important;
+  backdrop-filter: blur(10px) saturate(112%) !important;
+  border-color: rgba(126,104,67,.18) !important;
+}
+
+.signature-point::after {
+  opacity: .12 !important;
+}
+
+.signature-board h2,
+.signature-board h3,
+.signature-board strong {
+  color: #221f1a !important;
+}
+
+.signature-board p,
+.signature-board .muted,
+.signature-point p {
+  color: #4b4338 !important;
+}
+
+/* ---------- END SIGNATURE SECTION BACKGROUND FINAL ---------- */
+
+
+
+
+
+/* ---------- DETAILS SECTION BACKGROUND FINAL ---------- */
+
+/* Фон для блока "Детали / Дорого выглядит то, что не спорит само с собой" */
+.page-hero-interior + .section {
+  position: relative !important;
+  overflow: hidden !important;
+  background:
+    linear-gradient(180deg,
+      rgba(247,242,233,.66) 0%,
+      rgba(247,242,233,.46) 42%,
+      rgba(247,242,233,.70) 100%),
+    url("../img/details-section-bg.png") center center / cover no-repeat !important;
+}
+
+/* Мягкий слой поверх фото, чтобы текст читался */
+.page-hero-interior + .section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 22% 18%, rgba(255,255,255,.28), transparent 25rem),
+    linear-gradient(90deg,
+      rgba(247,242,233,.18),
+      rgba(247,242,233,.06) 52%,
+      rgba(247,242,233,.12)) !important;
+}
+
+/* Контент поверх фоновой картинки */
+.page-hero-interior + .section > .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Центральная доска — стеклянная, не белый лист */
+.page-hero-interior + .section .split {
+  background:
+    linear-gradient(145deg,
+      rgba(255,255,255,.50),
+      rgba(234,224,210,.58)) !important;
+  backdrop-filter: blur(8px) saturate(108%) !important;
+  border-color: rgba(126,104,67,.18) !important;
+  box-shadow:
+    0 30px 88px rgba(77,62,38,.11),
+    inset 0 0 0 1px rgba(255,255,255,.46),
+    inset 0 1px 0 rgba(255,255,255,.68) !important;
+}
+
+/* Карточки внутри блока */
+.page-hero-interior + .section .card {
+  background:
+    linear-gradient(145deg,
+      rgba(255,255,255,.60),
+      rgba(229,219,204,.70)) !important;
+  backdrop-filter: blur(10px) saturate(110%) !important;
+  border-color: rgba(126,104,67,.18) !important;
+  box-shadow:
+    0 18px 46px rgba(77,62,38,.08),
+    inset 0 0 0 1px rgba(255,255,255,.36) !important;
+}
+
+/* Убираем пересвет с карточек */
+.page-hero-interior + .section .card::after {
+  opacity: .08 !important;
+}
+
+/* Текст плотнее и читабельнее */
+.page-hero-interior + .section h2,
+.page-hero-interior + .section .card h3 {
+  color: #221f1a !important;
+}
+
+.page-hero-interior + .section p,
+.page-hero-interior + .section .muted,
+.page-hero-interior + .section .card p {
+  color: #4b4338 !important;
+}
+
+/* ---------- END DETAILS SECTION BACKGROUND FINAL ---------- */
+
+
+/* ---------- FITOUT SECTION BACKGROUND FINAL ---------- */
+
+/* Фон для блока "Смысл / Финальная проработка" на странице Под жилье */
+.page-hero-fitout + .section {
+  position: relative !important;
+  overflow: hidden !important;
+  background:
+    linear-gradient(180deg,
+      rgba(247,242,233,.68) 0%,
+      rgba(247,242,233,.48) 42%,
+      rgba(247,242,233,.74) 100%),
+    url("../img/fitout-section-bg.png") center center / cover no-repeat !important;
+}
+
+.page-hero-fitout + .section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 22% 18%, rgba(255,255,255,.28), transparent 25rem),
+    linear-gradient(90deg,
+      rgba(247,242,233,.20),
+      rgba(247,242,233,.08) 52%,
+      rgba(247,242,233,.12)) !important;
+}
+
+.page-hero-fitout + .section > .container {
+  position: relative;
+  z-index: 2;
+}
+
+.page-hero-fitout + .section .split {
+  background:
+    linear-gradient(145deg,
+      rgba(255,255,255,.52),
+      rgba(234,224,210,.60)) !important;
+  backdrop-filter: blur(8px) saturate(108%) !important;
+  border-color: rgba(126,104,67,.18) !important;
+  box-shadow:
+    0 30px 88px rgba(77,62,38,.11),
+    inset 0 0 0 1px rgba(255,255,255,.46),
+    inset 0 1px 0 rgba(255,255,255,.68) !important;
+}
+
+.page-hero-fitout + .section .card {
+  background:
+    linear-gradient(145deg,
+      rgba(255,255,255,.62),
+      rgba(229,219,204,.72)) !important;
+  backdrop-filter: blur(10px) saturate(110%) !important;
+  border-color: rgba(126,104,67,.18) !important;
+  box-shadow:
+    0 18px 46px rgba(77,62,38,.08),
+    inset 0 0 0 1px rgba(255,255,255,.36) !important;
+}
+
+.page-hero-fitout + .section .card::after {
+  opacity: .08 !important;
+}
+
+.page-hero-fitout + .section h2,
+.page-hero-fitout + .section .card h3 {
+  color: #221f1a !important;
+}
+
+.page-hero-fitout + .section p,
+.page-hero-fitout + .section .muted,
+.page-hero-fitout + .section .card p {
+  color: #4b4338 !important;
+}
+
+/* ---------- END FITOUT SECTION BACKGROUND FINAL ---------- */
+
+
+/* ---------- PROJECTS PAGE PREMIUM FINAL ---------- */
+
+.projects-hero {
+  position: relative;
+  min-height: 520px;
+  overflow: hidden;
+  display: grid;
+  align-items: center;
+  border-bottom: 1px solid rgba(126,104,67,.13);
+  background:
+    linear-gradient(90deg,
+      rgba(247,242,233,.92) 0%,
+      rgba(247,242,233,.70) 34%,
+      rgba(247,242,233,.26) 62%,
+      rgba(247,242,233,.02) 100%),
+    url("../img/projects-hero-bg.png") center center / cover no-repeat;
+}
+
+.projects-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 18% 42%, rgba(255,255,255,.34), transparent 22rem),
+    linear-gradient(180deg, transparent 0%, rgba(247,242,233,.24) 100%);
+}
+
+.projects-hero-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.projects-hero-copy {
+  width: min(620px, 100%);
+}
+
+.projects-hero .eyebrow {
+  color: #8b7041 !important;
+}
+
+.projects-hero h1 {
+  font-size: clamp(48px, 5.2vw, 84px) !important;
+  line-height: 1.04 !important;
+  letter-spacing: .035em !important;
+  margin-bottom: 24px !important;
+  color: #221f1a !important;
+  text-shadow: 0 14px 38px rgba(255,255,255,.72);
+}
+
+.projects-hero .lead {
+  max-width: 560px;
+  color: #40382f !important;
+  font-size: 18px !important;
+  line-height: 1.65 !important;
+}
+
+.projects-showcase {
+  position: relative;
+  padding: 72px 0 84px;
+  background:
+    radial-gradient(circle at 76% 10%, rgba(185,154,94,.08), transparent 24rem),
+    linear-gradient(180deg, #f4eee5, #eee5d8);
+}
+
+.project-filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 44px;
+}
+
+.project-filters button {
+  min-height: 42px;
+  padding: 0 24px;
+  border: 1px solid rgba(126,104,67,.18);
+  border-radius: 999px;
+  background: rgba(255,255,255,.44);
+  color: #5a5146;
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.project-filters button.active,
+.project-filters button:hover {
+  background: linear-gradient(135deg, #c4a165, #a98243);
+  color: #fff8ed;
+  border-color: transparent;
+}
+
+.projects-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.project-case {
+  overflow: hidden;
+  border-radius: 28px;
+  border: 1px solid rgba(126,104,67,.16);
+  background: rgba(255,255,255,.56);
+  box-shadow:
+    0 28px 80px rgba(77,62,38,.10),
+    inset 0 0 0 1px rgba(255,255,255,.54);
+}
+
+.project-case-img {
+  min-height: 260px;
+  background-size: cover;
+  background-position: center;
+}
+
+.img-house {
+  background-image: url("../img/project-architecture-house.png");
+}
+
+.img-sofa {
+  background-image: url("../img/project-interior-sofa.png");
+}
+
+.img-chair {
+  background-image: url("../img/project-fitout-chair.png");
+}
+
+.img-complex {
+  background-image: url("../img/project-complex-as.png");
+}
+
+.project-case-body {
+  padding: 26px 28px 28px;
+}
+
+.project-case h3 {
+  margin-bottom: 12px;
+  font-size: 28px !important;
+  color: #221f1a !important;
+}
+
+.project-case p {
+  color: #4b4338;
+  max-width: 520px;
+}
+
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+  color: #786b5a;
+  font-size: 14px;
+}
+
+.project-meta span:not(:last-child)::after {
+  content: "•";
+  margin-left: 12px;
+  color: #b99a5e;
+}
+
+.project-case-accent {
+  background:
+    linear-gradient(145deg, rgba(71,63,51,.92), rgba(120,105,82,.92));
+  border-color: rgba(224,199,142,.28);
+}
+
+.project-case-accent h3,
+.project-case-accent p,
+.project-case-accent .project-meta {
+  color: #fff8ed !important;
+}
+
+.projects-cta {
+  padding: 0 0 90px;
+  background: #eee5d8;
+}
+
+.projects-cta-board {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 40px;
+  align-items: center;
+  border: 1px solid rgba(126,104,67,.14);
+  border-radius: 34px;
+  padding: clamp(28px, 5vw, 54px);
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.72), rgba(235,225,210,.76));
+  box-shadow: 0 28px 80px rgba(77,62,38,.09);
+}
+
+.projects-cta h2 {
+  font-size: clamp(32px, 3.4vw, 56px) !important;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 880px) {
+  .projects-card-grid,
+  .projects-cta-board {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-hero {
+    min-height: 620px;
+    background:
+      linear-gradient(180deg,
+        rgba(247,242,233,.94) 0%,
+        rgba(247,242,233,.72) 52%,
+        rgba(247,242,233,.22) 100%),
+      url("../img/projects-hero-bg.png") 58% center / cover no-repeat;
+  }
+}
+
+@media (max-width: 560px) {
+  .projects-showcase {
+    padding-top: 52px;
+  }
+
+  .project-case-img {
+    min-height: 210px;
+  }
+}
+
+/* ---------- END PROJECTS PAGE PREMIUM FINAL ---------- */
