@@ -1,19 +1,25 @@
 ﻿<?php
 page_start(
     'Этапы работы',
-    'Этапы архитектурной и интерьерной проработки жилья: бриф, концепция, планировки, образ, финальная упаковка.',
+    'Этапы работы архитектурной студии: бриф, планировка, концепция, материалы, авторский надзор и подготовка решений.',
     $currentRoute
 );
 ?>
 
-<section class="section">
-  <div class="container narrow">
-    <p class="eyebrow">Этапы</p>
-    <h1>Работа должна идти спокойно и понятно</h1>
-    <p class="lead">
-      Клиенту не нужно разбираться в каждом техническом нюансе.
-      Ему нужно видеть логику: что делаем сейчас, что будет следующим шагом и какой результат получаем.
-    </p>
+<section class="page-hero page-hero-process">
+  <div class="container page-hero-inner">
+    <div>
+      <p class="eyebrow">ЭТАПЫ РАБОТЫ</p>
+      <h1>Весь процесс под контролем</h1>
+      <p class="lead">
+        От первой идеи до подготовленных решений: планирование, концепция,
+        визуальная логика, авторский надзор и сопровождение проекта.
+      </p>
+      <div class="actions">
+        <a class="btn primary" href="<?= url('/contacts') ?>">Начать проект</a>
+        <a class="btn" href="<?= url('/architecture') ?>">Что входит</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -22,68 +28,30 @@ page_start(
     <article class="step reveal">
       <div>
         <h3>Бриф и задача</h3>
-        <p class="muted">Собираем вводные: объект, образ жизни, бюджетный ориентир, сроки, ограничения и ожидания.</p>
+        <p class="muted">Собираем вводные: объект, стиль жизни, ограничения, бюджетный ориентир и ожидания.</p>
       </div>
     </article>
 
     <article class="step reveal">
       <div>
         <h3>Планировочная основа</h3>
-        <p class="muted">Прорабатываем функциональную структуру, маршруты, зоны, мебель и будущие сценарии.</p>
+        <p class="muted">Прорабатываем функциональную структуру, маршруты, мебель и сценарии.</p>
       </div>
     </article>
 
     <article class="step reveal">
       <div>
-        <h3>Архитектурный образ</h3>
-        <p class="muted">Формируем визуальный язык: пропорции, арки, фасады, материалы, свет и характер объекта.</p>
+        <h3>Визуальная концепция</h3>
+        <p class="muted">Формируем образ, материалы, свет, арки, фактуры и настроение объекта.</p>
       </div>
     </article>
 
     <article class="step reveal">
       <div>
-        <h3>Финальная упаковка</h3>
-        <p class="muted">Собираем решения в понятный комплект, с которым можно двигаться к реализации.</p>
+        <h3>Подготовка решений</h3>
+        <p class="muted">Собираем понятный комплект для дальнейшей реализации и общения с подрядчиками.</p>
       </div>
     </article>
-  </div>
-</section>
-
-<section class="signature-section">
-  <div class="container signature-board reveal">
-    <div class="signature-grid">
-      <div>
-        <p class="eyebrow">Контроль процесса</p>
-        <h2>Каждый этап оставляет после себя понятный результат</h2>
-        <p class="lead">
-          Не “мы подумали и что-то нарисовали”, а конкретная точка фиксации:
-          планировка, образ, материалы, сценарии, состав следующих действий.
-        </p>
-      </div>
-
-      <div class="signature-points">
-        <article class="signature-point">
-          <small>до</small>
-          <strong>Вводные</strong>
-          <p class="muted">Понимаем объект, клиента, ограничения и желаемый уровень.</p>
-        </article>
-        <article class="signature-point">
-          <small>во время</small>
-          <strong>Сборка</strong>
-          <p class="muted">Соединяем архитектуру, интерьер и будущую реализацию.</p>
-        </article>
-        <article class="signature-point">
-          <small>после</small>
-          <strong>Пакет</strong>
-          <p class="muted">Передаем решения в понятной структуре для дальнейшей работы.</p>
-        </article>
-        <article class="signature-point">
-          <small>итог</small>
-          <strong>Спокойствие</strong>
-          <p class="muted">Меньше сомнений, случайных решений и дорогих переделок.</p>
-        </article>
-      </div>
-    </div>
   </div>
 </section>
 
