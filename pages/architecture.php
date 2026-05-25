@@ -23,10 +23,10 @@ page_start(
   </div>
 </section>
 
-<section class="section">
-  <div class="container split">
-    <div>
-      <p class="eyebrow">Подход</p>
+<section class="section architecture-gem-section">
+  <div class="container architecture-gem-layout">
+    <div class="architecture-gem-copy">
+      <p class="eyebrow">ПОДХОД</p>
       <h2>Архитектура должна выглядеть собранной, а не украшенной после</h2>
       <p class="muted">
         Мы работаем с пропорциями, светом, входом, приватностью, фасадным ритмом
@@ -34,26 +34,31 @@ page_start(
       </p>
     </div>
 
-    <div class="cards">
-      <article class="card reveal">
-        <div class="card-num">01</div>
-        <h3>Объем</h3>
-        <p class="muted">Высоты, масса, силуэт, ритм фасада и читаемость архитектуры.</p>
-      </article>
+    <figure class="gem-infographic reveal">
+      <!-- ---------- AS ARCH STONE CARDS FINAL ---------- -->
+<div class="architecture-stone-grid" aria-label="Архитектурные принципы">
+  <article class="architecture-stone-card architecture-stone-card--01">
+    <span>01</span>
+    <h3>Объем</h3>
+    <p>Высоты, масса, силуэт, ритм фасада и читаемость архитектуры.</p>
+  </article>
 
-      <article class="card reveal">
-        <div class="card-num">02</div>
-        <h3>Фасад</h3>
-        <p class="muted">Материалы, фактуры, арочные элементы, свет и статус объекта.</p>
-      </article>
+  <article class="architecture-stone-card architecture-stone-card--02">
+    <span>02</span>
+    <h3>Фасад</h3>
+    <p>Материалы, фактуры, арочные элементы, свет и статус объекта.</p>
+  </article>
 
-      <article class="card reveal">
-        <div class="card-num">03</div>
-        <h3>Связь с интерьером</h3>
-        <p class="muted">Окна, виды, мебельные оси, свет и логика будущей отделки.</p>
-      </article>
-    </div>
+  <article class="architecture-stone-card architecture-stone-card--03">
+    <span>03</span>
+    <h3>Связь с интерьером</h3>
+    <p>Окна, виды, мебельные оси, свет и логика будущей отделки.</p>
+  </article>
+</div>
+<!-- ---------- END AS ARCH STONE CARDS FINAL ---------- -->
+    </figure>
   </div>
 </section>
 
 <?php page_end(); ?>
+

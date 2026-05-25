@@ -1,4 +1,10 @@
-﻿.DS_Store
+﻿*.bak
+*.bak-*
+*.broken-*
+*.zip
+_publish/
+_deploy/
+.DS_Store
 Thumbs.db
 .vscode/
-leads/*.csv
+.idea/

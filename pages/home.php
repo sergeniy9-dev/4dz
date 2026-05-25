@@ -6,140 +6,92 @@ page_start(
 );
 ?>
 
-<section class="as-showcase">
-  <div class="container as-showcase-inner">
-    <div class="as-showcase-copy">
-      <p class="eyebrow">ДИЗАЙН, ПРОДУМАННЫЙ ДО МЕЛОЧЕЙ</p>
+<!-- AS HOME REF CARDS START -->
+<section class="as-home-ref-cards">
+  <div class="container">
+    <div class="as-home-ref-cards-grid">
+      <a class="as-home-ref-card reveal" href="/architecture">
+        <img src="/assets/img/home-card-architecture.png?v=8" alt="Архитектура">
+        <div class="as-home-ref-card__body">
+          <h3>Архитектура</h3>
+          <p>Объем, фасад, посадка дома, планировка и архитектурный образ.</p>
+          <span>Перейти в раздел →</span>
+        </div>
+      </a>
 
-      <h1>
-        Создаем интерьеры и архитектуру,<br>
-        <span>в которых хочется жить</span>
-      </h1>
+      <a class="as-home-ref-card reveal" href="/interior">
+        <img src="/assets/img/home-card-interior.png?v=8" alt="Интерьер">
+        <div class="as-home-ref-card__body">
+          <h3>Интерьер</h3>
+          <p>Свет, материалы, мебель, сценарии жизни и спокойная атмосфера.</p>
+          <span>Перейти в раздел →</span>
+        </div>
+      </a>
 
-      <p class="lead">
-        Комплексный подход к проектированию частных и коммерческих пространств.
-        От концепции до подготовки решений под реализацию.
+      <a class="as-home-ref-card reveal" href="/fitout">
+        <img src="/assets/img/home-card-fitout.png?v=8" alt="Под ключ">
+        <div class="as-home-ref-card__body">
+          <h3>Под ключ</h3>
+          <p>Комплектация, поставки, сопровождение и финальная сборка пространства.</p>
+          <span>Перейти в раздел →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+<!-- AS HOME REF CARDS END -->
+<section class="section stone-section">
+  <div class="container stone-layout">
+    <div class="stone-section-head reveal">
+      <p class="eyebrow">ФИЛОСОФИЯ СТУДИИ</p>
+      <h2>Сначала ощущение, потом детали</h2>
+      <p class="muted">
+        Пространство должно продавать уровень еще до объяснений: через свет,
+        пропорции, фактуры, тишину, материалы и точную архитектурную подачу.
       </p>
+    </div>
 
-      <div class="actions">
-        <a class="btn primary" href="<?= url('/contacts') ?>">Рассчитать проект</a>
-        <a class="btn" href="<?= url('/projects') ?>">Смотреть проекты</a>
-      </div>
+    <div class="stone-grid">
+      <article class="stone-card stone-card--01 reveal">
+        <div class="stone-card__content">
+          <span>ФОН</span>
+          <h3>Светлый камень</h3>
+          <p>Мраморная фактура, теплый тон и спокойная премиальность.</p>
+        </div>
+      </article>
+
+      <article class="stone-card stone-card--02 reveal">
+        <div class="stone-card__content">
+          <span>АКЦЕНТ</span>
+          <h3>Латунная линия</h3>
+          <p>Тонкая графика, арки и мягкие световые контуры.</p>
+        </div>
+      </article>
+
+      <article class="stone-card stone-card--03 reveal">
+        <div class="stone-card__content">
+          <span>ФОРМА</span>
+          <h3>Арочный портал</h3>
+          <p>Символ входа в продуманное пространство.</p>
+        </div>
+      </article>
+
+      <article class="stone-card stone-card--04 reveal">
+        <div class="stone-card__content">
+          <span>РИТМ</span>
+          <h3>Редкая типографика</h3>
+          <p>Воздух, крупные паузы и дорогая подача.</p>
+        </div>
+      </article>
     </div>
   </div>
 </section>
 
-<section class="as-tile-strip">
-  <div class="container as-tiles">
-    <a class="as-tile tile-architecture" href="<?= url('/architecture') ?>">
-      <div class="as-tile-text">
-        <h3>Архитектура</h3>
-        <p>Проектируем дома и общественные пространства с учетом контекста, функции и эстетики.</p>
-      </div>
-      <span>→</span>
-    </a>
 
-    <a class="as-tile tile-interior" href="<?= url('/interior') ?>">
-      <div class="as-tile-text">
-        <h3>Интерьеры</h3>
-        <p>Создаем гармоничные интерьеры для жизни и бизнеса — от идеи до финальных деталей.</p>
-      </div>
-      <span>→</span>
-    </a>
-
-    <a class="as-tile tile-fitout" href="<?= url('/fitout') ?>">
-      <div class="as-tile-text">
-        <h3>Под жилье</h3>
-        <p>Решения под ваш образ жизни: комфорт, функциональность и индивидуальность.</p>
-      </div>
-      <span>→</span>
-    </a>
-
-    <a class="as-tile tile-complex" href="<?= url('/process') ?>">
-      <div class="as-tile-text">
-        <h3>Комплексно</h3>
-        <p>Весь процесс под контролем: планирование, авторский надзор и подготовка решений.</p>
-      </div>
-      <span>→</span>
-    </a>
-  </div>
-</section>
-
-<section class="as-benefits">
-  <div class="container as-benefits-row">
-    <article>
-      <div class="as-benefit-icon">♕</div>
-      <div>
-        <h3>Премиальный подход</h3>
-        <p>Каждое решение основано на логике, опыте и внимании к деталям.</p>
-      </div>
-    </article>
-
-    <article>
-      <div class="as-benefit-icon">△</div>
-      <div>
-        <h3>Эстетика в деталях</h3>
-        <p>Материалы, свет, текстуры и формы создают цельное пространство.</p>
-      </div>
-    </article>
-
-    <article>
-      <div class="as-benefit-icon">▣</div>
-      <div>
-        <h3>Реализация под ключ</h3>
-        <p>От концепции до финальной реализации — без лишних хлопот.</p>
-      </div>
-    </article>
-
-    <article>
-      <div class="as-benefit-icon">◎</div>
-      <div>
-        <h3>Индивидуальность</h3>
-        <p>Каждый проект уникален и отражает характер владельца.</p>
-      </div>
-    </article>
-  </div>
-</section>
-
-<section class="signature-section">
-  <div class="container signature-board reveal">
-    <div class="signature-grid">
-      <div>
-        <p class="eyebrow">Философия студии</p>
-        <h2>Сначала ощущение, потом детали</h2>
-        <p class="lead">
-          Пространство должно продавать уровень еще до объяснений:
-          через свет, пропорции, фактуры, тишину, материалы и точную архитектурную подачу.
-        </p>
-      </div>
-
-      <div class="signature-points">
-        <article class="signature-point">
-          <small>Фон</small>
-          <strong>Светлый камень</strong>
-          <p class="muted">Мраморная фактура, теплый тон и спокойная премиальность.</p>
-        </article>
-
-        <article class="signature-point">
-          <small>Акцент</small>
-          <strong>Латунная линия</strong>
-          <p class="muted">Тонкая графика, арки и мягкие световые контуры.</p>
-        </article>
-
-        <article class="signature-point">
-          <small>Форма</small>
-          <strong>Арочный портал</strong>
-          <p class="muted">Символ входа в продуманное пространство.</p>
-        </article>
-
-        <article class="signature-point">
-          <small>Ритм</small>
-          <strong>Редкая типографика</strong>
-          <p class="muted">Воздух, крупные паузы и дорогая подача.</p>
-        </article>
-      </div>
-    </div>
-  </div>
-</section>
 
 <?php page_end(); ?>
+
+
+
+
+

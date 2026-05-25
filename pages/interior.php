@@ -6,27 +6,10 @@ page_start(
 );
 ?>
 
-<section class="page-hero page-hero-interior">
-  <div class="container page-hero-inner">
-    <div>
-      <p class="eyebrow">ИНТЕРЬЕРЫ</p>
-      <h1>Создаем гармоничные интерьеры для жизни и бизнеса</h1>
-      <p class="lead">
-        Продумываем планировки, мебельные сценарии, свет, хранение, материалы
-        и детали, которые делают пространство цельным.
-      </p>
-      <div class="actions">
-        <a class="btn primary" href="<?= url('/contacts') ?>">Обсудить интерьер</a>
-        <a class="btn" href="<?= url('/projects') ?>">Смотреть проекты</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container split">
-    <div>
-      <p class="eyebrow">Детали</p>
+<section class="section interior-stone-section">
+  <div class="container interior-stone-layout">
+    <div class="interior-stone-copy reveal">
+      <p class="eyebrow">ДЕТАЛИ</p>
       <h2>Дорого выглядит то, что не спорит само с собой</h2>
       <p class="muted">
         Хороший интерьер держится не на отдельных дорогих предметах, а на планировке,
@@ -34,26 +17,33 @@ page_start(
       </p>
     </div>
 
-    <div class="cards">
-      <article class="card reveal">
-        <div class="card-num">01</div>
-        <h3>Планировка</h3>
-        <p class="muted">Маршруты, зоны, приватность, хранение и бытовые сценарии.</p>
+    <div class="interior-stone-grid">
+      <article class="interior-stone-card interior-stone-card--01 reveal">
+        <div class="interior-stone-card__content">
+          <span>01</span>
+          <h3>Планировка</h3>
+          <p>Маршруты, зоны, приватность, хранение и бытовые сценарии.</p>
+        </div>
       </article>
 
-      <article class="card reveal">
-        <div class="card-num">02</div>
-        <h3>Свет</h3>
-        <p class="muted">Общий, вечерний, акцентный и функциональный свет.</p>
+      <article class="interior-stone-card interior-stone-card--02 reveal">
+        <div class="interior-stone-card__content">
+          <span>02</span>
+          <h3>Свет</h3>
+          <p>Общий, вечерний, акцентный и функциональный свет.</p>
+        </div>
       </article>
 
-      <article class="card reveal">
-        <div class="card-num">03</div>
-        <h3>Материалы</h3>
-        <p class="muted">Камень, дерево, латунь, текстиль и мягкие фактуры.</p>
+      <article class="interior-stone-card interior-stone-card--03 reveal">
+        <div class="interior-stone-card__content">
+          <span>03</span>
+          <h3>Материалы</h3>
+          <p>Камень, дерево, латунь, текстиль и мягкие фактуры.</p>
+        </div>
       </article>
     </div>
   </div>
 </section>
 
 <?php page_end(); ?>
+

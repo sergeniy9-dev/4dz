@@ -7,6 +7,8 @@ function page_head(string $title, string $description = ''): void
     $fullTitle = $title === SITE['name'] ? SITE['name'] : $title . ' — ' . SITE['name'];
     $description = $description ?: SITE['descriptor'];
     $metrikaId = SITE['metrika_id'];
+    $requestPath = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/';
+    $showGreeting = $requestPath === '/' || $requestPath === '/index.php';
     ?>
 <!doctype html>
 <html lang="ru">
@@ -15,12 +17,14 @@ function page_head(string $title, string $description = ''): void
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title><?= h($fullTitle) ?></title>
   <meta name="description" content="<?= h($description) ?>">
-  <meta name="theme-color" content="#11100d">
+  <meta name="theme-color" content="#f4eee4">
   <meta property="og:title" content="<?= h($fullTitle) ?>">
   <meta property="og:description" content="<?= h($description) ?>">
   <meta property="og:type" content="website">
   <link rel="icon" href="<?= asset('img/favicon.svg') ?>">
   <link rel="stylesheet" href="<?= asset('css/style.css') ?>">
+  <link rel="stylesheet" href="<?= asset('css/site-light.css') ?>?v=as-greeting-1">
+
   <?php if ($metrikaId !== '00000000') : ?>
   <script>
     (function(m,e,t,r,i,k,a){
@@ -40,47 +44,19 @@ function page_head(string $title, string $description = ''): void
     });
   </script>
   <?php endif; ?>
-  <link rel="stylesheet" href="<?= asset('css/site-light.css') ?>?v=light-final-1">
 </head>
 <body>
-<div class="intro-loader" data-intro>
-  <div class="intro-noise"></div>
-
-  <div class="intro-camera">
-    <div class="intro-marble"></div>
-
-    <div class="intro-arch arch-back"></div>
-    <div class="intro-arch arch-mid"></div>
-    <div class="intro-arch arch-front"></div>
-
-    <svg class="intro-bones" viewBox="0 0 1000 680" aria-hidden="true">
-      <path d="M500 72 L214 570 L786 570 Z"/>
-      <path d="M500 72 L500 570"/>
-      <path d="M214 570 L500 336 L786 570"/>
-      <path d="M300 420 L700 420"/>
-      <path d="M360 292 L640 292"/>
-      <path d="M214 570 C310 512 396 468 500 336 C604 468 690 512 786 570"/>
-      <circle cx="500" cy="72" r="5"/>
-      <circle cx="214" cy="570" r="5"/>
-      <circle cx="786" cy="570" r="5"/>
-      <circle cx="500" cy="336" r="4"/>
-    </svg>
-
-    <div class="intro-logo-stage">
-      <img class="intro-logo-copy copy-3" src="<?= asset('img/logo.svg') ?>" alt="">
-      <img class="intro-logo-copy copy-2" src="<?= asset('img/logo.svg') ?>" alt="">
-      <img class="intro-logo-copy copy-1" src="<?= asset('img/logo.svg') ?>" alt="">
-      <img class="intro-logo-main" src="<?= asset('img/logo.svg') ?>" alt="<?= h(SITE['name']) ?>">
-    </div>
-
-    <div class="intro-caption">
-      <span>ФОН • СВЕТЛЫЙ МРАМОР И ЛАТУНЬ</span>
-      <strong>Архитектура начинается с первого впечатления</strong>
-    </div>
-
-    <div class="intro-enter-line"></div>
-  </div>
+<?php if ($showGreeting) : ?>
+<!-- AS GREETING COVER START -->
+<div class="as-greeting-cover" id="asGreetingCover" aria-hidden="true">
+  <img class="as-greeting-cover__img" src="/assets/img/intro-brand-scene.png?v=3001" alt="">
 </div>
+<!-- AS GREETING COVER END -->
+<?php endif; ?>
+<?php if ($showGreeting) : ?>
+
+<?php endif; ?>
+
 <?php if ($metrikaId !== '00000000') : ?>
 <noscript><div><img src="https://mc.yandex.ru/watch/<?= h($metrikaId) ?>" style="position:absolute; left:-9999px;" alt=""></div></noscript>
 <?php endif; ?>
@@ -169,7 +145,7 @@ function page_footer(): void
   </div>
 </footer>
 
-<script src="<?= asset('js/main.js') ?>"></script>
+<script src="<?= asset('js/main.js') ?>?v=as-greeting-1"></script>
 </body>
 </html>
 <?php
@@ -187,7 +163,4 @@ function page_end(): void
     echo '</main>';
     page_footer();
 }
-
-
-
 

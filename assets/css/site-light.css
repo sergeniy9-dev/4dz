@@ -1,4 +1,5 @@
-﻿:root {
+﻿@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Manrope:wght@300;400;500;600;700&display=swap");
+:root {
   --bg: #efe9de !important;
   --bg-soft: #f8f3eb !important;
   --card: rgba(255,255,255,.64) !important;
@@ -3829,3 +3830,2326 @@ body {
 }
 
 /* ---------- END PROJECTS PAGE PREMIUM FINAL ---------- */
+
+
+/* ---------- HOME GAP BACKGROUND FINAL ---------- */
+
+/* Убираем ощущение пустоты между плитками/преимуществами и блоком философии */
+.as-benefits {
+  position: relative !important;
+  overflow: hidden !important;
+  padding-bottom: 120px !important;
+  background:
+    linear-gradient(180deg,
+      rgba(247,242,233,.82) 0%,
+      rgba(247,242,233,.50) 42%,
+      rgba(247,242,233,.72) 100%),
+    url("../img/home-gap-section-bg.png") center center / cover no-repeat !important;
+}
+
+.as-benefits::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 18% 22%, rgba(255,255,255,.36), transparent 24rem),
+    linear-gradient(90deg,
+      rgba(247,242,233,.26),
+      rgba(247,242,233,.08) 52%,
+      rgba(247,242,233,.18));
+}
+
+.as-benefits > .container {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* Полоса преимуществ становится стеклянной, чтобы фон работал */
+.as-benefits-row {
+  background:
+    linear-gradient(145deg,
+      rgba(255,255,255,.58),
+      rgba(234,224,210,.58)) !important;
+  backdrop-filter: blur(8px) saturate(108%) !important;
+  border-color: rgba(126,104,67,.14) !important;
+  box-shadow:
+    0 24px 72px rgba(77,62,38,.09),
+    inset 0 0 0 1px rgba(255,255,255,.44) !important;
+}
+
+/* Блок философии подтягиваем ближе, чтобы не было огромной пустоты */
+.signature-section {
+  margin-top: -54px !important;
+  padding-top: 40px !important;
+}
+
+/* ---------- END HOME GAP BACKGROUND FINAL ---------- */
+
+
+/* ---------- HOME GAP WIDTH FIX ---------- */
+
+/* Делаем фон в зоне преимуществ визуально шире и менее обрезанным */
+.as-benefits {
+  background-image:
+    linear-gradient(180deg,
+      rgba(247,242,233,.74) 0%,
+      rgba(247,242,233,.42) 42%,
+      rgba(247,242,233,.66) 100%),
+    url("../img/home-gap-section-bg.png") !important;
+
+  background-repeat: no-repeat, no-repeat !important;
+  background-position: center center, center center !important;
+  background-size: 100% 100%, 120% auto !important;
+}
+
+/* Если хочется еще шире — поменяй 120% на 130% выше */
+
+.as-benefits::after {
+  background:
+    radial-gradient(circle at 18% 22%, rgba(255,255,255,.26), transparent 24rem),
+    linear-gradient(90deg,
+      rgba(247,242,233,.18),
+      rgba(247,242,233,.05) 52%,
+      rgba(247,242,233,.12)) !important;
+}
+
+/* Немного увеличиваем высоту зоны, чтобы фон дышал */
+.as-benefits {
+  padding-bottom: 150px !important;
+}
+
+/* Блок философии оставляем ближе, но не налезает слишком резко */
+.signature-section {
+  margin-top: -64px !important;
+}
+
+/* ---------- END HOME GAP WIDTH FIX ---------- */
+
+
+/* ---------- HOME SHOWROOM FULL BLEED FIX ---------- */
+
+/*
+  Смысл:
+  - убираем ощущение пустых молочных зон;
+  - делаем нижнюю часть главной цельной showroom-сценой;
+  - преимущества и философия становятся слоями поверх архитектурного фона.
+*/
+
+/* 1. Преимущества — теперь это не пустой блок, а широкий фон */
+.as-benefits {
+  position: relative !important;
+  overflow: hidden !important;
+  padding: 54px 0 96px !important;
+  margin: 0 !important;
+  background:
+    linear-gradient(180deg,
+      rgba(247,242,233,.64) 0%,
+      rgba(247,242,233,.34) 46%,
+      rgba(247,242,233,.58) 100%),
+    url("../img/home-gap-section-bg.png") center center / cover no-repeat !important;
+  border-top: 1px solid rgba(126,104,67,.10) !important;
+  border-bottom: 1px solid rgba(126,104,67,.10) !important;
+}
+
+.as-benefits::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+  background:
+    radial-gradient(circle at 18% 28%, rgba(255,255,255,.24), transparent 26rem),
+    radial-gradient(circle at 82% 18%, rgba(185,154,94,.08), transparent 28rem),
+    linear-gradient(90deg,
+      rgba(247,242,233,.10) 0%,
+      rgba(247,242,233,.04) 46%,
+      rgba(247,242,233,.16) 100%) !important;
+}
+
+.as-benefits::after {
+  display: none !important;
+}
+
+.as-benefits > .container {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* 2. Полоса преимуществ должна занимать ширину и выглядеть как дорогая панель */
+.as-benefits-row {
+  width: 100% !important;
+  min-height: 132px !important;
+  background:
+    linear-gradient(145deg,
+      rgba(255,255,255,.52),
+      rgba(232,222,207,.50)) !important;
+  backdrop-filter: blur(10px) saturate(112%) !important;
+  border: 1px solid rgba(126,104,67,.16) !important;
+  box-shadow:
+    0 28px 86px rgba(77,62,38,.10),
+    inset 0 0 0 1px rgba(255,255,255,.46),
+    inset 0 1px 0 rgba(255,255,255,.68) !important;
+}
+
+/* 3. Философия — не отдельная белая карточка в пустоте, а следующий слой той же сцены */
+.signature-section {
+  position: relative !important;
+  overflow: hidden !important;
+  margin-top: 0 !important;
+  padding: 86px 0 118px !important;
+  background:
+    linear-gradient(180deg,
+      rgba(247,242,233,.46) 0%,
+      rgba(247,242,233,.30) 44%,
+      rgba(247,242,233,.62) 100%),
+    url("../img/signature-section-bg.png") center center / cover no-repeat !important;
+  border-bottom: 1px solid rgba(126,104,67,.12) !important;
+}
+
+.signature-section::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+  background:
+    radial-gradient(circle at 18% 22%, rgba(255,255,255,.32), transparent 28rem),
+    radial-gradient(circle at 78% 12%, rgba(185,154,94,.10), transparent 28rem),
+    linear-gradient(90deg,
+      rgba(247,242,233,.12),
+      rgba(247,242,233,.04) 50%,
+      rgba(247,242,233,.16)) !important;
+}
+
+.signature-section > .container {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* 4. Доску делаем шире, плотнее и меньше похожей на маленькую карточку */
+.signature-board {
+  width: 100% !important;
+  min-height: 520px !important;
+  border-radius: 42px !important;
+  padding: clamp(42px, 5vw, 76px) !important;
+  background:
+    linear-gradient(135deg,
+      rgba(255,255,255,.62) 0%,
+      rgba(238,228,213,.54) 48%,
+      rgba(232,222,207,.48) 100%) !important;
+  backdrop-filter: blur(12px) saturate(112%) !important;
+  border: 1px solid rgba(126,104,67,.18) !important;
+  box-shadow:
+    0 40px 120px rgba(77,62,38,.14),
+    inset 0 0 0 1px rgba(255,255,255,.50),
+    inset 0 1px 0 rgba(255,255,255,.78) !important;
+}
+
+.signature-board::before {
+  right: clamp(32px, 6vw, 110px) !important;
+  top: clamp(34px, 5vw, 82px) !important;
+  width: min(320px, 30vw) !important;
+  height: min(430px, 42vw) !important;
+  border-color: rgba(185,154,94,.28) !important;
+  opacity: .85 !important;
+}
+
+.signature-board::after {
+  background:
+    radial-gradient(circle at 16% 20%, rgba(255,255,255,.34), transparent 22rem),
+    linear-gradient(90deg,
+      rgba(255,255,255,.18) 0%,
+      rgba(255,255,255,.06) 50%,
+      rgba(255,255,255,.03) 100%) !important;
+}
+
+/* 5. Сетка внутри философии: больше воздуха, но без пустоты */
+.signature-grid {
+  grid-template-columns: minmax(360px, .86fr) minmax(520px, 1.14fr) !important;
+  gap: clamp(42px, 6vw, 92px) !important;
+  align-items: center !important;
+}
+
+.signature-board h2 {
+  max-width: 560px !important;
+  font-size: clamp(42px, 4.4vw, 74px) !important;
+  line-height: 1.02 !important;
+}
+
+.signature-board .lead {
+  max-width: 560px !important;
+  color: #40382f !important;
+}
+
+/* 6. Карточки философии делаем более видимыми, чтобы не растворялись */
+.signature-points {
+  gap: 16px !important;
+}
+
+.signature-point {
+  min-height: 178px !important;
+  padding: 24px !important;
+  background:
+    linear-gradient(145deg,
+      rgba(255,255,255,.64),
+      rgba(230,220,205,.58)) !important;
+  backdrop-filter: blur(10px) saturate(112%) !important;
+  border: 1px solid rgba(126,104,67,.18) !important;
+  box-shadow:
+    0 20px 56px rgba(77,62,38,.08),
+    inset 0 0 0 1px rgba(255,255,255,.42) !important;
+}
+
+.signature-point small {
+  color: #8b7041 !important;
+}
+
+.signature-point strong {
+  color: #221f1a !important;
+}
+
+.signature-point p,
+.signature-point .muted {
+  color: #4b4338 !important;
+}
+
+/* 7. Убираем слишком большие пустые разрывы после плиток */
+.as-tile-strip + .as-benefits {
+  margin-top: 0 !important;
+}
+
+/* 8. На широких экранах фон должен работать на всю сцену */
+@media (min-width: 1440px) {
+  .as-benefits,
+  .signature-section {
+    background-size: cover !important;
+  }
+
+  .signature-board {
+    min-height: 560px !important;
+  }
+}
+
+/* 9. Планшет */
+@media (max-width: 1180px) {
+  .signature-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .signature-board {
+    min-height: auto !important;
+  }
+}
+
+/* 10. Мобильная версия без перегруза */
+@media (max-width: 680px) {
+  .as-benefits {
+    padding: 46px 0 72px !important;
+  }
+
+  .signature-section {
+    padding: 64px 0 82px !important;
+  }
+
+  .signature-board {
+    border-radius: 30px !important;
+    padding: 30px !important;
+  }
+
+  .signature-points {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ---------- END HOME SHOWROOM FULL BLEED FIX ---------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------- LUXURY ONYX GLASS PANELS FINAL ---------- */
+
+/*
+  Вместо "драгоценного камня" делаем то, что реально подходит сайту:
+  светлая ониксовая / мраморная плитка с латунной фаской,
+  мягкой глубиной, перламутровым свечением и без грязных трещин.
+*/
+
+.page-hero-architecture + .section .cards .card,
+.page-hero-interior + .section .cards .card,
+.page-hero-fitout + .section .cards .card {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+
+  min-height: 292px !important;
+  padding: 28px 30px 30px !important;
+  border-radius: 32px !important;
+
+  background:
+    radial-gradient(circle at 18% 12%, rgba(255,255,255,.92), transparent 9rem),
+    radial-gradient(circle at 82% 18%, rgba(255,246,226,.66), transparent 10rem),
+    radial-gradient(circle at 74% 88%, rgba(205,166,92,.12), transparent 12rem),
+    linear-gradient(145deg, rgba(255,250,241,.94), rgba(239,224,198,.90)) !important;
+
+  border: 1px solid rgba(173, 127, 57, .38) !important;
+  outline: 1px solid rgba(255,255,255,.62) !important;
+  outline-offset: -4px !important;
+
+  box-shadow:
+    0 26px 74px rgba(74,52,24,.12),
+    0 8px 22px rgba(176,126,51,.08),
+    inset 0 2px 0 rgba(255,255,255,.92),
+    inset 2px 0 0 rgba(255,255,255,.42),
+    inset -2px 0 0 rgba(132,86,27,.08),
+    inset 0 -3px 0 rgba(116,76,25,.08),
+    inset 0 0 32px rgba(255,255,255,.18) !important;
+
+  backdrop-filter: blur(8px) saturate(110%) !important;
+}
+
+/* Мягкая полировка, без грязных трещин */
+.page-hero-architecture + .section .cards .card::before,
+.page-hero-interior + .section .cards .card::before,
+.page-hero-fitout + .section .cards .card::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+  border-radius: inherit !important;
+
+  background:
+    linear-gradient(128deg, rgba(255,255,255,.44) 0 8%, transparent 8.4% 100%),
+    linear-gradient(34deg, transparent 0 34%, rgba(255,255,255,.18) 34.2%, transparent 35% 100%),
+    linear-gradient(152deg, transparent 0 70%, rgba(184,139,70,.10) 70.2%, transparent 71% 100%),
+    radial-gradient(circle at 86% 12%, rgba(255,255,255,.50), transparent 6rem),
+    radial-gradient(circle at 18% 86%, rgba(255,255,255,.24), transparent 7rem);
+  opacity: .72 !important;
+}
+
+/* Латунная верхняя линия — аккуратно, без зебры */
+.page-hero-architecture + .section .cards .card::after,
+.page-hero-interior + .section .cards .card::after,
+.page-hero-fitout + .section .cards .card::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  top: 64px !important;
+  height: 1px !important;
+  z-index: 2 !important;
+  pointer-events: none !important;
+
+  background: linear-gradient(
+    90deg,
+    rgba(169,112,35,0) 0%,
+    rgba(169,112,35,.38) 14%,
+    rgba(255,255,255,.54) 50%,
+    rgba(169,112,35,.38) 86%,
+    rgba(169,112,35,0) 100%
+  ) !important;
+
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.58),
+    0 4px 12px rgba(117,76,25,.08) !important;
+}
+
+/* Чтобы карточки не были совсем одинаковые — разные мягкие световые акценты */
+.page-hero-architecture + .section .cards .card:nth-child(1),
+.page-hero-interior + .section .cards .card:nth-child(1),
+.page-hero-fitout + .section .cards .card:nth-child(1) {
+  background:
+    radial-gradient(circle at 16% 10%, rgba(255,255,255,.94), transparent 9rem),
+    radial-gradient(circle at 82% 20%, rgba(255,246,226,.58), transparent 10rem),
+    linear-gradient(145deg, rgba(255,250,241,.95), rgba(239,224,198,.90)) !important;
+}
+
+.page-hero-architecture + .section .cards .card:nth-child(2),
+.page-hero-interior + .section .cards .card:nth-child(2),
+.page-hero-fitout + .section .cards .card:nth-child(2) {
+  background:
+    radial-gradient(circle at 72% 10%, rgba(255,255,255,.92), transparent 9rem),
+    radial-gradient(circle at 18% 82%, rgba(216,178,104,.12), transparent 11rem),
+    linear-gradient(145deg, rgba(255,249,239,.95), rgba(238,221,190,.90)) !important;
+}
+
+.page-hero-architecture + .section .cards .card:nth-child(3),
+.page-hero-interior + .section .cards .card:nth-child(3),
+.page-hero-fitout + .section .cards .card:nth-child(3) {
+  background:
+    radial-gradient(circle at 24% 12%, rgba(255,255,255,.90), transparent 9rem),
+    radial-gradient(circle at 86% 80%, rgba(205,166,92,.12), transparent 11rem),
+    linear-gradient(145deg, rgba(255,250,242,.95), rgba(240,225,201,.90)) !important;
+}
+
+/* Контент поверх */
+.page-hero-architecture + .section .cards .card > *,
+.page-hero-interior + .section .cards .card > *,
+.page-hero-fitout + .section .cards .card > * {
+  position: relative !important;
+  z-index: 5 !important;
+}
+
+/* Номер */
+.page-hero-architecture + .section .card-num,
+.page-hero-interior + .section .card-num,
+.page-hero-fitout + .section .card-num {
+  margin-bottom: 18px !important;
+  color: #8b5b1d !important;
+  font-size: 13px !important;
+  line-height: 1 !important;
+  font-weight: 700 !important;
+  letter-spacing: .18em !important;
+  text-shadow: 0 1px 0 rgba(255,255,255,.76) !important;
+}
+
+.page-hero-architecture + .section .card-num::after,
+.page-hero-interior + .section .card-num::after,
+.page-hero-fitout + .section .card-num::after {
+  content: "" !important;
+  display: block !important;
+  width: 50px !important;
+  height: 1px !important;
+  margin-top: 10px !important;
+  background: linear-gradient(90deg, rgba(160,103,32,.72), rgba(160,103,32,.10)) !important;
+}
+
+/* Заголовки */
+.page-hero-architecture + .section .card h3,
+.page-hero-interior + .section .card h3,
+.page-hero-fitout + .section .card h3 {
+  margin: 0 0 16px !important;
+  color: #211a13 !important;
+  font-size: clamp(21px, 1.48vw, 27px) !important;
+  line-height: 1.12 !important;
+  font-weight: 500 !important;
+  letter-spacing: -.015em !important;
+  text-shadow: 0 1px 0 rgba(255,255,255,.70) !important;
+}
+
+.page-hero-architecture + .section .card h3::after,
+.page-hero-interior + .section .card h3::after,
+.page-hero-fitout + .section .card h3::after {
+  content: "" !important;
+  display: block !important;
+  width: 48px !important;
+  height: 1px !important;
+  margin-top: 12px !important;
+  background: linear-gradient(90deg, rgba(160,103,32,.62), rgba(160,103,32,.08)) !important;
+}
+
+/* Текст */
+.page-hero-architecture + .section .card p,
+.page-hero-interior + .section .card p,
+.page-hero-fitout + .section .card p,
+.page-hero-architecture + .section .card .muted,
+.page-hero-interior + .section .card .muted,
+.page-hero-fitout + .section .card .muted {
+  color: #3e3227 !important;
+  font-size: clamp(14px, .98vw, 16px) !important;
+  line-height: 1.58 !important;
+  text-shadow: 0 1px 0 rgba(255,255,255,.50) !important;
+  margin: 0 !important;
+}
+
+/* Hover: только дорогая глубина, без скачков */
+.page-hero-architecture + .section .cards .card:hover,
+.page-hero-interior + .section .cards .card:hover,
+.page-hero-fitout + .section .cards .card:hover {
+  transform: none !important;
+  filter: saturate(1.03) brightness(1.01) contrast(1.01) !important;
+  border-color: rgba(192, 142, 67, .58) !important;
+
+  box-shadow:
+    0 32px 88px rgba(74,52,24,.15),
+    0 10px 26px rgba(176,126,51,.11),
+    inset 0 2px 0 rgba(255,255,255,.96),
+    inset 2px 0 0 rgba(255,255,255,.46),
+    inset -2px 0 0 rgba(132,86,27,.10),
+    inset 0 -3px 0 rgba(116,76,25,.10),
+    inset 0 0 34px rgba(255,255,255,.20) !important;
+}
+
+/* Сетка */
+.page-hero-architecture + .section .cards,
+.page-hero-interior + .section .cards,
+.page-hero-fitout + .section .cards {
+  gap: 20px !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+}
+
+/* Планшет */
+@media (max-width: 1080px) {
+  .page-hero-architecture + .section .cards,
+  .page-hero-interior + .section .cards,
+  .page-hero-fitout + .section .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+/* Мобильная версия */
+@media (max-width: 680px) {
+  .page-hero-architecture + .section .cards,
+  .page-hero-interior + .section .cards,
+  .page-hero-fitout + .section .cards {
+    grid-template-columns: 1fr !important;
+  }
+
+  .page-hero-architecture + .section .cards .card,
+  .page-hero-interior + .section .cards .card,
+  .page-hero-fitout + .section .cards .card {
+    min-height: 240px !important;
+    padding: 22px 22px 24px !important;
+    border-radius: 26px !important;
+  }
+
+  .page-hero-architecture + .section .cards .card::after,
+  .page-hero-interior + .section .cards .card::after,
+  .page-hero-fitout + .section .cards .card::after {
+    top: 58px !important;
+  }
+}
+
+/* ---------- END LUXURY ONYX GLASS PANELS FINAL ---------- */
+
+
+/* ---------- ARCHITECTURE GEM IMAGE BLOCK ---------- */
+
+/* Секция архитектуры с реальным кристальным изображением */
+.architecture-gem-section {
+  position: relative !important;
+  overflow: hidden !important;
+  padding: 92px 0 110px !important;
+  background:
+    linear-gradient(180deg,
+      rgba(247,242,233,.66) 0%,
+      rgba(247,242,233,.46) 42%,
+      rgba(247,242,233,.74) 100%),
+    url("../img/architecture-section-bg.png") center center / cover no-repeat !important;
+}
+
+.architecture-gem-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 20% 18%, rgba(255,255,255,.28), transparent 26rem),
+    linear-gradient(90deg,
+      rgba(247,242,233,.20),
+      rgba(247,242,233,.06) 52%,
+      rgba(247,242,233,.14));
+}
+
+.architecture-gem-layout {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(320px, .72fr) minmax(520px, 1.28fr);
+  gap: clamp(34px, 5vw, 76px);
+  align-items: center;
+
+  border: 1px solid rgba(126,104,67,.16);
+  border-radius: 46px;
+  padding: clamp(34px, 5vw, 70px);
+
+  background:
+    linear-gradient(145deg,
+      rgba(255,255,255,.56),
+      rgba(234,224,210,.46)) !important;
+
+  backdrop-filter: blur(10px) saturate(112%);
+  box-shadow:
+    0 38px 110px rgba(77,62,38,.13),
+    inset 0 0 0 1px rgba(255,255,255,.46),
+    inset 0 1px 0 rgba(255,255,255,.72);
+}
+
+.architecture-gem-layout::before {
+  content: "";
+  position: absolute;
+  inset: 24px;
+  border: 1px solid rgba(126,104,67,.08);
+  border-radius: 34px;
+  pointer-events: none;
+}
+
+.architecture-gem-copy {
+  position: relative;
+  z-index: 3;
+}
+
+.architecture-gem-copy h2 {
+  font-size: clamp(38px, 4vw, 68px) !important;
+  line-height: 1.04 !important;
+  letter-spacing: -.025em !important;
+  color: #221f1a !important;
+}
+
+.architecture-gem-copy .muted {
+  max-width: 520px;
+  color: #4b4338 !important;
+}
+
+/* Сам кристальный блок */
+.gem-infographic {
+  position: relative;
+  z-index: 3;
+  margin: 0;
+  border-radius: 36px;
+  overflow: hidden;
+  transform: translateZ(0);
+
+  box-shadow:
+    0 34px 90px rgba(74,52,24,.18),
+    0 12px 32px rgba(176,126,51,.14),
+    inset 0 1px 0 rgba(255,255,255,.90);
+}
+
+.gem-infographic::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  border-radius: inherit;
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,.62),
+    inset 0 0 0 2px rgba(185,132,52,.16);
+}
+
+.gem-infographic::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(255,255,255,.20), transparent 12rem),
+    linear-gradient(120deg, rgba(255,255,255,.18), transparent 28%, transparent 72%, rgba(255,255,255,.10));
+  opacity: .75;
+}
+
+.gem-infographic img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter:
+    saturate(1.02)
+    contrast(1.02)
+    brightness(1.01);
+}
+
+/* Убираем старые карточки, если где-то остались в этой секции */
+.architecture-gem-section .cards {
+  display: none !important;
+}
+
+/* Адаптив */
+@media (max-width: 1080px) {
+  .architecture-gem-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .gem-infographic {
+    border-radius: 30px;
+  }
+}
+
+@media (max-width: 680px) {
+  .architecture-gem-section {
+    padding: 64px 0 82px !important;
+  }
+
+  .architecture-gem-layout {
+    border-radius: 30px;
+    padding: 24px;
+  }
+
+  .architecture-gem-layout::before {
+    inset: 14px;
+    border-radius: 22px;
+  }
+
+  .gem-infographic {
+    border-radius: 22px;
+  }
+}
+
+/* ---------- END ARCHITECTURE GEM IMAGE BLOCK ---------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------- AS GREETING COVER ---------- */
+
+.as-greeting-cover {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  background: #f4eee4;
+  transition:
+    opacity .85s ease,
+    visibility .85s ease;
+}
+
+.as-greeting-cover__img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+  transform: scale(1.012);
+  opacity: 1;
+  transition:
+    opacity .85s ease,
+    transform .95s ease;
+}
+
+.as-greeting-cover.is-leaving {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.as-greeting-cover.is-leaving .as-greeting-cover__img {
+  opacity: 0;
+  transform: scale(1);
+}
+
+html.as-greeting-lock,
+html.as-greeting-lock body {
+  overflow: hidden;
+}
+
+/* ---------- END AS GREETING COVER ---------- */
+
+
+
+
+
+/* ---------- AS STONE CARDS FINAL ---------- */
+
+.stone-section {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(90px, 9vw, 145px) 0;
+  background:
+    radial-gradient(circle at 52% 20%, rgba(255,255,255,.78), transparent 30rem),
+    linear-gradient(135deg, #f6efe4 0%, #ebe0cf 54%, #faf4eb 100%);
+}
+
+.stone-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 82% 16%, rgba(190,145,70,.15), transparent 24rem),
+    linear-gradient(90deg, rgba(255,255,255,.42), transparent 22%, transparent 80%, rgba(255,255,255,.28));
+}
+
+.stone-layout {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(280px, .75fr) minmax(620px, 1.25fr);
+  gap: clamp(38px, 5vw, 82px);
+  align-items: center;
+}
+
+.stone-section-head {
+  max-width: 640px;
+}
+
+.stone-section-head h2 {
+  margin-bottom: 28px;
+  font-size: clamp(58px, 5.8vw, 104px);
+  line-height: .92;
+  letter-spacing: -.055em;
+}
+
+.stone-section-head .muted {
+  max-width: 560px;
+  font-size: clamp(18px, 1.35vw, 25px);
+  line-height: 1.55;
+}
+
+.stone-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(18px, 2vw, 28px);
+}
+
+/* На случай если reveal не сработал */
+.stone-section .reveal {
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
+}
+
+.stone-card {
+  position: relative;
+  min-height: clamp(220px, 17vw, 285px);
+  overflow: hidden;
+  border-radius: 34px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid rgba(177, 131, 55, .46);
+  box-shadow:
+    0 28px 72px rgba(68, 47, 23, .15),
+    0 9px 24px rgba(68, 47, 23, .10),
+    inset 0 0 0 1px rgba(255,255,255,.50);
+  isolation: isolate;
+}
+
+.stone-card--01 {
+  background-image: url("../img/card-stone-01.png?v=5");
+}
+
+.stone-card--02 {
+  background-image: url("../img/card-stone-02.png?v=5");
+}
+
+.stone-card--03 {
+  background-image: url("../img/card-stone-03.png?v=5");
+}
+
+.stone-card--04 {
+  background-image: url("../img/card-stone-04.png?v=5");
+}
+
+.stone-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg,
+      rgba(255,250,240,.58) 0%,
+      rgba(255,250,240,.36) 42%,
+      rgba(255,250,240,.14) 74%,
+      rgba(255,250,240,.04) 100%),
+    radial-gradient(circle at 18% 18%, rgba(255,255,255,.40), transparent 12rem);
+}
+
+.stone-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  border-radius: inherit;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.26), transparent 38%),
+    linear-gradient(315deg, rgba(184,137,62,.12), transparent 46%);
+  mix-blend-mode: soft-light;
+}
+
+.stone-card__content {
+  position: relative;
+  z-index: 3;
+  height: 100%;
+  min-height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: clamp(30px, 3.4vw, 52px);
+}
+
+.stone-card__content span {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+  color: #8a672d;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: .42em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.stone-card__content span::after {
+  content: "";
+  width: 42px;
+  height: 1px;
+  background: linear-gradient(90deg, #b78b3d, transparent);
+}
+
+.stone-card__content h3 {
+  margin: 0 0 18px;
+  max-width: 520px;
+  color: #201c16;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(29px, 2.5vw, 44px);
+  line-height: .98;
+  font-weight: 400;
+  letter-spacing: -.035em;
+  text-shadow: 0 1px 0 rgba(255,255,255,.42);
+}
+
+.stone-card__content p {
+  margin: 0;
+  max-width: 430px;
+  color: rgba(32,28,22,.82);
+  font-size: clamp(16px, 1.1vw, 20px);
+  line-height: 1.55;
+}
+
+.stone-card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 38px 92px rgba(68, 47, 23, .19),
+    0 14px 34px rgba(68, 47, 23, .12),
+    inset 0 0 0 1px rgba(255,255,255,.58);
+}
+
+@media (max-width: 1180px) {
+  .stone-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .stone-section-head {
+    max-width: 760px;
+  }
+}
+
+@media (max-width: 900px) {
+  .stone-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stone-card {
+    min-height: 250px;
+    border-radius: 28px;
+  }
+}
+
+@media (max-width: 560px) {
+  .stone-section {
+    padding: 72px 0;
+  }
+
+  .stone-section-head h2 {
+    font-size: 48px;
+  }
+
+  .stone-card {
+    min-height: 230px;
+  }
+
+  .stone-card__content {
+    padding: 32px 26px;
+  }
+
+  .stone-card__content span {
+    font-size: 10px;
+    letter-spacing: .32em;
+    margin-bottom: 18px;
+  }
+
+  .stone-card__content h3 {
+    font-size: 30px;
+  }
+
+  .stone-card__content p {
+    font-size: 16px;
+  }
+}
+
+/* ---------- END AS STONE CARDS FINAL ---------- */
+
+
+/* ---------- AS INTERIOR STONE CARDS FINAL ---------- */
+
+.interior-stone-section {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(90px, 9vw, 145px) 0;
+  background:
+    radial-gradient(circle at 68% 18%, rgba(255,255,255,.76), transparent 30rem),
+    linear-gradient(135deg, #f7f0e6 0%, #ece1d0 52%, #faf4eb 100%);
+}
+
+.interior-stone-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    url("../img/details-section-bg.png") center center / cover no-repeat;
+  opacity: .26;
+  filter: saturate(.88) brightness(1.08);
+}
+
+.interior-stone-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.46), transparent 24%, transparent 78%, rgba(255,255,255,.30)),
+    radial-gradient(circle at 86% 18%, rgba(184,137,62,.16), transparent 24rem);
+}
+
+.interior-stone-layout {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(300px, .78fr) minmax(680px, 1.22fr);
+  gap: clamp(42px, 5vw, 86px);
+  align-items: center;
+}
+
+.interior-stone-copy {
+  max-width: 650px;
+}
+
+.interior-stone-copy h2 {
+  margin-bottom: 28px;
+  font-size: clamp(58px, 5.6vw, 104px);
+  line-height: .92;
+  letter-spacing: -.055em;
+}
+
+.interior-stone-copy .muted {
+  max-width: 580px;
+  font-size: clamp(18px, 1.32vw, 24px);
+  line-height: 1.58;
+}
+
+.interior-stone-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(16px, 1.7vw, 26px);
+}
+
+/* Чтобы reveal точно не спрятал карточки */
+.interior-stone-section .reveal {
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
+}
+
+.interior-stone-card {
+  position: relative;
+  min-height: clamp(285px, 24vw, 390px);
+  overflow: hidden;
+  border-radius: 34px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid rgba(177, 131, 55, .48);
+  box-shadow:
+    0 28px 72px rgba(68, 47, 23, .15),
+    0 9px 24px rgba(68, 47, 23, .10),
+    inset 0 0 0 1px rgba(255,255,255,.52);
+  isolation: isolate;
+  transition:
+    transform .35s ease,
+    box-shadow .35s ease;
+}
+
+.interior-stone-card--01 {
+  background-image: url("../img/interior-stone-01.png?v=1");
+}
+
+.interior-stone-card--02 {
+  background-image: url("../img/interior-stone-02.png?v=1");
+}
+
+.interior-stone-card--03 {
+  background-image: url("../img/interior-stone-03.png?v=1");
+}
+
+.interior-stone-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg,
+      rgba(255,250,240,.72) 0%,
+      rgba(255,250,240,.46) 48%,
+      rgba(255,250,240,.18) 100%),
+    radial-gradient(circle at 25% 14%, rgba(255,255,255,.45), transparent 12rem);
+}
+
+.interior-stone-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  border-radius: inherit;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.30), transparent 38%),
+    linear-gradient(315deg, rgba(184,137,62,.14), transparent 46%);
+  mix-blend-mode: soft-light;
+}
+
+.interior-stone-card__content {
+  position: relative;
+  z-index: 3;
+  height: 100%;
+  min-height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: clamp(30px, 3.2vw, 48px);
+}
+
+.interior-stone-card__content span {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+  color: #8a672d;
+  font-size: 13px;
+  line-height: 1;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.interior-stone-card__content span::after {
+  content: "";
+  width: 52px;
+  height: 1px;
+  background: linear-gradient(90deg, #b78b3d, transparent);
+}
+
+.interior-stone-card__content h3 {
+  margin: 0 0 24px;
+  color: #201c16;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(31px, 2.4vw, 46px);
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: -.035em;
+  text-shadow: 0 1px 0 rgba(255,255,255,.46);
+}
+
+.interior-stone-card__content p {
+  margin: 0;
+  max-width: 280px;
+  color: rgba(32,28,22,.84);
+  font-size: clamp(16px, 1.05vw, 20px);
+  line-height: 1.58;
+}
+
+.interior-stone-card:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0 40px 96px rgba(68, 47, 23, .20),
+    0 15px 36px rgba(68, 47, 23, .13),
+    inset 0 0 0 1px rgba(255,255,255,.60);
+}
+
+@media (max-width: 1180px) {
+  .interior-stone-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .interior-stone-copy {
+    max-width: 780px;
+  }
+}
+
+@media (max-width: 900px) {
+  .interior-stone-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .interior-stone-card {
+    min-height: 260px;
+    border-radius: 28px;
+  }
+}
+
+@media (max-width: 560px) {
+  .interior-stone-section {
+    padding: 72px 0;
+  }
+
+  .interior-stone-copy h2 {
+    font-size: 48px;
+  }
+
+  .interior-stone-card {
+    min-height: 235px;
+  }
+
+  .interior-stone-card__content {
+    padding: 32px 26px;
+  }
+
+  .interior-stone-card__content h3 {
+    font-size: 30px;
+  }
+
+  .interior-stone-card__content p {
+    font-size: 16px;
+  }
+}
+
+/* ---------- END AS INTERIOR STONE CARDS FINAL ---------- */
+
+
+/* ---------- AS GLOBAL TYPOGRAPHY FINAL ---------- */
+
+:root {
+  --font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-sans: "Manrope", Inter, Arial, sans-serif;
+  --font-ink: #242321;
+  --font-muted: rgba(36, 35, 33, .68);
+  --font-gold: #9b7434;
+}
+
+/* База сайта */
+html,
+body {
+  font-family: var(--font-sans) !important;
+  color: var(--font-ink);
+  font-weight: 400;
+  letter-spacing: normal;
+}
+
+/* Весь обычный текст */
+p,
+li,
+span,
+small,
+label,
+input,
+textarea,
+select,
+button,
+a,
+td,
+th,
+.muted,
+.hero-text,
+.page-text,
+.card p,
+.footer,
+.footer a,
+.footer-note {
+  font-family: var(--font-sans) !important;
+}
+
+/* Все крупные заголовки сайта */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.hero h1,
+.page-hero h1,
+.page-hero h2,
+.section h2,
+.card h3,
+.project-card h3,
+.service-card h3,
+.process-card h3,
+.contact-card h3,
+.as4-hero-copy h1,
+.as4-project-card h2,
+.as4-services-intro h2,
+.as4-service-item h3,
+.home-editorial-copy h1,
+.home-gems-head h2,
+.home-services-head h2,
+.interior-crystal-copy h2,
+.interior-crystal-card h3,
+.stone-section-head h2,
+.stone-card__content h3,
+.interior-stone-copy h2,
+.interior-stone-card__content h3 {
+  font-family: var(--font-serif) !important;
+  font-weight: 400 !important;
+  letter-spacing: -.045em;
+  color: var(--font-ink);
+}
+
+/* Главные заголовки — более воздушные */
+h1,
+.hero h1,
+.page-hero h1,
+.as4-hero-copy h1 {
+  font-weight: 400 !important;
+  letter-spacing: -.06em;
+}
+
+/* Курсивные акценты */
+em,
+i,
+h1 em,
+h2 em,
+h3 em,
+.hero h1 em,
+.page-hero h1 em,
+.as4-hero-copy h1 em {
+  font-family: var(--font-serif) !important;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--font-gold);
+}
+
+/* Верхние маленькие подписи */
+.eyebrow,
+.as-ref-kicker,
+.as4-services-intro span,
+.card span,
+.stone-card__content span,
+.interior-stone-card__content span,
+.interior-crystal-card span,
+.project-meta,
+.badge {
+  font-family: var(--font-sans) !important;
+  font-weight: 600 !important;
+  letter-spacing: .34em;
+  text-transform: uppercase;
+}
+
+/* Меню и шапка — оставляем нашу, но шрифт приводим к одному стилю */
+.site-header,
+.site-header a,
+.nav a,
+.as-ref-nav a,
+.header-phone,
+.as-ref-contact,
+.menu-btn,
+.brand-text,
+.brand-text strong,
+.brand-text small {
+  font-family: var(--font-sans) !important;
+}
+
+/* Кнопки */
+.btn,
+.as4-btn,
+.as-ref-btn,
+button,
+input[type="submit"] {
+  font-family: var(--font-sans) !important;
+  font-weight: 500 !important;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+}
+
+/* Формы */
+input,
+textarea,
+select {
+  font-family: var(--font-sans) !important;
+  font-weight: 400;
+}
+
+/* Чтобы старые карточки не выбивались */
+.card h3,
+.cards h3,
+.project-card h3,
+.home-service-card h3,
+.as4-project-card h2,
+.as4-service-item h3 {
+  font-family: var(--font-serif) !important;
+  font-weight: 400 !important;
+}
+
+/* Более дорогой вид текста */
+p,
+.muted,
+.hero-text,
+.as4-hero-copy p,
+.as4-project-card p,
+.as4-service-item p {
+  font-weight: 400;
+  color: var(--font-muted);
+}
+
+/* Лого-картинки не трогаем */
+.brand img,
+.as-ref-brand img,
+.logo img {
+  font-family: initial !important;
+}
+
+/* ---------- END AS GLOBAL TYPOGRAPHY FINAL ---------- */
+
+
+
+
+
+/* ---------- AS HOME REF CARDS STABLE FINAL ---------- */
+
+.as-home-ref-cards {
+  position: relative;
+  z-index: 4;
+  padding: clamp(34px, 3.6vw, 58px) 0 clamp(54px, 5vw, 82px);
+  background: #f7f3ec;
+  border-top: 1px solid rgba(36, 35, 33, .10);
+  border-bottom: 1px solid rgba(36, 35, 33, .08);
+}
+
+.as-home-ref-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(18px, 2.1vw, 32px);
+}
+
+.as-home-ref-card {
+  display: block;
+  overflow: hidden;
+  color: inherit;
+  text-decoration: none;
+  background: rgba(255, 252, 246, .72);
+  border: 1px solid rgba(36, 35, 33, .14);
+  box-shadow: 0 18px 54px rgba(36, 35, 33, .06);
+  transition:
+    transform .32s ease,
+    box-shadow .32s ease,
+    border-color .32s ease;
+}
+
+.as-home-ref-card img {
+  width: 100%;
+  height: clamp(220px, 17vw, 325px);
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(.88) brightness(1.04);
+  transition:
+    transform .65s ease,
+    filter .65s ease;
+}
+
+.as-home-ref-card__body {
+  padding: clamp(22px, 2.2vw, 32px);
+}
+
+.as-home-ref-card__body h3 {
+  margin: 0 0 12px;
+  color: #242321;
+  font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif) !important;
+  font-size: clamp(30px, 2.25vw, 44px);
+  line-height: 1.02;
+  letter-spacing: -.045em;
+  font-weight: 400 !important;
+}
+
+.as-home-ref-card__body p {
+  max-width: 460px;
+  margin: 0 0 18px;
+  color: rgba(36, 35, 33, .68);
+  font-family: var(--font-sans, Manrope, Arial, sans-serif) !important;
+  font-size: clamp(14px, .95vw, 17px);
+  line-height: 1.52;
+}
+
+.as-home-ref-card__body span {
+  display: inline-flex;
+  align-items: center;
+  color: #242321;
+  font-family: var(--font-sans, Manrope, Arial, sans-serif) !important;
+  font-size: 13px;
+  line-height: 1;
+  border-bottom: 1px solid rgba(36, 35, 33, .28);
+}
+
+.as-home-ref-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(151, 110, 48, .30);
+  box-shadow: 0 30px 78px rgba(36, 35, 33, .11);
+}
+
+.as-home-ref-card:hover img {
+  transform: scale(1.035);
+  filter: saturate(.94) brightness(1.06);
+}
+
+.as-home-ref-cards .reveal {
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
+}
+
+@media (max-width: 980px) {
+  .as-home-ref-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .as-home-ref-card img {
+    height: 320px;
+  }
+}
+
+@media (max-width: 560px) {
+  .as-home-ref-cards {
+    padding: 34px 0 58px;
+  }
+
+  .as-home-ref-card img {
+    height: 240px;
+  }
+
+  .as-home-ref-card__body {
+    padding: 22px;
+  }
+}
+
+/* ---------- END AS HOME REF CARDS STABLE FINAL ---------- */
+
+
+/* ---------- AS INTERIOR TEXT FIX FINAL ---------- */
+
+/* Чиним блок /interior: буквы больше не вылезают из карточек */
+.interior-crystal-layout,
+.interior-stone-layout {
+  grid-template-columns: minmax(360px, .72fr) minmax(760px, 1.28fr) !important;
+  gap: clamp(34px, 4.5vw, 72px) !important;
+}
+
+/* Делаем правые карточки шире и спокойнее */
+.interior-crystal-grid,
+.interior-stone-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: clamp(18px, 1.8vw, 28px) !important;
+}
+
+/* Сами карточки */
+.interior-crystal-card,
+.interior-stone-card {
+  min-height: clamp(300px, 24vw, 390px) !important;
+  border-radius: 30px !important;
+}
+
+/* Внутренние отступы меньше, чтобы тексту хватало места */
+.interior-crystal-card,
+.interior-stone-card__content {
+  padding: clamp(28px, 2.5vw, 42px) !important;
+}
+
+/* Номера 01 / 02 / 03 */
+.interior-crystal-card span,
+.interior-stone-card__content span {
+  margin-bottom: 26px !important;
+  font-size: 12px !important;
+  letter-spacing: .30em !important;
+  white-space: nowrap !important;
+}
+
+/* Главный фикс: заголовки в карточках */
+.interior-crystal-card h3,
+.interior-stone-card__content h3 {
+  max-width: 100% !important;
+  margin: 0 0 20px !important;
+  font-size: clamp(30px, 2vw, 42px) !important;
+  line-height: 1.02 !important;
+  letter-spacing: -.035em !important;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+  hyphens: none !important;
+}
+
+/* Текст внутри карточек */
+.interior-crystal-card p,
+.interior-stone-card__content p {
+  max-width: 260px !important;
+  font-size: clamp(15px, .95vw, 18px) !important;
+  line-height: 1.55 !important;
+}
+
+/* Левый большой заголовок тоже чуть сдерживаем */
+.interior-crystal-copy h2,
+.interior-stone-copy h2 {
+  font-size: clamp(56px, 5vw, 92px) !important;
+  line-height: .92 !important;
+}
+
+/* Планшеты */
+@media (max-width: 1240px) {
+  .interior-crystal-layout,
+  .interior-stone-layout {
+    grid-template-columns: 1fr !important;
+  }
+
+  .interior-crystal-grid,
+  .interior-stone-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
+
+/* Узкие экраны */
+@media (max-width: 980px) {
+  .interior-crystal-grid,
+  .interior-stone-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .interior-crystal-card,
+  .interior-stone-card {
+    min-height: 240px !important;
+  }
+
+  .interior-crystal-card h3,
+  .interior-stone-card__content h3 {
+    font-size: 34px !important;
+  }
+
+  .interior-crystal-card p,
+  .interior-stone-card__content p {
+    max-width: 420px !important;
+  }
+}
+
+/* ---------- END AS INTERIOR TEXT FIX FINAL ---------- */
+
+
+/* ---------- AS FITOUT CRYSTAL FINAL ---------- */
+
+.fitout-crystal-section {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(90px, 9vw, 145px) 0;
+  background:
+    radial-gradient(circle at 68% 18%, rgba(255,255,255,.78), transparent 30rem),
+    linear-gradient(135deg, #f7f0e6 0%, #ece1d0 52%, #faf4eb 100%);
+}
+
+.fitout-crystal-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    url("../img/fitout-section-bg.png") center center / cover no-repeat;
+  opacity: .24;
+  filter: saturate(.86) brightness(1.08);
+}
+
+.fitout-crystal-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.46), transparent 24%, transparent 78%, rgba(255,255,255,.30)),
+    radial-gradient(circle at 86% 18%, rgba(184,137,62,.16), transparent 24rem);
+}
+
+.fitout-crystal-layout {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(360px, .72fr) minmax(760px, 1.28fr);
+  gap: clamp(34px, 4.5vw, 72px);
+  align-items: center;
+}
+
+.fitout-crystal-copy {
+  max-width: 660px;
+}
+
+.fitout-crystal-copy h2 {
+  margin: 0 0 28px;
+  font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif) !important;
+  font-size: clamp(56px, 5vw, 92px);
+  line-height: .92;
+  letter-spacing: -.055em;
+  font-weight: 400 !important;
+}
+
+.fitout-crystal-copy .muted {
+  max-width: 580px;
+  font-family: var(--font-sans, Manrope, Arial, sans-serif) !important;
+  font-size: clamp(18px, 1.3vw, 24px);
+  line-height: 1.58;
+}
+
+.fitout-crystal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(18px, 1.8vw, 28px);
+}
+
+.fitout-crystal-card {
+  position: relative;
+  min-height: clamp(300px, 24vw, 390px);
+  overflow: hidden;
+  border-radius: 30px;
+  padding: clamp(28px, 2.5vw, 42px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  isolation: isolate;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid rgba(177,131,55,.46);
+  box-shadow:
+    0 28px 72px rgba(68,47,23,.15),
+    0 9px 24px rgba(68,47,23,.10),
+    inset 0 0 0 1px rgba(255,255,255,.52);
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+
+.fitout-crystal-card--01 {
+  background-image: url("../img/fitout-crystal-01.png?v=2");
+}
+
+.fitout-crystal-card--02 {
+  background-image: url("../img/fitout-crystal-02.png?v=2");
+}
+
+.fitout-crystal-card--03 {
+  background-image: url("../img/fitout-crystal-03.png?v=2");
+}
+
+.fitout-crystal-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(180deg, rgba(255,250,240,.68), rgba(255,250,240,.34) 62%, rgba(255,250,240,.10)),
+    radial-gradient(circle at 22% 18%, rgba(255,255,255,.42), transparent 12rem);
+}
+
+.fitout-crystal-card span {
+  margin-bottom: 26px;
+  color: #8a672d;
+  font-family: var(--font-sans, Manrope, Arial, sans-serif) !important;
+  font-size: 12px;
+  letter-spacing: .30em;
+  text-transform: uppercase;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.fitout-crystal-card span::after {
+  content: "";
+  display: inline-block;
+  width: 48px;
+  height: 1px;
+  margin-left: 14px;
+  vertical-align: middle;
+  background: linear-gradient(90deg, #b78b3d, transparent);
+}
+
+.fitout-crystal-card h3 {
+  max-width: 100%;
+  margin: 0 0 20px;
+  color: #201c16;
+  font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif) !important;
+  font-size: clamp(29px, 1.9vw, 40px);
+  line-height: 1.03;
+  letter-spacing: -.035em;
+  font-weight: 400 !important;
+  word-break: normal;
+  overflow-wrap: normal;
+  hyphens: none;
+}
+
+.fitout-crystal-card p {
+  max-width: 260px;
+  margin: 0;
+  color: rgba(32,28,22,.82);
+  font-family: var(--font-sans, Manrope, Arial, sans-serif) !important;
+  font-size: clamp(15px, .95vw, 18px);
+  line-height: 1.55;
+}
+
+.fitout-crystal-card:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0 40px 96px rgba(68,47,23,.20),
+    0 15px 36px rgba(68,47,23,.13),
+    inset 0 0 0 1px rgba(255,255,255,.60);
+}
+
+.fitout-crystal-section .reveal {
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
+}
+
+@media (max-width: 1240px) {
+  .fitout-crystal-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .fitout-crystal-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 980px) {
+  .fitout-crystal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fitout-crystal-card {
+    min-height: 240px;
+  }
+
+  .fitout-crystal-card h3 {
+    font-size: 34px;
+  }
+
+  .fitout-crystal-card p {
+    max-width: 420px;
+  }
+}
+
+/* ---------- END AS FITOUT CRYSTAL FINAL ---------- */
+
+
+/* ---------- AS FITOUT SOFT FIX FINAL ---------- */
+
+/* Чуть спокойнее общая композиция */
+.fitout-crystal-layout {
+  grid-template-columns: minmax(360px, .78fr) minmax(720px, 1.22fr) !important;
+  gap: clamp(34px, 4vw, 64px) !important;
+}
+
+/* Левый заголовок чуть меньше, чтобы не давил */
+.fitout-crystal-copy h2 {
+  font-size: clamp(52px, 4.6vw, 84px) !important;
+  line-height: .94 !important;
+  letter-spacing: -.05em !important;
+}
+
+/* Карточки немного ниже и компактнее */
+.fitout-crystal-card {
+  min-height: clamp(270px, 21vw, 340px) !important;
+  padding: clamp(26px, 2.1vw, 34px) !important;
+  border-radius: 28px !important;
+}
+
+/* Номер и линия */
+.fitout-crystal-card span {
+  margin-bottom: 22px !important;
+  font-size: 11px !important;
+  letter-spacing: .28em !important;
+}
+
+.fitout-crystal-card span::after {
+  width: 40px !important;
+  margin-left: 12px !important;
+}
+
+/* Главное: длинные слова больше не вылезают */
+.fitout-crystal-card h3 {
+  max-width: 100% !important;
+  margin: 0 0 18px !important;
+  font-size: clamp(25px, 1.45vw, 31px) !important;
+  line-height: 1.08 !important;
+  letter-spacing: -.025em !important;
+  white-space: normal !important;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+}
+
+/* Текст внутри карточки */
+.fitout-crystal-card p {
+  max-width: 230px !important;
+  font-size: clamp(14px, .88vw, 16px) !important;
+  line-height: 1.55 !important;
+}
+
+/* Чуть меньше расстояния между карточками */
+.fitout-crystal-grid {
+  gap: clamp(16px, 1.5vw, 24px) !important;
+}
+
+/* Если экран уже — карточки не сжимаем до каши */
+@media (max-width: 1280px) {
+  .fitout-crystal-layout {
+    grid-template-columns: 1fr !important;
+  }
+
+  .fitout-crystal-grid {
+    grid-template-columns: repeat(3, minmax(220px, 1fr)) !important;
+  }
+}
+
+@media (max-width: 980px) {
+  .fitout-crystal-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .fitout-crystal-card {
+    min-height: 230px !important;
+  }
+
+  .fitout-crystal-card h3 {
+    font-size: 32px !important;
+  }
+
+  .fitout-crystal-card p {
+    max-width: 420px !important;
+  }
+}
+
+/* ---------- END AS FITOUT SOFT FIX FINAL ---------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------- AS ARCH STONE CARDS FINAL ---------- */
+
+.architecture-stone-grid {
+  width: min(760px, 100%);
+  margin-left: auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(16px, 1.5vw, 24px);
+  padding: clamp(18px, 2vw, 28px);
+  border-radius: 34px;
+  border: 1px solid rgba(177, 131, 55, .34);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255,255,255,.72), transparent 24rem),
+    rgba(255, 250, 241, .46);
+  box-shadow:
+    0 26px 70px rgba(70, 48, 22, .11),
+    inset 0 0 0 1px rgba(255,255,255,.58);
+}
+
+.architecture-stone-card {
+  position: relative;
+  min-height: clamp(280px, 22vw, 360px);
+  overflow: hidden;
+  border-radius: 26px;
+  padding: clamp(26px, 2.2vw, 36px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  isolation: isolate;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid rgba(177, 131, 55, .42);
+  box-shadow:
+    0 20px 48px rgba(70, 48, 22, .13),
+    inset 0 0 0 1px rgba(255,255,255,.50);
+}
+
+.architecture-stone-card--01 {
+  background-image: url("../img/architecture-stone-01.png?v=1");
+}
+
+.architecture-stone-card--02 {
+  background-image: url("../img/architecture-stone-02.png?v=1");
+}
+
+.architecture-stone-card--03 {
+  background-image: url("../img/architecture-stone-03.png?v=1");
+}
+
+.architecture-stone-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(180deg, rgba(255,250,240,.72), rgba(255,250,240,.32) 62%, rgba(255,250,240,.10)),
+    radial-gradient(circle at 20% 16%, rgba(255,255,255,.46), transparent 11rem);
+}
+
+.architecture-stone-card span {
+  margin-bottom: 24px;
+  color: #8a672d;
+  font-family: var(--font-sans, Manrope, Arial, sans-serif) !important;
+  font-size: 11px;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.architecture-stone-card span::after {
+  content: "";
+  display: inline-block;
+  width: 38px;
+  height: 1px;
+  margin-left: 12px;
+  vertical-align: middle;
+  background: linear-gradient(90deg, #b78b3d, transparent);
+}
+
+.architecture-stone-card h3 {
+  max-width: 100%;
+  margin: 0 0 16px;
+  color: #201c16;
+  font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif) !important;
+  font-size: clamp(27px, 1.7vw, 36px);
+  line-height: 1.02;
+  letter-spacing: -.035em;
+  font-weight: 400 !important;
+  word-break: normal;
+  overflow-wrap: normal;
+  hyphens: none;
+}
+
+.architecture-stone-card p {
+  max-width: 220px;
+  margin: 0;
+  color: rgba(32,28,22,.82);
+  font-family: var(--font-sans, Manrope, Arial, sans-serif) !important;
+  font-size: clamp(13px, .82vw, 15px);
+  line-height: 1.55;
+}
+
+.architecture-stone-card:hover {
+  transform: translateY(-4px);
+  transition: transform .32s ease, box-shadow .32s ease;
+  box-shadow:
+    0 30px 78px rgba(70, 48, 22, .17),
+    inset 0 0 0 1px rgba(255,255,255,.62);
+}
+
+/* На этой странице убираем поведение старой картинки, если осталось */
+img[src*="architecture-gem-cards"] {
+  display: none !important;
+}
+
+@media (max-width: 1240px) {
+  .architecture-stone-grid {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 980px) {
+  .architecture-stone-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .architecture-stone-card {
+    min-height: 230px;
+  }
+
+  .architecture-stone-card h3 {
+    font-size: 34px;
+  }
+
+  .architecture-stone-card p {
+    max-width: 420px;
+  }
+}
+
+/* ---------- END AS ARCH STONE CARDS FINAL ---------- */
+
+
+/* ---------- AS HOME GLASS HOVER FINAL ---------- */
+
+/* Стеклянный премиальный блик на каменных карточках главной */
+.stone-section .stone-card,
+.home-stone-section .stone-card,
+.home-stone-card,
+.as-stone-card {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transition:
+    transform .38s ease,
+    box-shadow .38s ease,
+    border-color .38s ease,
+    filter .38s ease;
+}
+
+/* Диагональный стеклянный луч */
+.stone-section .stone-card::after,
+.home-stone-section .stone-card::after,
+.home-stone-card::after,
+.as-stone-card::after {
+  content: "";
+  position: absolute;
+  inset: -55%;
+  z-index: 5;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateX(-62%) rotate(18deg);
+  background:
+    linear-gradient(
+      105deg,
+      transparent 34%,
+      rgba(255,255,255,.00) 40%,
+      rgba(255,255,255,.22) 45%,
+      rgba(255,255,255,.78) 49%,
+      rgba(255,255,255,.28) 53%,
+      rgba(255,255,255,.00) 60%,
+      transparent 68%
+    );
+  mix-blend-mode: screen;
+  transition:
+    transform .95s cubic-bezier(.2,.8,.2,1),
+    opacity .38s ease;
+}
+
+/* Мягкое свечение по краю при наведении */
+.stone-section .stone-card:hover,
+.home-stone-section .stone-card:hover,
+.home-stone-card:hover,
+.as-stone-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(190, 142, 62, .64) !important;
+  filter: brightness(1.035) saturate(1.04);
+  box-shadow:
+    0 34px 86px rgba(92, 65, 31, .18),
+    0 12px 32px rgba(92, 65, 31, .13),
+    inset 0 0 0 1px rgba(255,255,255,.70),
+    inset 0 18px 42px rgba(255,255,255,.22) !important;
+}
+
+.stone-section .stone-card:hover::after,
+.home-stone-section .stone-card:hover::after,
+.home-stone-card:hover::after,
+.as-stone-card:hover::after {
+  opacity: 1;
+  transform: translateX(62%) rotate(18deg);
+}
+
+/* Маленький живой отблеск в углу */
+.stone-section .stone-card:hover::before,
+.home-stone-section .stone-card:hover::before,
+.home-stone-card:hover::before,
+.as-stone-card:hover::before {
+  filter: brightness(1.08);
+}
+
+/* На телефонах без агрессивного движения */
+@media (hover: none) {
+  .stone-section .stone-card::after,
+  .home-stone-section .stone-card::after,
+  .home-stone-card::after,
+  .as-stone-card::after {
+    display: none;
+  }
+
+  .stone-section .stone-card:hover,
+  .home-stone-section .stone-card:hover,
+  .home-stone-card:hover,
+  .as-stone-card:hover {
+    transform: none;
+  }
+}
+
+/* ---------- END AS HOME GLASS HOVER FINAL ---------- */

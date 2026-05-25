@@ -1,0 +1,3 @@
+date;name;phone;message;page;utm_source;utm_medium;utm_campaign;ip
+"2026-05-25 09:10:38";"Сергей Кириллов";+77777777;на;http://localhost:8000/contacts;;;;::1
+"2026-05-25 09:11:52";"Сергей Кириллов";907787;;http://localhost:8000/contacts?sent=1;;;;::1

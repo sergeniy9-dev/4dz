@@ -6,54 +6,38 @@ page_start(
 );
 ?>
 
-<section class="page-hero page-hero-fitout">
-  <div class="container page-hero-inner">
-    <div>
-      <p class="eyebrow">ПОД ЖИЛЬЕ</p>
-      <h1>Решения под ваш образ жизни</h1>
-      <p class="lead">
-        Прорабатываем пространство так, чтобы оно было не только красивым,
-        но и удобным: комфорт, функциональность, индивидуальность и спокойная реализация.
-      </p>
-      <div class="actions">
-        <a class="btn primary" href="<?= url('/contacts') ?>">Оставить заявку</a>
-        <a class="btn" href="<?= url('/process') ?>">Как работаем</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container split">
-    <div>
-      <p class="eyebrow">Смысл</p>
+<section class="section fitout-crystal-section">
+  <div class="container fitout-crystal-layout">
+    <div class="fitout-crystal-copy reveal">
+      <p class="eyebrow">СМЫСЛ</p>
       <h2>Финальная проработка, чтобы дальше не было хаоса</h2>
       <p class="muted">
-        Собираем решения по планировке, материалам, свету, мебели и деталям в понятную систему,
-        с которой можно двигаться к отделке и реализации.
+        Собираем решения по планировке, материалам, свету, мебели и деталям
+        в понятную систему, с которой можно двигаться к отделке и реализации.
       </p>
     </div>
 
-    <div class="cards">
-      <article class="card reveal">
-        <div class="card-num">01</div>
+    <div class="fitout-crystal-grid">
+      <article class="fitout-crystal-card fitout-crystal-card--01 reveal">
+        <span>01</span>
         <h3>Комфорт</h3>
-        <p class="muted">Сценарии жизни, удобство маршрутов и логика ежедневного использования.</p>
+        <p>Сценарии жизни, удобство маршрутов и логика ежедневного использования.</p>
       </article>
 
-      <article class="card reveal">
-        <div class="card-num">02</div>
+      <article class="fitout-crystal-card fitout-crystal-card--02 reveal">
+        <span>02</span>
         <h3>Функциональность</h3>
-        <p class="muted">Хранение, мебель, проходы, техника и реальные бытовые задачи.</p>
+        <p>Хранение, мебель, проходы, техника и реальные бытовые задачи.</p>
       </article>
 
-      <article class="card reveal">
-        <div class="card-num">03</div>
+      <article class="fitout-crystal-card fitout-crystal-card--03 reveal">
+        <span>03</span>
         <h3>Индивидуальность</h3>
-        <p class="muted">Пространство отражает характер владельца, а не копирует шаблон.</p>
+        <p>Пространство отражает характер владельца, а не копирует шаблон.</p>
       </article>
     </div>
   </div>
 </section>
 
 <?php page_end(); ?>
+
