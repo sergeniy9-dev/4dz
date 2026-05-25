@@ -1,0 +1,450 @@
+﻿(function () {
+  const header = document.querySelector('[data-header]');
+  const menuBtn = document.querySelector('[data-menu-btn]');
+  const nav = document.querySelector('[data-nav]');
+
+  function onScroll() {
+    if (!header) return;
+    header.classList.toggle('scrolled', window.scrollY > 16);
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  if (menuBtn && nav) {
+    menuBtn.addEventListener('click', function () {
+      nav.classList.toggle('open');
+    });
+
+    nav.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        nav.classList.remove('open');
+      });
+    });
+  }
+
+  document.querySelectorAll('.js-letters').forEach(function (el) {
+    const text = el.textContent.trim();
+    el.textContent = '';
+
+    text.split('').forEach(function (char, index) {
+      const span = document.createElement('span');
+      span.textContent = char === ' ' ? '\u00A0' : char;
+      span.style.animationDelay = (index * 0.035) + 's';
+      el.appendChild(span);
+    });
+  });
+
+  const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.reveal').forEach(function (el) {
+    observer.observe(el);
+  });
+
+  const params = new URLSearchParams(window.location.search);
+  const utmFields = ['utm_source', 'utm_medium', 'utm_campaign'];
+
+  utmFields.forEach(function (key) {
+    const value = params.get(key) || localStorage.getItem(key) || '';
+    if (value) {
+      localStorage.setItem(key, value);
+    }
+
+    document.querySelectorAll('input[name="' + key + '"]').forEach(function (input) {
+      input.value = value;
+    });
+  });
+
+  document.querySelectorAll('input[name="page"]').forEach(function (input) {
+    input.value = window.location.href;
+  });
+})();
+
+/* ---------- PREMIUM INTRO LOGO ANIMATION ---------- */
+(function () {
+  const intro = document.querySelector('[data-intro]');
+  if (!intro) return;
+
+  const html = document.documentElement;
+  const body = document.body;
+
+  const prefersReducedMotion = window.matchMedia &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const alreadySeen = sessionStorage.getItem('archa_intro_seen') === '1';
+
+  function revealSite() {
+    html.classList.remove('intro-lock');
+    body.classList.remove('is-intro-running');
+
+    requestAnimationFrame(function () {
+      body.classList.add('site-reveal');
+    });
+  }
+
+  if (alreadySeen || prefersReducedMotion) {
+    intro.classList.add('skip');
+    revealSite();
+    return;
+  }
+
+  html.classList.add('intro-lock');
+  body.classList.add('is-intro-running');
+
+  let closed = false;
+
+  function closeIntro() {
+    if (closed) return;
+    closed = true;
+
+    intro.classList.add('intro-out');
+    sessionStorage.setItem('archa_intro_seen', '1');
+
+    setTimeout(function () {
+      revealSite();
+    }, 520);
+
+    setTimeout(function () {
+      intro.remove();
+    }, 1350);
+  }
+
+  window.addEventListener('load', function () {
+    setTimeout(closeIntro, 3100);
+  });
+
+  setTimeout(closeIntro, 5200);
+
+  intro.addEventListener('click', closeIntro);
+  window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape' || event.key === 'Enter' || event.key === ' ') {
+      closeIntro();
+    }
+  });
+})();
+
+
+/* ---------- SHOWROOM LUXURY LIGHT TRACKING ---------- */
+(function () {
+  const targets = document.querySelectorAll(
+    '.hero-card, .card, .signature-point, .presentation-card, .project, .stat, .material-cell'
+  );
+
+  if (!targets.length) return;
+
+  targets.forEach(function (el) {
+    el.style.setProperty('--mx', '52%');
+    el.style.setProperty('--my', '18%');
+
+    el.addEventListener('pointermove', function (event) {
+      const rect = el.getBoundingClientRect();
+      const x = ((event.clientX - rect.left) / rect.width) * 100;
+      const y = ((event.clientY - rect.top) / rect.height) * 100;
+
+      el.style.setProperty('--mx', x.toFixed(2) + '%');
+      el.style.setProperty('--my', y.toFixed(2) + '%');
+    });
+
+    el.addEventListener('pointerleave', function () {
+      el.style.setProperty('--mx', '52%');
+      el.style.setProperty('--my', '18%');
+    });
+  });
+})();
+/* ---------- END SHOWROOM LUXURY LIGHT TRACKING ---------- */
+
+
+
+
+
+/* ---------- AS SHOWROOM TILE LIGHT ---------- */
+(function () {
+  const tiles = document.querySelectorAll('.showroom-tile');
+
+  tiles.forEach(function (tile) {
+    tile.style.setProperty('--mx', '50%');
+    tile.style.setProperty('--my', '20%');
+
+    tile.addEventListener('pointermove', function (event) {
+      const rect = tile.getBoundingClientRect();
+      const x = ((event.clientX - rect.left) / rect.width) * 100;
+      const y = ((event.clientY - rect.top) / rect.height) * 100;
+
+      tile.style.setProperty('--mx', x.toFixed(2) + '%');
+      tile.style.setProperty('--my', y.toFixed(2) + '%');
+    });
+
+    tile.addEventListener('pointerleave', function () {
+      tile.style.setProperty('--mx', '50%');
+      tile.style.setProperty('--my', '20%');
+    });
+  });
+})();
+/* ---------- END AS SHOWROOM TILE LIGHT ---------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------- AS GREETING COVER ---------- */
+(function () {
+  function runGreetingCover() {
+    var cover = document.getElementById('asGreetingCover');
+    if (!cover) return;
+
+    document.documentElement.classList.add('as-greeting-lock');
+
+    window.setTimeout(function () {
+      cover.classList.add('is-leaving');
+      document.documentElement.classList.remove('as-greeting-lock');
+
+      window.setTimeout(function () {
+        if (cover && cover.parentNode) {
+          cover.parentNode.removeChild(cover);
+        }
+      }, 900);
+    }, 2000);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', runGreetingCover, { once: true });
+  } else {
+    runGreetingCover();
+  }
+})();
+ /* ---------- END AS GREETING COVER ---------- */
+
+
+/* ---------- AS PROJECT FILTERS FINAL ---------- */
+(function () {
+  function normalizeText(text) {
+    return String(text || '')
+      .toLowerCase()
+      .replace(/\s+/g, ' ')
+      .trim();
+  }
+
+  function getFilterFromText(text) {
+    var value = normalizeText(text);
+
+    if (value.includes('все')) return 'all';
+    if (value.includes('дом')) return 'houses';
+    if (value.includes('квартир')) return 'apartments';
+    if (value.includes('коммер')) return 'commercial';
+    if (value.includes('процесс')) return 'process';
+
+    return 'all';
+  }
+
+  function getCardCategory(card) {
+    if (card.dataset.projectCategory) return card.dataset.projectCategory;
+    if (card.dataset.category) return card.dataset.category;
+    if (card.dataset.filter) return card.dataset.filter;
+
+    var text = normalizeText(card.textContent);
+
+    if (
+      text.includes('дом') ||
+      text.includes('таунхаус') ||
+      text.includes('коттедж') ||
+      text.includes('загород')
+    ) {
+      return 'houses';
+    }
+
+    if (
+      text.includes('квартир') ||
+      text.includes('апартамент')
+    ) {
+      return 'apartments';
+    }
+
+    if (
+      text.includes('офис') ||
+      text.includes('коммер') ||
+      text.includes('ресторан') ||
+      text.includes('салон') ||
+      text.includes('шоурум')
+    ) {
+      return 'commercial';
+    }
+
+    if (
+      text.includes('в процессе') ||
+      text.includes('строится') ||
+      text.includes('реализации') ||
+      text.includes('разработка')
+    ) {
+      return 'process';
+    }
+
+    return 'all';
+  }
+
+  function initProjectFilters() {
+    var pageText = normalizeText(document.body.textContent);
+    var isProjectsPage =
+      window.location.pathname.replace(/\/+$/, '') === '/projects' ||
+      pageText.includes('все проекты') ||
+      pageText.includes('частные дома') ||
+      pageText.includes('коммерческие');
+
+    if (!isProjectsPage) return;
+
+    var buttons = Array.from(document.querySelectorAll(
+      '.projects-filter button, .projects-filters button, .project-filters button, .filters button, .filter-btn, [data-project-filter], [data-filter]'
+    ));
+
+    if (!buttons.length) {
+      buttons = Array.from(document.querySelectorAll('button, a')).filter(function (el) {
+        var text = normalizeText(el.textContent);
+        return (
+          text === 'все проекты' ||
+          text === 'частные дома' ||
+          text === 'квартиры' ||
+          text === 'коммерческие' ||
+          text === 'в процессе'
+        );
+      });
+    }
+
+    var cards = Array.from(document.querySelectorAll(
+      '[data-project-card], .project-card, .projects-card, .projects-item, .project-item, .as-project-card'
+    ));
+
+    cards = cards.filter(function (card) {
+      return !buttons.includes(card);
+    });
+
+    if (!buttons.length || !cards.length) return;
+
+    buttons.forEach(function (button) {
+      if (!button.dataset.projectFilter) {
+        button.dataset.projectFilter = button.dataset.filter || getFilterFromText(button.textContent);
+      }
+
+      button.setAttribute('type', button.tagName.toLowerCase() === 'button' ? 'button' : button.getAttribute('type') || '');
+    });
+
+    cards.forEach(function (card) {
+      if (!card.dataset.projectCategory) {
+        card.dataset.projectCategory = getCardCategory(card);
+      }
+    });
+
+    function setActiveButton(activeButton) {
+      buttons.forEach(function (button) {
+        button.classList.remove('active', 'is-active');
+        button.setAttribute('aria-pressed', 'false');
+      });
+
+      activeButton.classList.add('active', 'is-active');
+      activeButton.setAttribute('aria-pressed', 'true');
+    }
+
+    function filterProjects(filter) {
+      cards.forEach(function (card) {
+        var category = card.dataset.projectCategory || 'all';
+        var show = filter === 'all' || category === filter;
+
+        card.classList.toggle('project-card-hidden', !show);
+        card.hidden = !show;
+      });
+    }
+
+    buttons.forEach(function (button) {
+      button.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        var filter = button.dataset.projectFilter || getFilterFromText(button.textContent);
+
+        setActiveButton(button);
+        filterProjects(filter);
+
+        if (window.history && window.history.replaceState) {
+          var url = new URL(window.location.href);
+          url.searchParams.set('filter', filter);
+          window.history.replaceState({}, '', url.toString());
+        }
+      });
+    });
+
+    var params = new URLSearchParams(window.location.search);
+    var startFilter = params.get('filter') || 'all';
+
+    var startButton = buttons.find(function (button) {
+      return button.dataset.projectFilter === startFilter;
+    }) || buttons[0];
+
+    setActiveButton(startButton);
+    filterProjects(startButton.dataset.projectFilter || 'all');
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initProjectFilters, { once: true });
+  } else {
+    initProjectFilters();
+  }
+})();
+ /* ---------- END AS PROJECT FILTERS FINAL ---------- */

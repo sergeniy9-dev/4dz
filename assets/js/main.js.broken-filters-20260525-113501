@@ -1,0 +1,337 @@
+﻿(function () {
+  const header = document.querySelector('[data-header]');
+  const menuBtn = document.querySelector('[data-menu-btn]');
+  const nav = document.querySelector('[data-nav]');
+
+  function onScroll() {
+    if (!header) return;
+    header.classList.toggle('scrolled', window.scrollY > 16);
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  if (menuBtn && nav) {
+    menuBtn.addEventListener('click', function () {
+      nav.classList.toggle('open');
+    });
+
+    nav.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        nav.classList.remove('open');
+      });
+    });
+  }
+
+  document.querySelectorAll('.js-letters').forEach(function (el) {
+    const text = el.textContent.trim();
+    el.textContent = '';
+
+    text.split('').forEach(function (char, index) {
+      const span = document.createElement('span');
+      span.textContent = char === ' ' ? '\u00A0' : char;
+      span.style.animationDelay = (index * 0.035) + 's';
+      el.appendChild(span);
+    });
+  });
+
+  const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.reveal').forEach(function (el) {
+    observer.observe(el);
+  });
+
+  const params = new URLSearchParams(window.location.search);
+  const utmFields = ['utm_source', 'utm_medium', 'utm_campaign'];
+
+  utmFields.forEach(function (key) {
+    const value = params.get(key) || localStorage.getItem(key) || '';
+    if (value) {
+      localStorage.setItem(key, value);
+    }
+
+    document.querySelectorAll('input[name="' + key + '"]').forEach(function (input) {
+      input.value = value;
+    });
+  });
+
+  document.querySelectorAll('input[name="page"]').forEach(function (input) {
+    input.value = window.location.href;
+  });
+})();
+
+/* ---------- PREMIUM INTRO LOGO ANIMATION ---------- */
+(function () {
+  const intro = document.querySelector('[data-intro]');
+  if (!intro) return;
+
+  const html = document.documentElement;
+  const body = document.body;
+
+  const prefersReducedMotion = window.matchMedia &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const alreadySeen = sessionStorage.getItem('archa_intro_seen') === '1';
+
+  function revealSite() {
+    html.classList.remove('intro-lock');
+    body.classList.remove('is-intro-running');
+
+    requestAnimationFrame(function () {
+      body.classList.add('site-reveal');
+    });
+  }
+
+  if (alreadySeen || prefersReducedMotion) {
+    intro.classList.add('skip');
+    revealSite();
+    return;
+  }
+
+  html.classList.add('intro-lock');
+  body.classList.add('is-intro-running');
+
+  let closed = false;
+
+  function closeIntro() {
+    if (closed) return;
+    closed = true;
+
+    intro.classList.add('intro-out');
+    sessionStorage.setItem('archa_intro_seen', '1');
+
+    setTimeout(function () {
+      revealSite();
+    }, 520);
+
+    setTimeout(function () {
+      intro.remove();
+    }, 1350);
+  }
+
+  window.addEventListener('load', function () {
+    setTimeout(closeIntro, 3100);
+  });
+
+  setTimeout(closeIntro, 5200);
+
+  intro.addEventListener('click', closeIntro);
+  window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape' || event.key === 'Enter' || event.key === ' ') {
+      closeIntro();
+    }
+  });
+})();
+
+
+/* ---------- SHOWROOM LUXURY LIGHT TRACKING ---------- */
+(function () {
+  const targets = document.querySelectorAll(
+    '.hero-card, .card, .signature-point, .presentation-card, .project, .stat, .material-cell'
+  );
+
+  if (!targets.length) return;
+
+  targets.forEach(function (el) {
+    el.style.setProperty('--mx', '52%');
+    el.style.setProperty('--my', '18%');
+
+    el.addEventListener('pointermove', function (event) {
+      const rect = el.getBoundingClientRect();
+      const x = ((event.clientX - rect.left) / rect.width) * 100;
+      const y = ((event.clientY - rect.top) / rect.height) * 100;
+
+      el.style.setProperty('--mx', x.toFixed(2) + '%');
+      el.style.setProperty('--my', y.toFixed(2) + '%');
+    });
+
+    el.addEventListener('pointerleave', function () {
+      el.style.setProperty('--mx', '52%');
+      el.style.setProperty('--my', '18%');
+    });
+  });
+})();
+/* ---------- END SHOWROOM LUXURY LIGHT TRACKING ---------- */
+
+
+
+
+
+/* ---------- AS SHOWROOM TILE LIGHT ---------- */
+(function () {
+  const tiles = document.querySelectorAll('.showroom-tile');
+
+  tiles.forEach(function (tile) {
+    tile.style.setProperty('--mx', '50%');
+    tile.style.setProperty('--my', '20%');
+
+    tile.addEventListener('pointermove', function (event) {
+      const rect = tile.getBoundingClientRect();
+      const x = ((event.clientX - rect.left) / rect.width) * 100;
+      const y = ((event.clientY - rect.top) / rect.height) * 100;
+
+      tile.style.setProperty('--mx', x.toFixed(2) + '%');
+      tile.style.setProperty('--my', y.toFixed(2) + '%');
+    });
+
+    tile.addEventListener('pointerleave', function () {
+      tile.style.setProperty('--mx', '50%');
+      tile.style.setProperty('--my', '20%');
+    });
+  });
+})();
+/* ---------- END AS SHOWROOM TILE LIGHT ---------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------- AS GREETING COVER ---------- */
+(function () {
+  function runGreetingCover() {
+    var cover = document.getElementById('asGreetingCover');
+    if (!cover) return;
+
+    document.documentElement.classList.add('as-greeting-lock');
+
+    window.setTimeout(function () {
+      cover.classList.add('is-leaving');
+      document.documentElement.classList.remove('as-greeting-lock');
+
+      window.setTimeout(function () {
+        if (cover && cover.parentNode) {
+          cover.parentNode.removeChild(cover);
+        }
+      }, 900);
+    }, 2000);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', runGreetingCover, { once: true });
+  } else {
+    runGreetingCover();
+  }
+})();
+ /* ---------- END AS GREETING COVER ---------- */
+
+
+
+
+
+/* ---------- AS PROJECT FILTERS FINAL ---------- */
+(function () {
+  function initProjectFilters() {
+    var page = document.querySelector('[data-projects-page]');
+    if (!page) return;
+
+    var buttons = Array.prototype.slice.call(page.querySelectorAll('[data-project-filter]'));
+    var cards = Array.prototype.slice.call(page.querySelectorAll('[data-project-card]'));
+
+    if (!buttons.length || !cards.length) return;
+
+    function applyFilter(filter) {
+      buttons.forEach(function (button) {
+        var active = button.dataset.projectFilter === filter;
+        button.classList.toggle('active', active);
+        button.classList.toggle('is-active', active);
+        button.setAttribute('aria-pressed', active ? 'true' : 'false');
+      });
+
+      cards.forEach(function (card) {
+        var category = card.dataset.projectCategory;
+        var visible = filter === 'all' || category === filter;
+
+        card.classList.toggle('is-hidden', !visible);
+        card.hidden = !visible;
+      });
+    }
+
+    buttons.forEach(function (button) {
+      button.addEventListener('click', function () {
+        var filter = button.dataset.projectFilter || 'all';
+        applyFilter(filter);
+
+        var url = new URL(window.location.href);
+        url.searchParams.set('filter', filter);
+        window.history.replaceState({}, '', url.toString());
+      });
+    });
+
+    var params = new URLSearchParams(window.location.search);
+    var startFilter = params.get('filter') || 'all';
+
+    var hasStartFilter = buttons.some(function (button) {
+      return button.dataset.projectFilter === startFilter;
+    });
+
+    applyFilter(hasStartFilter ? startFilter : 'all');
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initProjectFilters, { once: true });
+  } else {
+    initProjectFilters();
+  }
+})();
+ /* ---------- END AS PROJECT FILTERS FINAL ---------- */
