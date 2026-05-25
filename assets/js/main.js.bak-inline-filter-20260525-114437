@@ -1,0 +1,398 @@
+﻿(function () {
+  const header = document.querySelector('[data-header]');
+  const menuBtn = document.querySelector('[data-menu-btn]');
+  const nav = document.querySelector('[data-nav]');
+
+  function onScroll() {
+    if (!header) return;
+    header.classList.toggle('scrolled', window.scrollY > 16);
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  if (menuBtn && nav) {
+    menuBtn.addEventListener('click', function () {
+      nav.classList.toggle('open');
+    });
+
+    nav.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        nav.classList.remove('open');
+      });
+    });
+  }
+
+  document.querySelectorAll('.js-letters').forEach(function (el) {
+    const text = el.textContent.trim();
+    el.textContent = '';
+
+    text.split('').forEach(function (char, index) {
+      const span = document.createElement('span');
+      span.textContent = char === ' ' ? '\u00A0' : char;
+      span.style.animationDelay = (index * 0.035) + 's';
+      el.appendChild(span);
+    });
+  });
+
+  const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.reveal').forEach(function (el) {
+    observer.observe(el);
+  });
+
+  const params = new URLSearchParams(window.location.search);
+  const utmFields = ['utm_source', 'utm_medium', 'utm_campaign'];
+
+  utmFields.forEach(function (key) {
+    const value = params.get(key) || localStorage.getItem(key) || '';
+    if (value) {
+      localStorage.setItem(key, value);
+    }
+
+    document.querySelectorAll('input[name="' + key + '"]').forEach(function (input) {
+      input.value = value;
+    });
+  });
+
+  document.querySelectorAll('input[name="page"]').forEach(function (input) {
+    input.value = window.location.href;
+  });
+})();
+
+/* ---------- PREMIUM INTRO LOGO ANIMATION ---------- */
+(function () {
+  const intro = document.querySelector('[data-intro]');
+  if (!intro) return;
+
+  const html = document.documentElement;
+  const body = document.body;
+
+  const prefersReducedMotion = window.matchMedia &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const alreadySeen = sessionStorage.getItem('archa_intro_seen') === '1';
+
+  function revealSite() {
+    html.classList.remove('intro-lock');
+    body.classList.remove('is-intro-running');
+
+    requestAnimationFrame(function () {
+      body.classList.add('site-reveal');
+    });
+  }
+
+  if (alreadySeen || prefersReducedMotion) {
+    intro.classList.add('skip');
+    revealSite();
+    return;
+  }
+
+  html.classList.add('intro-lock');
+  body.classList.add('is-intro-running');
+
+  let closed = false;
+
+  function closeIntro() {
+    if (closed) return;
+    closed = true;
+
+    intro.classList.add('intro-out');
+    sessionStorage.setItem('archa_intro_seen', '1');
+
+    setTimeout(function () {
+      revealSite();
+    }, 520);
+
+    setTimeout(function () {
+      intro.remove();
+    }, 1350);
+  }
+
+  window.addEventListener('load', function () {
+    setTimeout(closeIntro, 3100);
+  });
+
+  setTimeout(closeIntro, 5200);
+
+  intro.addEventListener('click', closeIntro);
+  window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape' || event.key === 'Enter' || event.key === ' ') {
+      closeIntro();
+    }
+  });
+})();
+
+
+/* ---------- SHOWROOM LUXURY LIGHT TRACKING ---------- */
+(function () {
+  const targets = document.querySelectorAll(
+    '.hero-card, .card, .signature-point, .presentation-card, .project, .stat, .material-cell'
+  );
+
+  if (!targets.length) return;
+
+  targets.forEach(function (el) {
+    el.style.setProperty('--mx', '52%');
+    el.style.setProperty('--my', '18%');
+
+    el.addEventListener('pointermove', function (event) {
+      const rect = el.getBoundingClientRect();
+      const x = ((event.clientX - rect.left) / rect.width) * 100;
+      const y = ((event.clientY - rect.top) / rect.height) * 100;
+
+      el.style.setProperty('--mx', x.toFixed(2) + '%');
+      el.style.setProperty('--my', y.toFixed(2) + '%');
+    });
+
+    el.addEventListener('pointerleave', function () {
+      el.style.setProperty('--mx', '52%');
+      el.style.setProperty('--my', '18%');
+    });
+  });
+})();
+/* ---------- END SHOWROOM LUXURY LIGHT TRACKING ---------- */
+
+
+
+
+
+/* ---------- AS SHOWROOM TILE LIGHT ---------- */
+(function () {
+  const tiles = document.querySelectorAll('.showroom-tile');
+
+  tiles.forEach(function (tile) {
+    tile.style.setProperty('--mx', '50%');
+    tile.style.setProperty('--my', '20%');
+
+    tile.addEventListener('pointermove', function (event) {
+      const rect = tile.getBoundingClientRect();
+      const x = ((event.clientX - rect.left) / rect.width) * 100;
+      const y = ((event.clientY - rect.top) / rect.height) * 100;
+
+      tile.style.setProperty('--mx', x.toFixed(2) + '%');
+      tile.style.setProperty('--my', y.toFixed(2) + '%');
+    });
+
+    tile.addEventListener('pointerleave', function () {
+      tile.style.setProperty('--mx', '50%');
+      tile.style.setProperty('--my', '20%');
+    });
+  });
+})();
+/* ---------- END AS SHOWROOM TILE LIGHT ---------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------- AS GREETING COVER ---------- */
+(function () {
+  function runGreetingCover() {
+    var cover = document.getElementById('asGreetingCover');
+    if (!cover) return;
+
+    document.documentElement.classList.add('as-greeting-lock');
+
+    window.setTimeout(function () {
+      cover.classList.add('is-leaving');
+      document.documentElement.classList.remove('as-greeting-lock');
+
+      window.setTimeout(function () {
+        if (cover && cover.parentNode) {
+          cover.parentNode.removeChild(cover);
+        }
+      }, 900);
+    }, 2000);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', runGreetingCover, { once: true });
+  } else {
+    runGreetingCover();
+  }
+})();
+ /* ---------- END AS GREETING COVER ---------- */
+
+
+
+
+
+
+
+
+
+
+
+/* ---------- AS PROJECT BUTTONS SAFE FINAL ---------- */
+(function () {
+  function cleanText(value) {
+    return String(value || '')
+      .toLowerCase()
+      .replace(/ё/g, 'е')
+      .replace(/\s+/g, ' ')
+      .trim();
+  }
+
+  function getFilterFromButton(button) {
+    var text = cleanText(button.textContent);
+
+    if (text === 'все проекты') return 'all';
+    if (text === 'частные дома') return 'houses';
+    if (text === 'квартиры') return 'apartments';
+    if (text === 'коммерческие') return 'commercial';
+    if (text === 'в процессе') return 'process';
+
+    return 'all';
+  }
+
+  function initProjectButtons() {
+    var path = window.location.pathname.replace(/\/+$/, '') || '/';
+    if (path !== '/projects') return;
+
+    var allowedTexts = [
+      'все проекты',
+      'частные дома',
+      'квартиры',
+      'коммерческие',
+      'в процессе'
+    ];
+
+    var buttons = Array.prototype.slice.call(document.querySelectorAll('button, a')).filter(function (el) {
+      return allowedTexts.indexOf(cleanText(el.textContent)) !== -1;
+    });
+
+    var cards = Array.prototype.slice.call(document.querySelectorAll('.project-card'));
+
+    if (!buttons.length || !cards.length) return;
+
+    /*
+      Категории по порядку карточек на странице:
+      1 — дом
+      2 — квартира
+      3 — дом
+      4 — квартира
+      5 — коммерческий
+      6 — в процессе
+    */
+    var categories = ['houses', 'apartments', 'houses', 'apartments', 'commercial', 'process'];
+
+    cards.forEach(function (card, index) {
+      card.dataset.asProjectCategory = categories[index] || 'houses';
+    });
+
+    function setActive(activeButton) {
+      buttons.forEach(function (button) {
+        button.classList.remove('active', 'is-active', 'current');
+        button.removeAttribute('data-active');
+        button.setAttribute('aria-pressed', 'false');
+      });
+
+      activeButton.classList.add('active', 'is-active', 'current');
+      activeButton.setAttribute('data-active', 'true');
+      activeButton.setAttribute('aria-pressed', 'true');
+    }
+
+    function showCards(filter) {
+      cards.forEach(function (card) {
+        var category = card.dataset.asProjectCategory;
+        var visible = filter === 'all' || category === filter;
+
+        if (visible) {
+          card.classList.remove('as-project-hidden');
+          card.removeAttribute('hidden');
+        } else {
+          card.classList.add('as-project-hidden');
+          card.setAttribute('hidden', 'hidden');
+        }
+      });
+    }
+
+    buttons.forEach(function (button) {
+      if (button.tagName.toLowerCase() === 'button') {
+        button.setAttribute('type', 'button');
+      }
+
+      button.addEventListener('click', function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        var filter = getFilterFromButton(button);
+
+        setActive(button);
+        showCards(filter);
+      });
+    });
+
+    setActive(buttons[0]);
+    showCards('all');
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initProjectButtons, { once: true });
+  } else {
+    initProjectButtons();
+  }
+})();
+ /* ---------- END AS PROJECT BUTTONS SAFE FINAL ---------- */
