@@ -6,9 +6,7 @@ function page_head(string $title, string $description = ''): void
 {
     $fullTitle = $title === SITE['name'] ? SITE['name'] : $title . ' — ' . SITE['name'];
     $description = $description ?: SITE['descriptor'];
-    $metrikaId = SITE['metrika_id'];
-    $requestPath = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/';
-    $showGreeting = $requestPath === '/' || $requestPath === '/index.php';
+    $metrikaId = SITE['metrika_id'] ?? '00000000';
     ?>
 <!doctype html>
 <html lang="ru">
@@ -23,7 +21,7 @@ function page_head(string $title, string $description = ''): void
   <meta property="og:type" content="website">
   <link rel="icon" href="<?= asset('img/favicon.svg') ?>">
   <link rel="stylesheet" href="<?= asset('css/style.css') ?>">
-  <link rel="stylesheet" href="<?= asset('css/site-light.css') ?>?v=as-greeting-1">
+  <link rel="stylesheet" href="<?= asset('css/site-light.css') ?>?v=site-final-1">
 
   <?php if ($metrikaId !== '00000000') : ?>
   <script>
@@ -36,7 +34,7 @@ function page_head(string $title, string $description = ''): void
       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
     })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym');
 
-    ym(<?= h($metrikaId) ?>, 'init', {
+    ym(<?= json_encode((string)$metrikaId) ?>, 'init', {
       clickmap:true,
       trackLinks:true,
       accurateTrackBounce:true,
@@ -46,20 +44,15 @@ function page_head(string $title, string $description = ''): void
   <?php endif; ?>
 </head>
 <body>
-<?php if ($showGreeting) : ?>
-<!-- AS GREETING COVER START -->
-<div class="as-greeting-cover" id="asGreetingCover" aria-hidden="true">
-  <img class="as-greeting-cover__img" src="/assets/img/intro-brand-scene.png?v=3001" alt="">
-</div>
-<!-- AS GREETING COVER END -->
-<?php endif; ?>
-<?php if ($showGreeting) : ?>
 
-<?php endif; ?>
+  <?php if ($metrikaId !== '00000000') : ?>
+  <noscript>
+    <div>
+      <img src="https://mc.yandex.ru/watch/<?= h($metrikaId) ?>" style="position:absolute; left:-9999px;" alt="">
+    </div>
+  </noscript>
+  <?php endif; ?>
 
-<?php if ($metrikaId !== '00000000') : ?>
-<noscript><div><img src="https://mc.yandex.ru/watch/<?= h($metrikaId) ?>" style="position:absolute; left:-9999px;" alt=""></div></noscript>
-<?php endif; ?>
 <?php
 }
 
@@ -145,7 +138,7 @@ function page_footer(): void
   </div>
 </footer>
 
-<script src="<?= asset('js/main.js') ?>?v=as-greeting-1"></script>
+<script src="<?= asset('js/main.js') ?>?v=site-final-1"></script>
 </body>
 </html>
 <?php
@@ -163,4 +156,3 @@ function page_end(): void
     echo '</main>';
     page_footer();
 }
-

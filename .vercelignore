@@ -1,0 +1,10 @@
+﻿.git
+*.bak
+*.bak-*
+*.broken-*
+4dz_publish
+4dz_publish.zip
+_publish
+_deploy
+.vscode
+.idea
