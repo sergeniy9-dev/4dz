@@ -7535,5 +7535,190 @@ main,
   }
 }
 
-/* ---------- END AS DESIGN STEPS CLEAN FINAL ---------- */
+
+/* ---------- AS DESIGN FINAL CTA CLEAN ---------- */
+
+.design-final-cta {
+  position: relative !important;
+  overflow: hidden !important;
+  padding: clamp(82px, 8vw, 138px) 0 !important;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(255,255,255,.72), transparent 28rem),
+    radial-gradient(circle at 82% 18%, rgba(185,154,94,.12), transparent 30rem),
+    linear-gradient(135deg, #eee2d2 0%, #f8f1e7 52%, #e7d9c6 100%) !important;
+  border-top: 1px solid rgba(126,104,67,.10) !important;
+}
+
+.design-final-cta__board {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+
+  display: grid !important;
+  grid-template-columns: minmax(420px, 1fr) minmax(300px, 360px) !important;
+  gap: clamp(34px, 6vw, 88px) !important;
+  align-items: center !important;
+
+  min-height: 410px !important;
+  padding: clamp(36px, 5vw, 76px) !important;
+
+  border-radius: 42px !important;
+  border: 1px solid rgba(126,104,67,.18) !important;
+
+  background:
+    radial-gradient(circle at 18% 18%, rgba(255,255,255,.74), transparent 24rem),
+    linear-gradient(145deg, rgba(255,255,255,.68), rgba(238,228,213,.58)) !important;
+
+  box-shadow:
+    0 34px 96px rgba(67,47,22,.11),
+    inset 0 0 0 1px rgba(255,255,255,.54) !important;
+}
+
+.design-final-cta__board::before,
+.design-final-cta__board::after {
+  display: none !important;
+  content: none !important;
+}
+
+.design-final-cta__copy {
+  position: relative !important;
+  z-index: 4 !important;
+  max-width: 780px !important;
+}
+
+.design-final-cta h2 {
+  max-width: 760px !important;
+  margin: 0 0 22px !important;
+  color: #242321 !important;
+  font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif) !important;
+  font-size: clamp(48px, 5vw, 92px) !important;
+  line-height: .94 !important;
+  letter-spacing: -.06em !important;
+  font-weight: 400 !important;
+}
+
+.design-final-cta .lead {
+  max-width: 660px !important;
+  color: rgba(36,35,33,.72) !important;
+  font-size: clamp(17px, 1.15vw, 22px) !important;
+  line-height: 1.64 !important;
+}
+
+/* чистая арка без логотипа */
+.design-final-cta__actions {
+  position: relative !important;
+  z-index: 5 !important;
+  overflow: hidden !important;
+
+  width: min(340px, 100%) !important;
+  max-width: 340px !important;
+  min-height: 310px !important;
+  margin-left: auto !important;
+
+  display: flex !important;
+  align-items: flex-end !important;
+  justify-content: center !important;
+
+  padding: 112px 28px 46px !important;
+
+  border: 1.5px solid rgba(155,116,52,.32) !important;
+  border-bottom: 1px solid rgba(155,116,52,.14) !important;
+  border-radius: 999px 999px 28px 28px !important;
+
+  background:
+    radial-gradient(circle at 50% 14%, rgba(255,255,255,.62), transparent 9rem),
+    linear-gradient(180deg, rgba(255,255,255,.26), rgba(255,255,255,.05)) !important;
+
+  box-shadow:
+    inset 0 22px 42px rgba(255,255,255,.30),
+    inset 12px 0 24px rgba(255,255,255,.12),
+    inset -12px 0 24px rgba(92,62,25,.06),
+    0 24px 56px rgba(67,47,22,.09) !important;
+}
+
+.design-final-cta__actions::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 20px 20px 24px !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+
+  border: 1px solid rgba(155,116,52,.14) !important;
+  border-bottom-color: rgba(155,116,52,.06) !important;
+  border-radius: 999px 999px 22px 22px !important;
+
+  box-shadow:
+    inset 0 16px 28px rgba(255,255,255,.16),
+    inset 0 -16px 26px rgba(92,62,25,.035) !important;
+}
+
+.design-final-cta__actions::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 26% !important;
+  right: 26% !important;
+  top: 54px !important;
+  height: 1px !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.88), transparent) !important;
+  box-shadow: 0 12px 28px rgba(255,255,255,.40) !important;
+}
+
+.design-final-cta__actions .btn {
+  position: relative !important;
+  z-index: 4 !important;
+
+  width: 100% !important;
+  min-height: 54px !important;
+  padding: 0 24px !important;
+
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  border-radius: 999px !important;
+  white-space: nowrap !important;
+  transform: none !important;
+
+  box-shadow:
+    0 14px 30px rgba(67,47,22,.12),
+    inset 0 1px 0 rgba(255,255,255,.66),
+    inset 0 -7px 14px rgba(67,47,22,.05) !important;
+}
+
+.design-final-cta__actions .btn.primary {
+  color: #fffaf2 !important;
+  background:
+    radial-gradient(circle at 30% 12%, rgba(255,255,255,.42), transparent 7rem),
+    linear-gradient(135deg, #c5a15f, #9b7434) !important;
+  border: 1px solid rgba(155,116,52,.26) !important;
+}
+
+.design-final-cta__actions .btn:hover {
+  transform: translateY(-2px) !important;
+  box-shadow:
+    0 20px 42px rgba(67,47,22,.15),
+    inset 0 1px 0 rgba(255,255,255,.78),
+    inset 0 -8px 16px rgba(67,47,22,.06) !important;
+}
+
+@media (max-width: 900px) {
+  .design-final-cta__board {
+    grid-template-columns: 1fr !important;
+    min-height: auto !important;
+    border-radius: 32px !important;
+  }
+
+  .design-final-cta__actions {
+    margin-left: 0 !important;
+    width: min(340px, 100%) !important;
+    max-width: 340px !important;
+    min-height: 260px !important;
+    padding: 92px 22px 34px !important;
+  }
+}
+
+/* ---------- END AS DESIGN FINAL CTA CLEAN ---------- */
 

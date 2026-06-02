@@ -110,3 +110,25 @@
   </div>
 </section>
 
+
+<!-- AS DESIGN FINAL CTA START -->
+<section class="design-final-cta">
+  <div class="container">
+    <div class="design-final-cta__board">
+      <div class="design-final-cta__copy">
+        <p class="eyebrow">Готовы обсудить проект?</p>
+        <h2>Начнём с вашего пространства</h2>
+        <p class="lead">
+          Расскажите о квартире, доме или коммерческом объекте — мы подскажем,
+          с какого этапа лучше начать и какой формат проекта подойдёт именно вам.
+        </p>
+      </div>
+
+      <div class="design-final-cta__actions">
+        <a class="btn primary" href="/contacts">Оставить заявку</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- AS DESIGN FINAL CTA END -->
+
