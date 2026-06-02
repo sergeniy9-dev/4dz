@@ -2,41 +2,90 @@
   <div class="container as-page-hero__grid">
     <div class="as-page-hero__copy reveal">
       <p class="eyebrow">ОТЗЫВЫ</p>
-      <h1>Впечатления клиентов после работы с AS Design</h1>
+      <h1>Впечатления после работы с AS Design</h1>
       <p class="muted">
-        Здесь можно разместить реальные отзывы клиентов и краткие впечатления о работе над проектом.
+        Для нас важны не только визуализации, но и спокойный процесс:
+        понятные этапы, аккуратные решения и внимание к деталям.
       </p>
     </div>
+
     <div class="as-page-hero__image reveal">
       <img src="/assets/img/projects-hero-bg.png?v=1" alt="Отзывы AS Design">
     </div>
   </div>
 </section>
 
-<section class="section as-reviews-section">
-  <div class="container as-reviews-grid">
+<section class="reviews-final-section">
+  <div class="container">
+    <div class="reviews-final-head reveal">
+      <p class="eyebrow">Доверие</p>
+      <h2>Клиенты ценят спокойную работу, понятные решения и цельный результат</h2>
+    </div>
 
-    <article class="as-review-card reveal">
-      <span>Квартира</span>
-      <p>
-        Очень внимательный подход, красивый результат и понятный процесс работы.
-      </p>
-    </article>
+    <div class="reviews-final-grid">
+      <article class="reviews-final-card reveal">
+        <span>Дизайн-проект</span>
+        <p>
+          «Было важно получить не просто красивую картинку, а понятный проект,
+          по которому можно двигаться дальше без хаоса и сомнений».
+        </p>
+        <small>Отзыв клиента о работе над интерьером</small>
+      </article>
 
-    <article class="as-review-card reveal">
-      <span>Дом</span>
-      <p>
-        Всё было спокойно, последовательно и со вкусом — именно так, как мы хотели.
-      </p>
-    </article>
+      <article class="reviews-final-card reviews-final-card--accent reveal">
+        <span>Комплектация</span>
+        <p>
+          «Понравилось, что материалы, мебель и детали подбирались не отдельно,
+          а как часть одной спокойной и продуманной истории».
+        </p>
+        <small>Отзыв клиента о подборе решений</small>
+      </article>
 
-    <article class="as-review-card reveal">
-      <span>Реализация</span>
-      <p>
-        Дизайн получился не просто красивым, а по-настоящему удобным для жизни.
-      </p>
-    </article>
+      <article class="reviews-final-card reveal">
+        <span>Сопровождение</span>
+        <p>
+          «На каждом этапе было понятно, что происходит сейчас и что будет дальше.
+          Это сильно снижает напряжение во время ремонта».
+        </p>
+        <small>Отзыв клиента о процессе работы</small>
+      </article>
+    </div>
 
+    <div class="reviews-trust-board reveal">
+      <div>
+        <p class="eyebrow">Подход</p>
+        <h2>Мы не перегружаем интерьер лишними решениями</h2>
+        <p class="lead">
+          Сначала разбираемся в образе жизни, задачах и бюджете. Потом собираем
+          проект так, чтобы пространство выглядело цельно, спокойно и актуально.
+        </p>
+      </div>
+
+      <div class="reviews-trust-points">
+        <div>
+          <span>01</span>
+          <p>Понятная последовательность этапов</p>
+        </div>
+
+        <div>
+          <span>02</span>
+          <p>Внимание к материалам, свету и деталям</p>
+        </div>
+
+        <div>
+          <span>03</span>
+          <p>Решения под реальный образ жизни</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="reviews-final-cta reveal">
+      <div>
+        <p class="eyebrow">Ваш проект</p>
+        <h2>Обсудим, каким должен быть ваш интерьер?</h2>
+      </div>
+
+      <a class="btn primary" href="/contacts">Оставить заявку</a>
+    </div>
   </div>
 </section>
-
