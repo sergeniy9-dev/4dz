@@ -21,7 +21,7 @@ function page_head(string $title, string $description = ''): void
   <meta property="og:type" content="website">
   <link rel="icon" href="<?= asset('img/favicon.svg') ?>">
   <link rel="stylesheet" href="<?= asset('css/style.css') ?>">
-  <link rel="stylesheet" href="<?= asset('css/site-light.css') ?>?v=remove-architecture-20260602-182354">
+  <link rel="stylesheet" href="<?= asset('css/site-light.css') ?>?v=home-ref-clean-20260602-185033">
 
   <?php if ($metrikaId !== '00000000') : ?>
   <script>
@@ -197,7 +197,7 @@ function page_footer(): void
   </div>
 </footer>
 
-<script src="<?= asset('js/main.js') ?>?v=remove-architecture-20260602-182354"></script>
+<script src="<?= asset('js/main.js') ?>?v=home-ref-clean-20260602-185033"></script>
 </body>
 </html>
 <?php
@@ -215,6 +215,7 @@ function page_end(): void
     echo '</main>';
     page_footer();
 }
+
 
 
 
