@@ -6,8 +6,8 @@
         <img src="/assets/img/home-card-interior.png?v=8" alt="">
         <div class="as-home-ref-card__body">
           <h3>Дизайн</h3>
-          <p>Объем, фасад, посадка дома, планировка и архитектурный образ.</p>
-          <span>Перейти в раздел →</span>
+<p>Планировка, стиль, свет, материалы и рабочая документация для будущего интерьера.</p>
+<span>Смотреть этапы →</span>
         </div>
       </a>
 
@@ -15,8 +15,8 @@
         <img src="/assets/img/home-card-interior.png?v=8" alt="Интерьер">
         <div class="as-home-ref-card__body">
           <h3>Интерьер</h3>
-          <p>Свет, материалы, мебель, сценарии жизни и спокойная атмосфера.</p>
-          <span>Перейти в раздел →</span>
+<p>Создаём пространство под ваш образ жизни: от настроения и фактур до деталей и мебели.</p>
+<span>Подробнее →</span>
         </div>
       </a>
 
@@ -24,8 +24,8 @@
         <img src="/assets/img/home-card-fitout.png?v=8" alt="Под ключ">
         <div class="as-home-ref-card__body">
           <h3>Под ключ</h3>
-          <p>Комплектация, поставки, сопровождение и финальная сборка пространства.</p>
-          <span>Перейти в раздел →</span>
+<p>Помогаем пройти путь от идеи до готового пространства без хаоса и лишних решений.</p>
+<span>Обсудить формат →</span>
         </div>
       </a>
     </div>
@@ -100,7 +100,25 @@
     </div>
   </div>
 </section>
+<section class="home-final-cta">
+  <div class="container">
+    <div class="home-final-cta__board">
+      <div>
+        <p class="eyebrow">Следующий шаг</p>
+        <h2>Обсудим ваш будущий интерьер</h2>
+        <p class="lead">
+          Расскажите, какое пространство вы хотите получить — мы поможем собрать идею,
+          стиль, планировку и понятный путь к реализации.
+        </p>
+      </div>
 
+      <div class="home-final-cta__actions">
+        <a class="btn primary" href="/contacts">Оставить заявку</a>
+        <a class="btn" href="/projects">Смотреть портфолио</a>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
