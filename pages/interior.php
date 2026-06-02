@@ -1,12 +1,4 @@
-﻿<?php
-page_start(
-    'Интерьеры',
-    'Интерьерная проработка жилья и коммерческих пространств: планировки, мебель, свет, материалы и атмосфера.',
-    $currentRoute
-);
-?>
-
-<section class="section interior-stone-section">
+﻿<section class="section interior-stone-section">
   <div class="container interior-stone-layout">
     <div class="interior-stone-copy reveal">
       <p class="eyebrow">ДЕТАЛИ</p>
@@ -45,5 +37,8 @@ page_start(
   </div>
 </section>
 
-<?php page_end(); ?>
+
+
+
+
 

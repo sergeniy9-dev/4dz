@@ -1,12 +1,4 @@
-﻿<?php
-page_start(
-    'Политика конфиденциальности',
-    'Политика обработки персональных данных.',
-    $currentRoute
-);
-?>
-
-<section class="section">
+﻿<section class="section">
   <div class="container narrow">
     <p class="eyebrow">Документы</p>
     <h1>Политика конфиденциальности</h1>
@@ -36,4 +28,7 @@ page_start(
   </div>
 </section>
 
-<?php page_end(); ?>
+
+
+
+

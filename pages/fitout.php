@@ -1,12 +1,4 @@
-﻿<?php
-page_start(
-    'Под жилье',
-    'Проработка жилья под реализацию: планировка, свет, материалы, сценарии, мебель и подготовка решений.',
-    $currentRoute
-);
-?>
-
-<section class="section fitout-crystal-section">
+﻿<section class="section fitout-crystal-section">
   <div class="container fitout-crystal-layout">
     <div class="fitout-crystal-copy reveal">
       <p class="eyebrow">СМЫСЛ</p>
@@ -39,5 +31,8 @@ page_start(
   </div>
 </section>
 
-<?php page_end(); ?>
+
+
+
+
 

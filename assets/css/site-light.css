@@ -1558,7 +1558,7 @@ textarea:focus {
 }
 
 .tile-architecture::before {
-  background-image: url("../img/project-architecture-house.png");
+  background-image: url("../img/project-interior-sofa.png");
 }
 
 .tile-interior::before {
@@ -2342,7 +2342,7 @@ body {
 }
 
 .tile-architecture::before {
-  background-image: url("../img/project-architecture-house.png");
+  background-image: url("../img/project-interior-sofa.png");
 }
 
 .tile-interior::before {
@@ -2816,7 +2816,7 @@ body {
 }
 
 .page-hero-architecture::before {
-  background-image: url("../img/page-architecture-hero.png");
+  background-image: url("../img/page-interior-hero.png");
   background-position: center right;
 }
 
@@ -3226,7 +3226,7 @@ body {
 
 /* ---------- ARCHITECTURE SECTION BG FINAL ---------- */
 
-/* Фон именно для секции после hero на странице Архитектура */
+/* Фон именно для секции после hero на странице Дизайн */
 .page-hero-architecture + .section {
   position: relative !important;
   overflow: hidden !important;
@@ -3722,7 +3722,7 @@ body {
 }
 
 .img-house {
-  background-image: url("../img/project-architecture-house.png");
+  background-image: url("../img/project-interior-sofa.png");
 }
 
 .img-sofa {
@@ -4677,52 +4677,7 @@ body {
 
 
 
-/* ---------- AS GREETING COVER ---------- */
 
-.as-greeting-cover {
-  position: fixed;
-  inset: 0;
-  z-index: 999999;
-  display: block;
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  background: #f4eee4;
-  transition:
-    opacity .85s ease,
-    visibility .85s ease;
-}
-
-.as-greeting-cover__img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-  object-position: center center;
-  transform: scale(1.012);
-  opacity: 1;
-  transition:
-    opacity .85s ease,
-    transform .95s ease;
-}
-
-.as-greeting-cover.is-leaving {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-.as-greeting-cover.is-leaving .as-greeting-cover__img {
-  opacity: 0;
-  transform: scale(1);
-}
-
-html.as-greeting-lock,
-html.as-greeting-lock body {
-  overflow: hidden;
-}
-
-/* ---------- END AS GREETING COVER ---------- */
 
 
 
@@ -5914,148 +5869,7 @@ p,
 
 
 
-/* ---------- AS ARCH STONE CARDS FINAL ---------- */
 
-.architecture-stone-grid {
-  width: min(760px, 100%);
-  margin-left: auto;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(16px, 1.5vw, 24px);
-  padding: clamp(18px, 2vw, 28px);
-  border-radius: 34px;
-  border: 1px solid rgba(177, 131, 55, .34);
-  background:
-    radial-gradient(circle at 50% 0%, rgba(255,255,255,.72), transparent 24rem),
-    rgba(255, 250, 241, .46);
-  box-shadow:
-    0 26px 70px rgba(70, 48, 22, .11),
-    inset 0 0 0 1px rgba(255,255,255,.58);
-}
-
-.architecture-stone-card {
-  position: relative;
-  min-height: clamp(280px, 22vw, 360px);
-  overflow: hidden;
-  border-radius: 26px;
-  padding: clamp(26px, 2.2vw, 36px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  isolation: isolate;
-  background-size: cover;
-  background-position: center;
-  border: 1px solid rgba(177, 131, 55, .42);
-  box-shadow:
-    0 20px 48px rgba(70, 48, 22, .13),
-    inset 0 0 0 1px rgba(255,255,255,.50);
-}
-
-.architecture-stone-card--01 {
-  background-image: url("../img/architecture-stone-01.png?v=1");
-}
-
-.architecture-stone-card--02 {
-  background-image: url("../img/architecture-stone-02.png?v=1");
-}
-
-.architecture-stone-card--03 {
-  background-image: url("../img/architecture-stone-03.png?v=1");
-}
-
-.architecture-stone-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background:
-    linear-gradient(180deg, rgba(255,250,240,.72), rgba(255,250,240,.32) 62%, rgba(255,250,240,.10)),
-    radial-gradient(circle at 20% 16%, rgba(255,255,255,.46), transparent 11rem);
-}
-
-.architecture-stone-card span {
-  margin-bottom: 24px;
-  color: #8a672d;
-  font-family: var(--font-sans, Manrope, Arial, sans-serif) !important;
-  font-size: 11px;
-  letter-spacing: .28em;
-  text-transform: uppercase;
-  font-weight: 700;
-  white-space: nowrap;
-}
-
-.architecture-stone-card span::after {
-  content: "";
-  display: inline-block;
-  width: 38px;
-  height: 1px;
-  margin-left: 12px;
-  vertical-align: middle;
-  background: linear-gradient(90deg, #b78b3d, transparent);
-}
-
-.architecture-stone-card h3 {
-  max-width: 100%;
-  margin: 0 0 16px;
-  color: #201c16;
-  font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif) !important;
-  font-size: clamp(27px, 1.7vw, 36px);
-  line-height: 1.02;
-  letter-spacing: -.035em;
-  font-weight: 400 !important;
-  word-break: normal;
-  overflow-wrap: normal;
-  hyphens: none;
-}
-
-.architecture-stone-card p {
-  max-width: 220px;
-  margin: 0;
-  color: rgba(32,28,22,.82);
-  font-family: var(--font-sans, Manrope, Arial, sans-serif) !important;
-  font-size: clamp(13px, .82vw, 15px);
-  line-height: 1.55;
-}
-
-.architecture-stone-card:hover {
-  transform: translateY(-4px);
-  transition: transform .32s ease, box-shadow .32s ease;
-  box-shadow:
-    0 30px 78px rgba(70, 48, 22, .17),
-    inset 0 0 0 1px rgba(255,255,255,.62);
-}
-
-/* На этой странице убираем поведение старой картинки, если осталось */
-img[src*="architecture-gem-cards"] {
-  display: none !important;
-}
-
-@media (max-width: 1240px) {
-  .architecture-stone-grid {
-    width: 100%;
-    margin-left: 0;
-  }
-}
-
-@media (max-width: 980px) {
-  .architecture-stone-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .architecture-stone-card {
-    min-height: 230px;
-  }
-
-  .architecture-stone-card h3 {
-    font-size: 34px;
-  }
-
-  .architecture-stone-card p {
-    max-width: 420px;
-  }
-}
-
-/* ---------- END AS ARCH STONE CARDS FINAL ---------- */
 
 
 /* ---------- AS HOME GLASS HOVER FINAL ---------- */
@@ -6153,3 +5967,458 @@ img[src*="architecture-gem-cards"] {
 }
 
 /* ---------- END AS HOME GLASS HOVER FINAL ---------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------- AS DISABLE ALL INTROS STABLE ---------- */
+.as-home-welcome-intro,
+.as-safe-home-intro,
+.as-one-image-loader,
+.as-final-photo-loader,
+.as-image-loader,
+.as-loading-screen,
+.logo-preloader,
+.intro-brand-scene,
+.as-greeting-cover,
+.as-safe-cover,
+.as-clean-startup-cover,
+#asHomeWelcomeIntro,
+#asSafeHomeIntro,
+#asOneImageLoader,
+#asFinalPhotoLoader,
+#asImageLoader,
+#asLoadingScreen {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+html,
+body {
+  overflow: auto !important;
+}
+/* ---------- END AS DISABLE ALL INTROS STABLE ---------- */
+
+
+/* ---------- AS SIMPLIFIED STRUCTURE FINAL ---------- */
+
+.as-page-hero {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(86px, 8vw, 140px) 0 clamp(60px, 6vw, 100px);
+  background:
+    radial-gradient(circle at 72% 22%, rgba(255,255,255,.82), transparent 25rem),
+    linear-gradient(135deg, #f8f1e7 0%, #eee3d3 54%, #fbf6ef 100%);
+}
+
+.as-page-hero__grid {
+  display: grid;
+  grid-template-columns: minmax(360px, .86fr) minmax(520px, 1.14fr);
+  gap: clamp(34px, 5vw, 86px);
+  align-items: center;
+}
+
+.as-page-hero__copy h1 {
+  margin: 0 0 26px;
+  color: #242321;
+  font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif) !important;
+  font-size: clamp(58px, 6vw, 112px);
+  line-height: .92;
+  letter-spacing: -.06em;
+  font-weight: 400 !important;
+}
+
+.as-page-hero__copy .muted {
+  max-width: 620px;
+  font-size: clamp(18px, 1.25vw, 23px);
+  line-height: 1.62;
+}
+
+.as-page-hero__image {
+  overflow: hidden;
+  min-height: clamp(360px, 36vw, 600px);
+  border-radius: 38px;
+  border: 1px solid rgba(176,138,66,.30);
+  box-shadow: 0 34px 92px rgba(67, 47, 22, .14);
+}
+
+.as-page-hero__image img {
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  display: block;
+  object-fit: cover;
+}
+
+.as-legend-section,
+.as-reviews-section,
+.as-design-steps-section {
+  padding: clamp(74px, 7vw, 125px) 0;
+  background: #f8f1e7;
+}
+
+.as-legend-card {
+  max-width: 1120px;
+  padding: clamp(34px, 5vw, 78px);
+  border-radius: 38px;
+  border: 1px solid rgba(176,138,66,.25);
+  background: rgba(255,250,241,.66);
+  box-shadow: 0 26px 76px rgba(67,47,22,.09);
+}
+
+.as-legend-card p {
+  margin: 0 0 24px;
+  color: rgba(36,35,33,.78);
+  font-size: clamp(18px, 1.22vw, 23px);
+  line-height: 1.72;
+}
+
+.as-legend-card p:first-child {
+  color: #242321;
+  font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif) !important;
+  font-size: clamp(34px, 3.5vw, 62px);
+  line-height: 1.04;
+  letter-spacing: -.045em;
+}
+
+.as-section-head {
+  max-width: 900px;
+  margin-bottom: clamp(36px, 5vw, 72px);
+}
+
+.as-section-head h2 {
+  margin: 0;
+  color: #242321;
+  font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif) !important;
+  font-size: clamp(48px, 5vw, 92px);
+  line-height: .96;
+  letter-spacing: -.055em;
+  font-weight: 400 !important;
+}
+
+.as-design-steps {
+  display: grid;
+  gap: clamp(22px, 2.4vw, 36px);
+}
+
+.as-design-step {
+  display: grid;
+  grid-template-columns: minmax(280px, .72fr) minmax(420px, 1.28fr);
+  gap: clamp(24px, 4vw, 64px);
+  align-items: center;
+  padding: clamp(18px, 2vw, 28px);
+  border-radius: 34px;
+  border: 1px solid rgba(176,138,66,.22);
+  background: rgba(255,250,241,.62);
+  box-shadow: 0 22px 64px rgba(67,47,22,.08);
+}
+
+.as-design-step:nth-child(even) {
+  grid-template-columns: minmax(420px, 1.28fr) minmax(280px, .72fr);
+}
+
+.as-design-step:nth-child(even) img {
+  order: 2;
+}
+
+.as-design-step img {
+  width: 100%;
+  height: clamp(260px, 24vw, 430px);
+  display: block;
+  object-fit: cover;
+  border-radius: 26px;
+}
+
+.as-design-step div {
+  padding: clamp(10px, 2vw, 26px);
+}
+
+.as-design-step span {
+  display: block;
+  margin-bottom: 18px;
+  color: #8a672d;
+  font-size: 12px;
+  letter-spacing: .32em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.as-design-step h3 {
+  margin: 0 0 18px;
+  color: #242321;
+  font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif) !important;
+  font-size: clamp(36px, 3.2vw, 64px);
+  line-height: 1.02;
+  letter-spacing: -.05em;
+  font-weight: 400 !important;
+}
+
+.as-design-step p {
+  margin: 0;
+  color: rgba(36,35,33,.72);
+  font-size: clamp(16px, 1.05vw, 20px);
+  line-height: 1.64;
+}
+
+.as-reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(20px, 2.2vw, 34px);
+}
+
+.as-review-card {
+  min-height: 260px;
+  padding: clamp(30px, 3vw, 46px);
+  border-radius: 32px;
+  border: 1px solid rgba(176,138,66,.26);
+  background: rgba(255,250,241,.64);
+  box-shadow: 0 22px 64px rgba(67,47,22,.08);
+}
+
+.as-review-card span {
+  display: block;
+  margin-bottom: 22px;
+  color: #8a672d;
+  font-size: 12px;
+  letter-spacing: .32em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.as-review-card p {
+  margin: 0;
+  color: #242321;
+  font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif) !important;
+  font-size: clamp(28px, 2.3vw, 44px);
+  line-height: 1.08;
+  letter-spacing: -.04em;
+}
+
+@media (max-width: 1120px) {
+  .as-page-hero__grid,
+  .as-design-step,
+  .as-design-step:nth-child(even) {
+    grid-template-columns: 1fr;
+  }
+
+  .as-design-step:nth-child(even) img {
+    order: 0;
+  }
+
+  .as-reviews-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .as-page-hero {
+    padding-top: 60px;
+  }
+
+  .as-page-hero__copy h1 {
+    font-size: 52px;
+  }
+
+  .as-page-hero__image {
+    min-height: 320px;
+    border-radius: 28px;
+  }
+
+  .as-design-step {
+    border-radius: 26px;
+  }
+
+  .as-design-step img {
+    height: 280px;
+    border-radius: 20px;
+  }
+
+  .as-design-step h3 {
+    font-size: 36px;
+  }
+}
+
+/* ---------- END AS SIMPLIFIED STRUCTURE FINAL ---------- */
+
+
+/* ---------- AS BLACK SCREEN FIX FINAL ---------- */
+
+html,
+body {
+  background: #f8f1e7 !important;
+  color: #242321 !important;
+  overflow: auto !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+body::before,
+body::after,
+html::before,
+html::after {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+main,
+.site-header,
+.footer,
+.container {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.as-home-welcome-intro,
+.as-safe-home-intro,
+.as-one-image-loader,
+.as-final-photo-loader,
+.as-image-loader,
+.as-loading-screen,
+.logo-preloader,
+.intro-brand-scene,
+.as-greeting-cover,
+.as-safe-cover,
+.as-clean-startup-cover,
+.preloader,
+.loader,
+.splash,
+[class*="preloader"],
+[class*="loader"],
+[class*="splash"],
+[class*="intro-brand"],
+[class*="greeting-cover"],
+[class*="safe-cover"],
+[id*="Preloader"],
+[id*="Loader"],
+[id*="Splash"],
+[id*="Intro"] {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* Главная: рабочий вид, если старые стили съехали */
+.as-home-opening-title {
+  padding: clamp(70px, 7vw, 118px) 0 clamp(30px, 4vw, 60px);
+  background: #f8f1e7 !important;
+}
+
+.as-home-opening-title h1 {
+  max-width: 980px;
+  margin: 0 0 24px;
+  color: #242321;
+  font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif) !important;
+  font-size: clamp(64px, 7vw, 128px);
+  line-height: .9;
+  letter-spacing: -.065em;
+  font-weight: 400 !important;
+}
+
+.as-home-opening-title p:not(.eyebrow) {
+  max-width: 720px;
+  margin: 0;
+  color: rgba(36,35,33,.72);
+  font-size: clamp(18px, 1.25vw, 23px);
+  line-height: 1.62;
+}
+
+.as-home-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(20px, 2.2vw, 34px);
+}
+
+.as-home-card {
+  background: rgba(255,250,241,.68);
+  border: 1px solid rgba(176,138,66,.24);
+  box-shadow: 0 22px 64px rgba(67,47,22,.08);
+}
+
+.as-home-card img {
+  width: 100%;
+  height: clamp(230px, 18vw, 340px);
+  display: block;
+  object-fit: cover;
+}
+
+.as-home-card div {
+  padding: clamp(24px, 3vw, 42px);
+}
+
+.as-home-card span {
+  display: block;
+  margin-bottom: 16px;
+  color: #8a672d;
+  font-size: 12px;
+  letter-spacing: .32em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.as-home-card h2 {
+  margin: 0 0 14px;
+  color: #242321;
+  font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif) !important;
+  font-size: clamp(34px, 3vw, 58px);
+  line-height: 1;
+  font-weight: 400 !important;
+}
+
+.as-home-card p {
+  margin: 0 0 18px;
+  color: rgba(36,35,33,.72);
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+.as-home-card a {
+  color: #242321;
+  text-underline-offset: 5px;
+}
+
+@media (max-width: 980px) {
+  .as-home-card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- END AS BLACK SCREEN FIX FINAL ---------- */
+
+

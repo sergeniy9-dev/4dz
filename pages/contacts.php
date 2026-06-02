@@ -1,67 +1,35 @@
-﻿<?php
-page_start(
-    'Контакты',
-    'Связаться по архитектурной проработке жилья.',
-    $currentRoute
-);
-
-$sent = isset($_GET['sent']);
-$error = isset($_GET['error']);
-?>
-
-<section class="section">
-  <div class="container form-wrap">
-    <div>
-      <p class="eyebrow">Контакты</p>
-      <h1>Обсудим объект</h1>
-      <p class="lead">
-        Напишите, что нужно проработать: дом, квартира, участок, фасад, планировка или подготовка под реализацию.
+﻿<section class="as-page-hero">
+  <div class="container as-page-hero__grid">
+    <div class="as-page-hero__copy reveal">
+      <p class="eyebrow">КОНТАКТЫ</p>
+      <h1>Обсудим ваш будущий интерьер</h1>
+      <p class="muted">
+        Оставьте заявку, и мы свяжемся с вами, чтобы обсудить задачу, формат проекта и первые идеи.
       </p>
-
-      <ul class="list">
-        <li><?= h(SITE['phone']) ?></li>
-        <li><?= h(SITE['email']) ?></li>
-        <li><?= h(SITE['address']) ?></li>
-      </ul>
-
-      <div class="actions">
-        <a class="btn" href="<?= h(SITE['telegram']) ?>" target="_blank" rel="noopener">Telegram</a>
-        <a class="btn" href="<?= h(SITE['whatsapp']) ?>" target="_blank" rel="noopener">WhatsApp</a>
-      </div>
     </div>
-
-    <form class="form" action="<?= url('/contact.php') ?>" method="post">
-      <?php if ($sent) : ?>
-        <div class="notice">Заявка отправлена. Мы свяжемся с вами.</div>
-      <?php endif; ?>
-
-      <?php if ($error) : ?>
-        <div class="notice error">Заполните имя и телефон.</div>
-      <?php endif; ?>
-
-      <input type="hidden" name="page" value="">
-      <input type="hidden" name="utm_source" value="">
-      <input type="hidden" name="utm_medium" value="">
-      <input type="hidden" name="utm_campaign" value="">
-
-      <div class="field">
-        <label for="name">Имя</label>
-        <input id="name" name="name" type="text" required placeholder="Как к вам обращаться">
-      </div>
-
-      <div class="field">
-        <label for="phone">Телефон</label>
-        <input id="phone" name="phone" type="tel" required placeholder="+7">
-      </div>
-
-      <div class="field">
-        <label for="message">Что нужно проработать</label>
-        <textarea id="message" name="message" placeholder="Например: дом 240 м², нужна архитектурная концепция и планировка под постоянное проживание"></textarea>
-      </div>
-
-      <button class="btn primary" type="submit">Отправить заявку</button>
-    </form>
+    <div class="as-page-hero__image reveal">
+      <img src="/assets/img/page-fitout-hero.png?v=1" alt="Контакты AS Design">
+    </div>
   </div>
 </section>
 
-<?php page_end(); ?>
+<section class="section as-contacts-section">
+  <div class="container as-contacts-grid">
+    <div class="as-contact-card reveal">
+      <span>Телефон</span>
+      <a href="tel:+70000000000">+7 000 000-00-00</a>
+    </div>
+
+    <div class="as-contact-card reveal">
+      <span>Email</span>
+      <a href="mailto:info@asdesignhome.ru">info@asdesignhome.ru</a>
+    </div>
+
+    <div class="as-contact-card reveal">
+      <span>Мессенджеры</span>
+      <p>Telegram / WhatsApp</p>
+    </div>
+  </div>
+</section>
+
+

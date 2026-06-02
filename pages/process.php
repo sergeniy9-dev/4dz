@@ -1,12 +1,4 @@
-﻿<?php
-page_start(
-    'Этапы работы',
-    'Этапы работы архитектурной студии: бриф, планировка, концепция, материалы, авторский надзор и подготовка решений.',
-    $currentRoute
-);
-?>
-
-<section class="page-hero page-hero-process">
+﻿<section class="page-hero page-hero-process">
   <div class="container page-hero-inner">
     <div>
       <p class="eyebrow">ЭТАПЫ РАБОТЫ</p>
@@ -17,7 +9,7 @@ page_start(
       </p>
       <div class="actions">
         <a class="btn primary" href="<?= url('/contacts') ?>">Начать проект</a>
-        <a class="btn" href="<?= url('/architecture') ?>">Что входит</a>
+        <a class="btn" href="<?= url('/design') ?>">Что входит</a>
       </div>
     </div>
   </div>
@@ -55,4 +47,8 @@ page_start(
   </div>
 </section>
 
-<?php page_end(); ?>
+
+
+
+
+

@@ -21,7 +21,7 @@ function page_head(string $title, string $description = ''): void
   <meta property="og:type" content="website">
   <link rel="icon" href="<?= asset('img/favicon.svg') ?>">
   <link rel="stylesheet" href="<?= asset('css/style.css') ?>">
-  <link rel="stylesheet" href="<?= asset('css/site-light.css') ?>?v=site-final-1">
+  <link rel="stylesheet" href="<?= asset('css/site-light.css') ?>?v=remove-architecture-20260602-182354">
 
   <?php if ($metrikaId !== '00000000') : ?>
   <script>
@@ -44,6 +44,65 @@ function page_head(string $title, string $description = ''): void
   <?php endif; ?>
 </head>
 <body>
+<!-- ---------- AS BLACK SCREEN FIX FINAL ---------- -->
+<script>
+(function () {
+  function unlockPage() {
+    document.documentElement.style.background = '#f8f1e7';
+    document.documentElement.style.overflow = 'auto';
+
+    if (document.body) {
+      document.body.style.background = '#f8f1e7';
+      document.body.style.overflow = 'auto';
+      document.body.style.opacity = '1';
+      document.body.style.visibility = 'visible';
+    }
+
+    var badWords = /(preloader|loader|splash|intro|welcome|greeting|cover)/i;
+
+    document.querySelectorAll('body *').forEach(function (el) {
+      if (el.closest('.site-header, main, footer')) return;
+
+      var idClass = (el.id || '') + ' ' + (el.className || '');
+      var cs = window.getComputedStyle(el);
+      var rect = el.getBoundingClientRect();
+
+      var coversScreen =
+        (cs.position === 'fixed' || cs.position === 'absolute') &&
+        rect.width >= window.innerWidth * 0.8 &&
+        rect.height >= window.innerHeight * 0.8;
+
+      var highZ = parseInt(cs.zIndex || '0', 10) > 1000;
+
+      if (badWords.test(idClass) || (coversScreen && highZ)) {
+        el.remove();
+      }
+    });
+  }
+
+  unlockPage();
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', unlockPage, { once: true });
+  } else {
+    unlockPage();
+  }
+
+  window.addEventListener('load', unlockPage, { once: true });
+  window.setTimeout(unlockPage, 100);
+  window.setTimeout(unlockPage, 500);
+  window.setTimeout(unlockPage, 1200);
+})();
+</script>
+<!-- ---------- END AS BLACK SCREEN FIX FINAL ---------- -->
+
+
+
+
+
+  <div id="siteIntro" class="site-intro" aria-hidden="true">
+  
+</div>
 
   <?php if ($metrikaId !== '00000000') : ?>
   <noscript>
@@ -138,7 +197,7 @@ function page_footer(): void
   </div>
 </footer>
 
-<script src="<?= asset('js/main.js') ?>?v=site-final-1"></script>
+<script src="<?= asset('js/main.js') ?>?v=remove-architecture-20260602-182354"></script>
 </body>
 </html>
 <?php
@@ -156,3 +215,29 @@ function page_end(): void
     echo '</main>';
     page_footer();
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -247,33 +247,17 @@
 
 
 
-/* ---------- AS GREETING COVER ---------- */
-(function () {
-  function runGreetingCover() {
-    var cover = document.getElementById('asGreetingCover');
-    if (!cover) return;
 
-    document.documentElement.classList.add('as-greeting-lock');
 
-    window.setTimeout(function () {
-      cover.classList.add('is-leaving');
-      document.documentElement.classList.remove('as-greeting-lock');
 
-      window.setTimeout(function () {
-        if (cover && cover.parentNode) {
-          cover.parentNode.removeChild(cover);
-        }
-      }, 900);
-    }, 2000);
-  }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', runGreetingCover, { once: true });
-  } else {
-    runGreetingCover();
-  }
-})();
- /* ---------- END AS GREETING COVER ---------- */
+
+
+
+
+
+
+
 
 
 

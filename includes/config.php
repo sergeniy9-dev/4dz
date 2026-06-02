@@ -2,7 +2,7 @@
 
 const SITE = [
     'name' => 'AS ДИЗАЙН',
-    'descriptor' => 'Интерьеры • Архитектура',
+    'descriptor' => 'Интерьеры • Дизайн',
     'phone' => '+7 000 000-00-00',
     'phone_href' => '+70000000000',
     'email' => 'hello@example.ru',
@@ -15,12 +15,11 @@ const SITE = [
 
 const NAV = [
     '/' => 'Главная',
-    '/architecture' => 'Архитектура',
-    '/interior' => 'Интерьер',
-    '/fitout' => 'Под жилье',
-    '/projects' => 'Проекты',
-    '/process' => 'Этапы',
-    '/contacts' => 'Контакты'
+    '/about' => 'О нас',
+    '/design' => 'Дизайн',
+    '/projects' => 'Портфолио',
+    '/reviews' => 'Отзывы',
+    '/contacts' => 'Контакты',
 ];
 
 function h(string $value): string
@@ -44,6 +43,13 @@ function asset(string $path): string
 {
     return url('assets/' . ltrim($path, '/'));
 }
+
+
+
+
+
+
+
 
 
 
