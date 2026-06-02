@@ -6844,4 +6844,696 @@ main,
   }
 }
 
-/* ---------- END AS HOME STONE SECTION CLEAN STEP ---------- */
+
+/* убираем старые арки с самой доски, чтобы не было дублей */
+.home-final-cta__board::before,
+.home-final-cta__board::after {
+  display: none !important;
+  content: none !important;
+}
+
+.home-final-cta__board {
+  grid-template-columns: minmax(420px, 1fr) minmax(280px, 380px) !important;
+  align-items: center !important;
+  min-height: 390px !important;
+  overflow: hidden !important;
+}
+
+/* сама арка, внутри которой стоят кнопки */
+.home-final-cta__actions {
+  position: relative !important;
+  z-index: 5 !important;
+  width: min(360px, 100%) !important;
+  min-width: 0 !important;
+  max-width: 360px !important;
+  min-height: 330px !important;
+  margin-left: auto !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-end !important;
+  gap: 14px !important;
+
+  padding: 118px 26px 34px !important;
+
+  border: 2px solid rgba(155,116,52,.34) !important;
+  border-bottom: 1px solid rgba(155,116,52,.20) !important;
+  border-radius: 999px 999px 34px 34px !important;
+
+  background:
+    radial-gradient(circle at 50% 14%, rgba(255,255,255,.64), transparent 8rem),
+    linear-gradient(180deg, rgba(255,255,255,.26), rgba(255,255,255,.06)) !important;
+
+  box-shadow:
+    inset 0 18px 34px rgba(255,255,255,.32),
+    inset 12px 0 22px rgba(255,255,255,.14),
+    inset -12px 0 24px rgba(92,62,25,.07),
+    0 26px 58px rgba(67,47,22,.10) !important;
+}
+
+/* внутренняя тонкая линия — эффект глубины */
+.home-final-cta__actions::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 18px 18px 24px !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+
+  border: 1px solid rgba(155,116,52,.18) !important;
+  border-bottom-color: rgba(155,116,52,.08) !important;
+  border-radius: 999px 999px 24px 24px !important;
+
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.20), rgba(255,255,255,.03)) !important;
+
+  box-shadow:
+    inset 0 16px 26px rgba(255,255,255,.18),
+    inset 0 -16px 28px rgba(92,62,25,.04) !important;
+}
+
+/* мягкий свет сверху внутри портала */
+.home-final-cta__actions::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 24% !important;
+  right: 24% !important;
+  top: 46px !important;
+  height: 1px !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.85), transparent) !important;
+  box-shadow: 0 12px 30px rgba(255,255,255,.45) !important;
+}
+
+/* кнопки внутри арки */
+.home-final-cta__actions .btn {
+  position: relative !important;
+  z-index: 3 !important;
+
+  width: 100% !important;
+  min-height: 52px !important;
+  padding: 0 22px !important;
+
+  border-radius: 999px !important;
+  transform: none !important;
+
+  box-shadow:
+    0 14px 30px rgba(67,47,22,.11),
+    inset 0 1px 0 rgba(255,255,255,.66),
+    inset 0 -7px 14px rgba(67,47,22,.05) !important;
+
+  transition:
+    transform .22s ease,
+    box-shadow .22s ease,
+    border-color .22s ease !important;
+}
+
+.home-final-cta__actions .btn:hover {
+  transform: translateY(-2px) !important;
+  box-shadow:
+    0 20px 42px rgba(67,47,22,.15),
+    inset 0 1px 0 rgba(255,255,255,.78),
+    inset 0 -8px 16px rgba(67,47,22,.06) !important;
+}
+
+.home-final-cta__actions .btn:active {
+  transform: translateY(1px) !important;
+}
+
+/* золотая основная кнопка */
+.home-final-cta__actions .btn.primary {
+  color: #fffaf2 !important;
+  background:
+    radial-gradient(circle at 30% 12%, rgba(255,255,255,.42), transparent 7rem),
+    linear-gradient(135deg, #c5a15f, #9b7434) !important;
+  border: 1px solid rgba(155,116,52,.26) !important;
+}
+
+/* вторая кнопка — светлая стеклянная */
+.home-final-cta__actions .btn:not(.primary) {
+  color: #242321 !important;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.72), rgba(246,238,225,.58)) !important;
+  border: 1px solid rgba(126,104,67,.22) !important;
+}
+
+/* чтобы текст слева не залезал на портал */
+.home-final-cta__board > div:first-child {
+  position: relative !important;
+  z-index: 4 !important;
+  max-width: 760px !important;
+}
+
+/* мобильная версия: арка остаётся, но становится компактной */
+@media (max-width: 900px) {
+  .home-final-cta__board {
+    grid-template-columns: 1fr !important;
+    min-height: auto !important;
+  }
+
+  .home-final-cta__actions {
+    margin-left: 0 !important;
+    width: min(360px, 100%) !important;
+    min-height: 280px !important;
+    padding: 92px 22px 28px !important;
+  }
+}
+
+/* ---------- END AS CTA BUTTONS INSIDE ARCH FINAL ---------- */
+
+
+/* ---------- AS CTA FINAL CLEAN SINGLE ---------- */
+
+.home-final-cta__board::before,
+.home-final-cta__board::after {
+  display: none !important;
+  content: none !important;
+}
+
+.home-final-cta__board {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  display: grid !important;
+  grid-template-columns: minmax(420px, 1fr) minmax(300px, 390px) !important;
+  gap: clamp(36px, 6vw, 92px) !important;
+  align-items: center !important;
+  min-height: 500px !important;
+}
+
+/* левый текст — ниже, как ты выбрал */
+.home-final-cta__board > div:first-child {
+  position: relative !important;
+  z-index: 4 !important;
+  max-width: 760px !important;
+  transform: translateY(70px) !important;
+}
+
+/* арка с кнопками внутри */
+.home-final-cta__actions {
+  position: relative !important;
+  z-index: 5 !important;
+
+  width: min(385px, 100%) !important;
+  max-width: 385px !important;
+  min-width: 0 !important;
+  min-height: 455px !important;
+  margin-left: auto !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-end !important;
+  gap: 14px !important;
+
+  padding: 170px 28px 38px !important;
+
+  border: 2px solid rgba(155,116,52,.38) !important;
+  border-bottom: 1px solid rgba(155,116,52,.20) !important;
+  border-radius: 999px 999px 38px 38px !important;
+
+  background:
+    radial-gradient(circle at 50% 12%, rgba(255,255,255,.72), transparent 10rem),
+    radial-gradient(circle at 50% 42%, rgba(185,154,94,.08), transparent 14rem),
+    linear-gradient(180deg, rgba(255,255,255,.30), rgba(255,255,255,.07)) !important;
+
+  box-shadow:
+    inset 0 24px 46px rgba(255,255,255,.36),
+    inset 16px 0 28px rgba(255,255,255,.16),
+    inset -16px 0 30px rgba(92,62,25,.08),
+    0 32px 74px rgba(67,47,22,.12) !important;
+}
+
+/* внутренняя арка — глубина */
+.home-final-cta__actions::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 24px 22px 28px !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+
+  border: 1px solid rgba(155,116,52,.18) !important;
+  border-bottom-color: rgba(155,116,52,.08) !important;
+  border-radius: 999px 999px 28px 28px !important;
+
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.18), rgba(255,255,255,.03)) !important;
+
+  box-shadow:
+    inset 0 18px 30px rgba(255,255,255,.18),
+    inset 0 -16px 28px rgba(92,62,25,.04) !important;
+}
+
+/* тонкий верхний блик */
+.home-final-cta__actions::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 24% !important;
+  right: 24% !important;
+  top: 62px !important;
+  height: 1px !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.88), transparent) !important;
+  box-shadow: 0 12px 30px rgba(255,255,255,.45) !important;
+}
+
+.home-final-cta__actions .btn {
+  position: relative !important;
+  z-index: 3 !important;
+
+  width: 100% !important;
+  min-height: 54px !important;
+  padding: 0 22px !important;
+
+  border-radius: 999px !important;
+  transform: none !important;
+
+  box-shadow:
+    0 14px 30px rgba(67,47,22,.11),
+    inset 0 1px 0 rgba(255,255,255,.66),
+    inset 0 -7px 14px rgba(67,47,22,.05) !important;
+
+  transition:
+    transform .22s ease,
+    box-shadow .22s ease,
+    border-color .22s ease !important;
+}
+
+.home-final-cta__actions .btn:hover {
+  transform: translateY(-2px) !important;
+  box-shadow:
+    0 20px 42px rgba(67,47,22,.15),
+    inset 0 1px 0 rgba(255,255,255,.78),
+    inset 0 -8px 16px rgba(67,47,22,.06) !important;
+}
+
+.home-final-cta__actions .btn:active {
+  transform: translateY(1px) !important;
+}
+
+.home-final-cta__actions .btn.primary {
+  color: #fffaf2 !important;
+  background:
+    radial-gradient(circle at 30% 12%, rgba(255,255,255,.42), transparent 7rem),
+    linear-gradient(135deg, #c5a15f, #9b7434) !important;
+  border: 1px solid rgba(155,116,52,.26) !important;
+}
+
+.home-final-cta__actions .btn:not(.primary) {
+  color: #242321 !important;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.72), rgba(246,238,225,.58)) !important;
+  border: 1px solid rgba(126,104,67,.22) !important;
+}
+
+@media (max-width: 900px) {
+  .home-final-cta__board {
+    grid-template-columns: 1fr !important;
+    min-height: auto !important;
+  }
+
+  .home-final-cta__board > div:first-child {
+    transform: none !important;
+  }
+
+  .home-final-cta__actions {
+    margin-left: 0 !important;
+    width: min(360px, 100%) !important;
+    max-width: 360px !important;
+    min-height: 330px !important;
+    padding: 118px 22px 30px !important;
+  }
+}
+
+/* ---------- END AS CTA FINAL CLEAN SINGLE ---------- */
+
+
+/* ---------- AS DESIGN HERO CLEAN FINAL ---------- */
+
+.as-design-hero {
+  position: relative !important;
+  overflow: hidden !important;
+  padding: clamp(86px, 8vw, 132px) 0 clamp(78px, 7vw, 118px) !important;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(255,255,255,.72), transparent 26rem),
+    radial-gradient(circle at 78% 16%, rgba(185,154,94,.12), transparent 30rem),
+    linear-gradient(135deg, #f7f0e6 0%, #eee2d2 52%, #faf5ee 100%) !important;
+  border-bottom: 1px solid rgba(126,104,67,.12) !important;
+}
+
+.as-design-hero::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.38), transparent 26%, transparent 74%, rgba(255,255,255,.22)),
+    linear-gradient(180deg, rgba(255,255,255,.28), transparent 36%, rgba(225,211,190,.20)) !important;
+}
+
+.as-design-hero .as-page-hero__grid {
+  position: relative !important;
+  z-index: 2 !important;
+  display: grid !important;
+  grid-template-columns: minmax(440px, .86fr) minmax(560px, 1.14fr) !important;
+  gap: clamp(58px, 7vw, 118px) !important;
+  align-items: center !important;
+}
+
+/* левая часть — более дорогая журнальная подача */
+.as-design-hero .as-page-hero__copy {
+  position: relative !important;
+  z-index: 3 !important;
+  max-width: 760px !important;
+  padding-left: clamp(0px, 1vw, 18px) !important;
+}
+
+.as-design-hero .as-page-hero__copy::before {
+  display: block !important;
+  margin-bottom: 28px !important;
+  color: rgba(139,112,65,.82) !important;
+  font-family: var(--font-sans, Manrope, Arial, sans-serif) !important;
+  font-size: 11px !important;
+  line-height: 1 !important;
+  letter-spacing: .36em !important;
+  text-transform: uppercase !important;
+  font-weight: 700 !important;
+}
+
+.as-design-hero .eyebrow {
+  display: none !important;
+}
+
+/* главное изменение: заголовок меньше, спокойнее, без огромной простыни */
+.as-design-hero h1 {
+  max-width: 720px !important;
+  margin: 0 0 30px !important;
+  color: #242321 !important;
+  font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif) !important;
+  font-size: clamp(52px, 5.1vw, 92px) !important;
+  line-height: .96 !important;
+  letter-spacing: -.062em !important;
+  font-weight: 400 !important;
+}
+
+.as-design-hero .muted {
+  max-width: 600px !important;
+  color: rgba(36,35,33,.74) !important;
+  font-size: clamp(18px, 1.18vw, 22px) !important;
+  line-height: 1.72 !important;
+}
+
+/* тонкая линия под текстом */
+.as-design-hero .muted::after {
+  content: "" !important;
+  display: block !important;
+  width: min(280px, 48vw) !important;
+  height: 1px !important;
+  margin-top: 34px !important;
+  background: linear-gradient(90deg, rgba(155,116,52,.62), transparent) !important;
+}
+
+/* картинка без арки, как дорогая интерьерная карточка */
+.as-design-hero .as-page-hero__image {
+  position: relative !important;
+  overflow: hidden !important;
+  min-height: clamp(440px, 39vw, 650px) !important;
+  border-radius: 36px !important;
+  border: 1px solid rgba(151,110,48,.24) !important;
+  background: rgba(255,250,241,.48) !important;
+  box-shadow:
+    0 42px 110px rgba(67,47,22,.16),
+    0 12px 34px rgba(67,47,22,.08),
+    inset 0 0 0 1px rgba(255,255,255,.56) !important;
+}
+
+/* убираем арку полностью */
+.as-design-hero .as-page-hero__image::before {
+  display: none !important;
+  content: none !important;
+}
+
+/* вместо арки — мягкая стеклянная полировка */
+.as-design-hero .as-page-hero__image::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 2 !important;
+  pointer-events: none !important;
+  background:
+    linear-gradient(120deg, rgba(255,255,255,.30), transparent 30%, transparent 72%, rgba(255,255,255,.14)),
+    linear-gradient(180deg, transparent 0%, rgba(32,28,22,.10) 100%) !important;
+}
+
+.as-design-hero .as-page-hero__image img {
+  position: relative !important;
+  z-index: 1 !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: inherit !important;
+  display: block !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  filter: saturate(.96) brightness(1.035) contrast(1.03) !important;
+}
+
+/* небольшой эффект "дорогого листа", но без дергания */
+.as-design-hero .as-page-hero__image:hover img {
+  transform: scale(1.018) !important;
+}
+
+.as-design-hero .as-page-hero__image img {
+  transition: transform .75s ease, filter .75s ease !important;
+}
+
+@media (max-width: 980px) {
+  .as-design-hero .as-page-hero__grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .as-design-hero h1 {
+    font-size: clamp(48px, 12vw, 78px) !important;
+  }
+
+  .as-design-hero .as-page-hero__image {
+    min-height: 360px !important;
+    border-radius: 30px !important;
+  }
+}
+
+/* ---------- END AS DESIGN HERO CLEAN FINAL ---------- */
+
+
+/* ---------- AS DESIGN STEPS CLEAN FINAL ---------- */
+
+.as-design-steps-section {
+  position: relative !important;
+  overflow: hidden !important;
+  padding: clamp(82px, 8vw, 138px) 0 clamp(96px, 9vw, 156px) !important;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(255,255,255,.72), transparent 28rem),
+    radial-gradient(circle at 82% 18%, rgba(185,154,94,.10), transparent 30rem),
+    linear-gradient(135deg, #f8f1e7 0%, #eee2d2 54%, #faf5ee 100%) !important;
+  border-top: 1px solid rgba(126,104,67,.10) !important;
+}
+
+.as-design-steps-section::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.34), transparent 28%, transparent 76%, rgba(255,255,255,.20)),
+    radial-gradient(circle at 50% 10%, rgba(255,255,255,.34), transparent 32rem) !important;
+}
+
+.as-design-steps-section > .container {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.as-design-steps-section .as-section-head {
+  max-width: 980px !important;
+  margin-bottom: clamp(48px, 6vw, 86px) !important;
+}
+
+.as-design-steps-section .as-section-head .eyebrow {
+  color: #8b7041 !important;
+  margin-bottom: 22px !important;
+}
+
+.as-design-steps-section .as-section-head h2 {
+  max-width: 920px !important;
+  color: #242321 !important;
+  font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif) !important;
+  font-size: clamp(48px, 5vw, 92px) !important;
+  line-height: .96 !important;
+  letter-spacing: -.06em !important;
+  font-weight: 400 !important;
+}
+
+.as-design-steps {
+  position: relative !important;
+  display: grid !important;
+  gap: clamp(22px, 2.8vw, 42px) !important;
+}
+
+/* центральная тонкая линия маршрута */
+.as-design-steps::before {
+  content: "" !important;
+  position: absolute !important;
+  left: 50% !important;
+  top: 18px !important;
+  bottom: 18px !important;
+  width: 1px !important;
+  transform: translateX(-50%) !important;
+  background: linear-gradient(180deg, transparent, rgba(155,116,52,.34), transparent) !important;
+  pointer-events: none !important;
+}
+
+.as-design-step {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+
+  display: grid !important;
+  grid-template-columns: minmax(320px, .78fr) minmax(440px, 1.22fr) !important;
+  gap: clamp(28px, 4vw, 68px) !important;
+  align-items: center !important;
+
+  padding: clamp(20px, 2.5vw, 34px) !important;
+  border-radius: 38px !important;
+  border: 1px solid rgba(126,104,67,.16) !important;
+
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.68), rgba(238,228,213,.56)) !important;
+
+  box-shadow:
+    0 28px 82px rgba(67,47,22,.10),
+    inset 0 0 0 1px rgba(255,255,255,.54) !important;
+}
+
+.as-design-step:nth-child(even) {
+  grid-template-columns: minmax(440px, 1.22fr) minmax(320px, .78fr) !important;
+}
+
+.as-design-step:nth-child(even) img {
+  order: 2 !important;
+}
+
+.as-design-step::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+  background:
+    radial-gradient(circle at 18% 14%, rgba(255,255,255,.48), transparent 18rem),
+    linear-gradient(120deg, rgba(255,255,255,.18), transparent 38%, rgba(185,154,94,.06)) !important;
+}
+
+/* маленький золотой маркер этапа */
+.as-design-step::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+  width: 13px !important;
+  height: 13px !important;
+  transform: translate(-50%, -50%) !important;
+  border-radius: 999px !important;
+  background: #b99a5e !important;
+  box-shadow:
+    0 0 0 8px rgba(185,154,94,.10),
+    0 10px 24px rgba(67,47,22,.16) !important;
+  z-index: 3 !important;
+}
+
+.as-design-step img {
+  position: relative !important;
+  z-index: 2 !important;
+  width: 100% !important;
+  height: clamp(260px, 23vw, 420px) !important;
+  display: block !important;
+  object-fit: cover !important;
+  border-radius: 28px !important;
+  border: 1px solid rgba(126,104,67,.14) !important;
+  box-shadow:
+    0 22px 58px rgba(67,47,22,.12),
+    inset 0 0 0 1px rgba(255,255,255,.44) !important;
+  filter: saturate(.96) brightness(1.03) contrast(1.02) !important;
+}
+
+.as-design-step div {
+  position: relative !important;
+  z-index: 2 !important;
+  padding: clamp(10px, 2vw, 28px) !important;
+}
+
+.as-design-step span {
+  display: block !important;
+  margin-bottom: 22px !important;
+  color: #8b7041 !important;
+  font-family: var(--font-sans, Manrope, Arial, sans-serif) !important;
+  font-size: 12px !important;
+  letter-spacing: .34em !important;
+  text-transform: uppercase !important;
+  font-weight: 700 !important;
+}
+
+.as-design-step h3 {
+  max-width: 680px !important;
+  margin: 0 0 18px !important;
+  color: #242321 !important;
+  font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif) !important;
+  font-size: clamp(36px, 3.3vw, 66px) !important;
+  line-height: .98 !important;
+  letter-spacing: -.055em !important;
+  font-weight: 400 !important;
+}
+
+.as-design-step p {
+  max-width: 620px !important;
+  margin: 0 !important;
+  color: rgba(36,35,33,.72) !important;
+  font-size: clamp(16px, 1.05vw, 20px) !important;
+  line-height: 1.64 !important;
+}
+
+.as-design-steps-section .reveal {
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
+}
+
+@media (max-width: 980px) {
+  .as-design-steps::before,
+  .as-design-step::after {
+    display: none !important;
+  }
+
+  .as-design-step,
+  .as-design-step:nth-child(even) {
+    grid-template-columns: 1fr !important;
+  }
+
+  .as-design-step:nth-child(even) img {
+    order: 0 !important;
+  }
+
+  .as-design-step {
+    border-radius: 30px !important;
+  }
+
+  .as-design-step img {
+    height: 300px !important;
+    border-radius: 24px !important;
+  }
+}
+
+/* ---------- END AS DESIGN STEPS CLEAN FINAL ---------- */
+
