@@ -1,0 +1,10 @@
+﻿*.bak
+*.bak-*
+*.backup-*
+*.backup-text-*
+*.old
+*.tmp
+*~
+node_modules
+vendor
+.git
