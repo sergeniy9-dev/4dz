@@ -8753,3 +8753,78 @@ main,
 
 /* ---------- END AS ABOUT FINAL CLEAN ---------- */
 
+
+/* ---------- AS HOME ENTRY IMAGE FINAL ---------- */
+
+html.as-home-entry-lock,
+html.as-home-entry-lock body {
+  overflow: hidden !important;
+}
+
+.as-home-entry-image {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 999999 !important;
+
+  display: block !important;
+
+  background: #f8f1e7 !important;
+
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+
+  transition:
+    opacity .75s ease,
+    visibility .75s ease !important;
+}
+
+.as-home-entry-image::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 2 !important;
+  pointer-events: none !important;
+
+  background:
+    radial-gradient(circle at 50% 36%, rgba(255,255,255,.18), transparent 26rem),
+    linear-gradient(180deg, rgba(248,241,231,.06), rgba(248,241,231,.18)) !important;
+}
+
+.as-home-entry-image__frame {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+
+  width: 100vw !important;
+  height: 100vh !important;
+  max-height: none !important;
+
+  display: block !important;
+
+  border-radius: 0 !important;
+  overflow: hidden !important;
+
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.as-home-entry-image__frame img {
+  display: block !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  max-height: none !important;
+
+  object-fit: cover !important;
+  object-position: center center !important;
+}
+
+.as-home-entry-image.is-hide {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* ---------- END AS HOME ENTRY IMAGE FINAL ---------- */
+

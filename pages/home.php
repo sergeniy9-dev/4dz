@@ -1,4 +1,32 @@
-﻿<!-- AS HOME REF CARDS START -->
+﻿<!-- AS HOME ENTRY IMAGE START -->
+<div class="as-home-entry-image" data-home-entry-image>
+  <div class="as-home-entry-image__frame">
+    <img src="/assets/img/intro-brand-scene.png?v=1" alt="AS Design">
+  </div>
+</div>
+
+<script>
+(function () {
+  var entry = document.querySelector('[data-home-entry-image]');
+  if (!entry) return;
+
+  document.documentElement.classList.add('as-home-entry-lock');
+
+  window.setTimeout(function () {
+    entry.classList.add('is-hide');
+    document.documentElement.classList.remove('as-home-entry-lock');
+
+    window.setTimeout(function () {
+      if (entry && entry.parentNode) {
+        entry.parentNode.removeChild(entry);
+      }
+    }, 700);
+  }, 1500);
+})();
+</script>
+<!-- AS HOME ENTRY IMAGE END -->
+
+<!-- AS HOME REF CARDS START -->
 <section class="as-home-ref-cards">
   <div class="container">
     <div class="as-home-ref-cards-grid">
@@ -119,6 +147,7 @@
     </div>
   </div>
 </section>
+
 
 
 
