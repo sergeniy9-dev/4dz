@@ -1,12 +1,11 @@
-﻿<?php
-declare(strict_types=1);
+<?php
 
-/*
-  Vercel запускает PHP из /api.
-  Мы переносим рабочую директорию в корень проекта
-  и подключаем обычный index.php сайта.
-*/
+$root = dirname(__DIR__);
 
-chdir(dirname(__DIR__));
+chdir($root);
 
-require dirname(__DIR__) . '/index.php';
+$_SERVER['DOCUMENT_ROOT'] = $root;
+$_SERVER['SCRIPT_FILENAME'] = $root . '/index.php';
+$_SERVER['SCRIPT_NAME'] = '/index.php';
+
+require $root . '/index.php';
