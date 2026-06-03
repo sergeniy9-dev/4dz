@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 require_once __DIR__ . '/includes/config.php';
 require_once __DIR__ . '/includes/layout.php';
@@ -37,6 +37,11 @@ $routes = [
         'description' => 'Этапы создания дизайн-проекта.',
     ],
 
+    '/support' => [
+        'file' => __DIR__ . '/pages/support.php',
+        'title' => 'Сопровождение проекта',
+        'description' => 'Сопровождение реализации дизайн-проекта AS Design.',
+    ],
     '/projects' => [
         'file' => __DIR__ . '/pages/projects.php',
         'title' => 'Портфолио',

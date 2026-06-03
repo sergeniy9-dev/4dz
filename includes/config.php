@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 const SITE = [
     'name' => 'AS ДИЗАЙН',
@@ -17,6 +17,7 @@ const NAV = [
     '/' => 'Главная',
     '/about' => 'О нас',
     '/design' => 'Дизайн',
+    '/support' => 'Сопровождение',
     '/projects' => 'Портфолио',
     '/reviews' => 'Отзывы',
     '/contacts' => 'Контакты',
